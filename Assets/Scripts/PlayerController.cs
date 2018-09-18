@@ -4,9 +4,12 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour {
 
-    public float moveSpeed = 4f;
+    public float moveSpeed = 200f;
     public float rotateSpeed = 10f;
     public float jumpForce = 300f;
+    public int voidCount = 0;
+    string bitstr = "Water/Water";
+    float bitheight = 10;
 
     Vector3 forward, right;
 
@@ -19,9 +22,33 @@ public class PlayerController : MonoBehaviour {
 	
 	void Update () {
         Move();
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            bitstr = "Water/Water";
+            bitheight = 10;
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            bitstr = "Magma/Magma";
+            bitheight = 1;
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            bitstr = "Grass/Dirt";
+            bitheight = 1;
+        }
         if (Input.GetKeyDown(KeyCode.Space))
         {
             Jump();
+        }
+        if (Input.GetMouseButton(0))
+        {
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit;
+            if (Physics.Raycast(ray, out hit, 100))
+            {
+                Instantiate(Resources.Load("Prefabs/Blocks/" + bitstr + "Bit"), hit.point + new Vector3(0,bitheight,0), hit.transform.rotation);
+            }
         }
 	}
 
@@ -36,7 +63,8 @@ public class PlayerController : MonoBehaviour {
         {
             transform.forward = Vector3.RotateTowards(transform.forward, heading, rotateSpeed * Time.deltaTime, 0.0f);
         }
-        transform.position += rightMovement + upMovement;
+        Vector3 movement = rightMovement + upMovement;
+        transform.GetComponent<Rigidbody>().velocity = new Vector3(movement.x, transform.GetComponent<Rigidbody>().velocity.y, movement.z);
     }
 
     void Jump()
