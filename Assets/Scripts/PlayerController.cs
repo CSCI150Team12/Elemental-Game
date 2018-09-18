@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour {
+using UnityEngine.Networking;
+
+public class PlayerController : NetworkBehaviour {
 
     public float moveSpeed = 4f;
     public float rotateSpeed = 10f;
@@ -11,6 +13,10 @@ public class PlayerController : MonoBehaviour {
     Vector3 forward, right;
 
 	void Start () {
+        if (!isLocalPlayer)
+        {
+            GetComponent<Rigidbody>().freezeRotation = true;
+        }
         forward = Camera.main.transform.forward;
         forward.y = 0;
         forward = forward.normalized;
@@ -18,6 +24,11 @@ public class PlayerController : MonoBehaviour {
     }
 	
 	void Update () {
+        if (!isLocalPlayer)
+        {
+            GetComponent<Rigidbody>().isKinematic = true;
+            return;
+        }
         Move();
         if (Input.GetKeyDown(KeyCode.Space))
         {
