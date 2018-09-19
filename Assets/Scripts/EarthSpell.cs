@@ -4,16 +4,10 @@ using UnityEngine;
 
 public class EarthSpell : Spell
 {
-
-    public bool dying = false;
-
-	// Use this for initialization
-	void Start () {
-		
-	}
 	
 	// Update is called once per frame
-	void Update () {
+	public override void Update () {
+        base.Update();
         if (dying)
         {
             Slide(-5f, -1.1f, 1);
@@ -24,12 +18,6 @@ public class EarthSpell : Spell
         }
         
 	}
-
-    public override void Die(float delay)
-    {
-        dying = true;
-        base.Die(2f);
-    }
 
     void Slide(float speed, float min, float max)
     {

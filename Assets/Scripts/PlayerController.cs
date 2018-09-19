@@ -35,17 +35,9 @@ public class PlayerController : MonoBehaviour {
         {
             spellStr = "Earth";
         }
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetMouseButtonDown(0))
         {
             CastSpell();
-        }
-        if (Input.GetKeyUp(KeyCode.E))
-        {
-            Spell spell = GetComponentInChildren<Spell>();
-            if (spell)
-            {
-                spell.Die();
-            }
         }
         Move();
         if (Input.GetKeyDown(KeyCode.Space))
@@ -75,7 +67,13 @@ public class PlayerController : MonoBehaviour {
 
     void CastSpell()
     {
-        Instantiate(Resources.Load("Prefabs/Spells/"+ spellStr + " Spell"), transform);
+        GameObject spellPrefab = (GameObject)Instantiate(Resources.Load("Prefabs/Spells/"+ spellStr + " Spell"));
+        spellPrefab.transform.position = transform.TransformPoint(spellPrefab.GetComponent<Spell>().offset); ;   
+        spellPrefab.transform.rotation = transform.rotation;
+        if (spellPrefab.GetComponent<Spell>().isChild)
+        {
+            spellPrefab.transform.parent = transform;
+        }
     }
 
 }

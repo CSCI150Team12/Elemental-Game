@@ -54,6 +54,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b375fd7eebe7ea74ba56a6ca8c6dff42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isChild: 1
+  dying: 0
+  hasLifespan: 1
+  lifespan: 0
+  offset: {x: 0, y: 0, z: 0}
+  triggerForce: 25
+  triggerEffectName: 
+  deathDelay: 0.45
 --- !u!136 &136252174586217600
 CapsuleCollider:
   m_ObjectHideFlags: 1
@@ -631,7 +639,7 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     randomizeRotationDirection: 0
-    maxNumParticles: 1000
+    maxNumParticles: 5000
     size3D: 0
     rotation3D: 1
     gravityModifier:
@@ -840,7 +848,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 2000
+      scalar: 5000
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -3467,7 +3475,7 @@ ParticleSystem:
         m_NumAlphaKeys: 2
     range: {x: 0, y: 1}
   CollisionModule:
-    enabled: 0
+    enabled: 1
     serializedVersion: 3
     type: 1
     collisionMode: 0
@@ -3645,11 +3653,11 @@ ParticleSystem:
     radiusScale: 1
     collidesWith:
       serializedVersion: 2
-      m_Bits: 823
+      m_Bits: 512
     maxCollisionShapes: 256
     quality: 0
     voxelSize: 0.5
-    collisionMessages: 1
+    collisionMessages: 0
     collidesWithDynamic: 1
     interiorCollisions: 0
   TriggerModule:
