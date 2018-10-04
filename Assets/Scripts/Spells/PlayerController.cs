@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour {
     public float moveSpeed = 4f;
     public float rotateSpeed = 10f;
     public float jumpForce = 300f;
+    public string spellStr = "Water";
 
     Vector3 forward, right;
 
@@ -18,6 +19,26 @@ public class PlayerController : MonoBehaviour {
     }
 	
 	void Update () {
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            spellStr = "Water";
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            spellStr = "Air";
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            spellStr = "Fire";
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha4))
+        {
+            spellStr = "Earth";
+        }
+        if (Input.GetMouseButtonDown(0))
+        {
+            CastSpell();
+        }
         Move();
         if (Input.GetKeyDown(KeyCode.Space))
         {
@@ -43,4 +64,16 @@ public class PlayerController : MonoBehaviour {
     {
         GetComponent<Rigidbody>().AddForce(0f, jumpForce, 0f);
     }
+
+    void CastSpell()
+    {
+        GameObject spellPrefab = (GameObject)Instantiate(Resources.Load("Prefabs/Spells/"+ spellStr + " Spell"));
+        spellPrefab.transform.position = transform.TransformPoint(spellPrefab.GetComponent<Spell>().offset); ;   
+        spellPrefab.transform.rotation = transform.rotation;
+        if (spellPrefab.GetComponent<Spell>().isChild)
+        {
+            spellPrefab.transform.parent = transform;
+        }
+    }
+
 }

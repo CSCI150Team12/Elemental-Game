@@ -306,9 +306,15 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\AirSpell.cs" />
+    <Compile Include="Assets\Scripts\EarthSpell.cs" />
+    <Compile Include="Assets\Scripts\FireSpell.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
+    <Compile Include="Assets\Scripts\Spell.cs" />
+    <Compile Include="Assets\Scripts\WaterSpell.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\Shaders\Particle Mesh Shader.shader" />
     <None Include="Packages\com.unity.package-manager-ui\Editor\Resources\Styles\Main_Dark.uss" />
     <None Include="Packages\com.unity.package-manager-ui\Editor\Resources\Styles\Main_Light.uss" />
     <None Include="Packages\com.unity.package-manager-ui\Editor\Resources\Templates\Alert.uxml" />
