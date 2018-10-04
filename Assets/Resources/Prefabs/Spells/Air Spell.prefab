@@ -58,7 +58,7 @@ MonoBehaviour:
   dying: 0
   hasLifespan: 1
   lifespan: 0
-  offset: {x: 0, y: 0, z: 0}
+  offset: {x: 0, y: 1.5, z: 0.5}
   triggerForce: 25
   triggerEffectName: 
   deathDelay: 0.45

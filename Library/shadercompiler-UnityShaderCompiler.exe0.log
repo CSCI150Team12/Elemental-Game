@@ -1,8 +1,17 @@
 Base path: C:/Program Files/Unity/Editor/Data
 Cmd: initializeCompiler
-Cmd: preprocess
-  error: 2 plat 21 at (50): Unexpected token ';'. Expected one of: '+' '-' '!' '~' '--' '++' '(' identifier sampler sampler1D sampler2D sampler3D samplerCUBE sampler_state or a user-defined type
-  insize=1657 outsize=739 ok=0
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
 Cmd: initializeCompiler
 Cmd: initializeCompiler
 Cmd: initializeCompiler
