@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
     public GameObject pelvis;
     private bool ragdollToggle = false;
     private Transform root;
+    private Spell currentSpell;
     public Animator animator;
 
     Vector3 forward, right;
@@ -29,6 +30,24 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        Move();
+        GetInput();
+        if(currentSpell != null && currentSpell.dying)
+        {
+            animator.SetBool("IsChanneling", false);
+        }
+    }
+
+    void GetInput()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            StartCoroutine(Jump());
+        }
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            SetRagdoll(ragdollToggle);
+        }
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             spellStr = "Water";
@@ -48,15 +67,6 @@ public class PlayerController : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             CastSpell();
-        }
-        Move();
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            StartCoroutine(Jump());
-        }
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            SetRagdoll(ragdollToggle);
         }
     }
 
@@ -94,7 +104,14 @@ public class PlayerController : MonoBehaviour
         if (spellPrefab.GetComponent<Spell>().isChild)
         {
             spellPrefab.transform.parent = transform;
+            currentSpell = spellPrefab.GetComponent<Spell>();
+            animator.SetBool("IsChanneling", true);
         }
+        else
+        {
+            animator.SetTrigger("GroundHit");
+        }
+        
     }
 
     void SetRagdoll(bool isRagdoll = true, bool initial = false)
