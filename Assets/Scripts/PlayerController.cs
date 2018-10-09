@@ -2,23 +2,33 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour {
+public class PlayerController : MonoBehaviour
+{
 
     public float moveSpeed = 4f;
     public float rotateSpeed = 10f;
     public float jumpForce = 300f;
     public string spellStr = "Water";
+    public GameObject pelvis;
+    private bool ragdollToggle = false;
+    private Transform root;
+    public Animator animator;
 
     Vector3 forward, right;
 
-	void Start () {
+    void Start()
+    {
         forward = Camera.main.transform.forward;
         forward.y = 0;
         forward = forward.normalized;
         right = Camera.main.transform.right;
+        animator = GetComponent<Animator>();
+        root = transform.Find("Root");
+        SetRagdoll(false, true);
     }
-	
-	void Update () {
+
+    void Update()
+    {
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             spellStr = "Water";
@@ -42,9 +52,13 @@ public class PlayerController : MonoBehaviour {
         Move();
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            Jump();
+            StartCoroutine(Jump());
         }
-	}
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            SetRagdoll(ragdollToggle);
+        }
+    }
 
     void Move()
     {
@@ -56,19 +70,26 @@ public class PlayerController : MonoBehaviour {
         if (direction.magnitude > 0.2f)
         {
             transform.forward = Vector3.RotateTowards(transform.forward, heading, rotateSpeed * Time.deltaTime, 0.0f);
+            animator.SetBool("IsRunning", true);
+        }
+        else
+        {
+            animator.SetBool("IsRunning", false);
         }
         transform.position += rightMovement + upMovement;
     }
 
-    void Jump()
+    IEnumerator Jump()
     {
+        animator.SetTrigger("Jump");
+        yield return new WaitForSeconds(0.3f);
         GetComponent<Rigidbody>().AddForce(0f, jumpForce, 0f);
     }
 
     void CastSpell()
     {
-        GameObject spellPrefab = (GameObject)Instantiate(Resources.Load("Prefabs/Spells/"+ spellStr + " Spell"));
-        spellPrefab.transform.position = transform.TransformPoint(spellPrefab.GetComponent<Spell>().offset); ;   
+        GameObject spellPrefab = (GameObject)Instantiate(Resources.Load("Prefabs/Spells/" + spellStr + " Spell"));
+        spellPrefab.transform.position = transform.TransformPoint(spellPrefab.GetComponent<Spell>().offset); ;
         spellPrefab.transform.rotation = transform.rotation;
         if (spellPrefab.GetComponent<Spell>().isChild)
         {
@@ -76,4 +97,30 @@ public class PlayerController : MonoBehaviour {
         }
     }
 
+    void SetRagdoll(bool isRagdoll = true, bool initial = false)
+    {
+
+        foreach (Collider col in root.GetComponentsInChildren<Collider>())
+        {
+            col.enabled = isRagdoll;
+            col.GetComponent<Rigidbody>().isKinematic = !isRagdoll;
+        }
+        GetComponent<BoxCollider>().enabled = !isRagdoll;
+        GetComponent<Rigidbody>().isKinematic = isRagdoll;
+        animator.enabled = !isRagdoll;
+        ragdollToggle = !isRagdoll;
+        if (isRagdoll)
+        {
+            root.parent = null;
+        }
+        else if (!initial)
+        {
+            transform.position = pelvis.transform.position;
+            transform.rotation = pelvis.transform.rotation;
+            root.parent = transform;
+        }
+    }
+
 }
+
+
