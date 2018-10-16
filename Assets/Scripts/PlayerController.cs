@@ -12,7 +12,8 @@ public class PlayerController : MonoBehaviour
     public GameObject pelvis;
     private bool ragdollToggle = false;
     private Transform root;
-    public Animator animator;
+    private Spell currentSpell;
+    private Animator animator;
 
     Vector3 forward, right;
 
@@ -29,6 +30,24 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        Move();
+        GetInput();
+        if(currentSpell != null && currentSpell.dying)
+        {
+            animator.SetBool("IsChanneling", false);
+        }
+    }
+
+    void GetInput()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            StartCoroutine(Jump());
+        }
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            SetRagdoll(ragdollToggle);
+        }
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             spellStr = "Water";
@@ -47,16 +66,7 @@ public class PlayerController : MonoBehaviour
         }
         if (Input.GetMouseButtonDown(0))
         {
-            CastSpell();
-        }
-        Move();
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            StartCoroutine(Jump());
-        }
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            SetRagdoll(ragdollToggle);
+            StartCoroutine(CastSpell());
         }
     }
 
@@ -86,15 +96,24 @@ public class PlayerController : MonoBehaviour
         GetComponent<Rigidbody>().AddForce(0f, jumpForce, 0f);
     }
 
-    void CastSpell()
+    IEnumerator CastSpell()
     {
         GameObject spellPrefab = (GameObject)Instantiate(Resources.Load("Prefabs/Spells/" + spellStr + " Spell"));
-        spellPrefab.transform.position = transform.TransformPoint(spellPrefab.GetComponent<Spell>().offset); ;
-        spellPrefab.transform.rotation = transform.rotation;
-        if (spellPrefab.GetComponent<Spell>().isChild)
+        Spell spellComponent = spellPrefab.GetComponent<Spell>();
+        if (spellComponent.animationVar == "IsChanneling")
         {
             spellPrefab.transform.parent = transform;
+            currentSpell = spellPrefab.GetComponent<Spell>();
+            animator.SetBool("IsChanneling", true);
         }
+        else if (spellComponent.animationVar == "GroundHit")
+        {
+            animator.SetTrigger("GroundHit");
+        }
+        yield return new WaitForSeconds(0.3f);
+        spellPrefab.transform.position = transform.TransformPoint(spellComponent.offset); ;
+        spellPrefab.transform.rotation = transform.rotation;
+        spellComponent.Initialize();
     }
 
     void SetRagdoll(bool isRagdoll = true, bool initial = false)
