@@ -13,8 +13,8 @@ public class Spell : MonoBehaviour {
     public string triggerEffectName = "";
     public float deathDelay = 0f;
     private float lifeTime;
-    
 
+    
     public virtual void Start()
     {
         lifeTime = Time.time + lifespan;
@@ -54,4 +54,5 @@ public class Spell : MonoBehaviour {
         Destroy(gameObject, deathDelay);
         dying = true;
     }
+
 }

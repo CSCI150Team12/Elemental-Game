@@ -3,7 +3,14 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - FinalRing
+  - QuaternaryRing
+  - TertiaryRing
+  - SecondRing
+  - CenterRing
+  - Boundary
+  - Spells
   layers:
   - Default
   - TransparentFX
