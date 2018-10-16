@@ -1849,6 +1849,7 @@ MonoBehaviour:
   moveSpeed: 4
   rotateSpeed: 10
   jumpForce: 300
+  spellStr: Water
   pelvis: {fileID: 0}
   animator: {fileID: 0}
 --- !u!135 &135905844301194830

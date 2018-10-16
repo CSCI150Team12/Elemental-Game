@@ -24,22 +24,27 @@ public class ActivateGravity : MonoBehaviour {
         if (gameObject.tag == "FinalRing") {
             if (seconds == 36) {
                 gameObject.GetComponent<Rigidbody>().useGravity = true;
+                gameObject.GetComponent<Rigidbody>().isKinematic = false;
             }
         } else if (gameObject.tag == "QuaternaryRing") {
             if (seconds == 72) {
                 gameObject.GetComponent<Rigidbody>().useGravity = true;
+                gameObject.GetComponent<Rigidbody>().isKinematic = false;
             }
         } else if (gameObject.tag == "TertiaryRing") {
             if (seconds == 108) {
                 gameObject.GetComponent<Rigidbody>().useGravity = true;
+                gameObject.GetComponent<Rigidbody>().isKinematic = false;
             }
         } else if (gameObject.tag == "SecondRing") {
             if (seconds == 144) {
                 gameObject.GetComponent<Rigidbody>().useGravity = true;
+                gameObject.GetComponent<Rigidbody>().isKinematic = false;
             }
         } else if (gameObject.tag == "CenterRing") {
             if (seconds == 180) {
                 gameObject.GetComponent<Rigidbody>().useGravity = true;
+                gameObject.GetComponent<Rigidbody>().isKinematic = false;
             }
         }
     }

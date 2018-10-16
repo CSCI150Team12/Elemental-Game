@@ -10,7 +10,7 @@
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace>
     </RootNamespace>
-    <ProjectGuid>{1C035281-EEB0-DB47-88B7-3CF45ACBEAA4}</ProjectGuid>
+    <ProjectGuid>{31A3256A-6F20-14C7-D50D-174046A142A0}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -73,16 +73,16 @@
     <Compile Include="Assets\Scripts\Spells\WaterSpell.cs" />
     <None Include="Assets\Shaders\Particle Mesh Shader.shader" />
     <Reference Include="UnityEditor.StandardEvents">
-      <HintPath>/Users/shauntderharoutunian/Documents/UnityProjects/Elemental-Game-Map/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+      <HintPath>/Users/shauntderharoutunian/Documents/GitHub/Elemental-Game/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>/Users/shauntderharoutunian/Documents/UnityProjects/Elemental-Game-Map/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>/Users/shauntderharoutunian/Documents/GitHub/Elemental-Game/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.PackageManagerUI.Editor">
-      <HintPath>/Users/shauntderharoutunian/Documents/UnityProjects/Elemental-Game-Map/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+      <HintPath>/Users/shauntderharoutunian/Documents/GitHub/Elemental-Game/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>/Users/shauntderharoutunian/Documents/UnityProjects/Elemental-Game-Map/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>/Users/shauntderharoutunian/Documents/GitHub/Elemental-Game/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
