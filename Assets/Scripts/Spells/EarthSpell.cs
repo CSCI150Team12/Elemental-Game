@@ -5,16 +5,18 @@ using UnityEngine;
 public class EarthSpell : Spell
 {
 	
-	// Update is called once per frame
 	public override void Update () {
         base.Update();
-        if (dying)
+        if (started)
         {
-            Slide(-5f, -1.1f, 1);
-        }
-        else
-        {
-            Slide(5f, -1.1f, 1);
+            if (dying)
+            {
+                Slide(-5f, -1.1f, 1);
+            }
+            else
+            {
+                Slide(5f, -1.1f, 1);
+            }
         }
         
 	}
