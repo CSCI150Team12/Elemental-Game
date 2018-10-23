@@ -107,7 +107,7 @@ MonoBehaviour:
         antiFlicker: 0
       lensDirt:
         texture: {fileID: 0}
-        intensity: 1
+        intensity: 0.5
   colorGrading:
     m_Enabled: 0
     m_Settings:

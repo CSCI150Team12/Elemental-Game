@@ -1,10 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
     public int playerNumber = 1;
+    public Text damageText;
     public float moveSpeed = 4f;
     public float rotateSpeed = 10f;
     public float damage = 0f;
@@ -66,7 +68,7 @@ public class PlayerController : MonoBehaviour
         }
         if (Input.GetButtonDown("Earth P" + playerNumber))
         {
-            spellStr = "Earth";
+            spellStr = "Magma";
         }
         if (canCast && Input.GetAxis("Cast P" + playerNumber) == 1)
         {
@@ -142,6 +144,13 @@ public class PlayerController : MonoBehaviour
         yield return new WaitForSeconds(1f);
         canCast = true;
     }
+
+    public void TakeDamage(float amount)
+    {
+        damage += amount;
+        damageText.text = "Player " + playerNumber + ": " + damage + "%";
+    }
+
 
     void SetRagdoll(bool isRagdoll = true, bool initial = false)
     {

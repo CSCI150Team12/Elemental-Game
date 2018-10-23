@@ -11,6 +11,7 @@ public class Spell : MonoBehaviour {
     public Vector3 offset = Vector3.zero;
     public float triggerForce = 0f;
     public string triggerEffectName = "";
+    public float damageAmount = 0;
     public float deathDelay = 0f;
     public string animationVar = "IsChanneling";
     public bool started = false;
@@ -31,6 +32,7 @@ public class Spell : MonoBehaviour {
 
     public virtual void Update()
     {
+        print(lifeTime);
         if (!dying && hasLifespan && lifeTime <= Time.time && started)
         {
             Die();
@@ -48,6 +50,11 @@ public class Spell : MonoBehaviour {
         {
             other.GetComponentInParent<Rigidbody>().AddForce(velocity * triggerForce);
             ApplyEffect(other.gameObject);
+            PlayerController player = other.gameObject.GetComponent<PlayerController>();
+            if (player)
+            {
+                player.TakeDamage(damageAmount);
+            }
         }
     }
 
@@ -62,6 +69,11 @@ public class Spell : MonoBehaviour {
             }
             other.GetComponentInParent<Rigidbody>().AddForce(transform.forward * triggerForce);
             ApplyEffect(other);
+            PlayerController player = other.gameObject.GetComponent<PlayerController>();
+            if (player)
+            {
+                player.TakeDamage(damageAmount);
+            }
         }
     }
 
