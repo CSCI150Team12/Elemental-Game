@@ -11,7 +11,7 @@ public class PlayerController : MonoBehaviour
     public float rotateSpeed = 10f;
     public float damage = 0f;
     public float jumpForce = 300f;
-    public string spellStr = "Water";
+    public string spellStr = "Fire";
     public GameObject pelvis;
     private bool ragdollToggle = false;
     private Transform root;
@@ -56,7 +56,6 @@ public class PlayerController : MonoBehaviour
         if (Input.GetButtonDown("Air P" + playerNumber))
         {
             spellStr = "Fireball";
-            print(playerNumber);
         }
         if (Input.GetButtonDown("Fire P" + playerNumber))
         {
@@ -148,7 +147,7 @@ public class PlayerController : MonoBehaviour
     public void TakeDamage(float amount)
     {
         damage += amount;
-        damageText.text = "Player " + playerNumber + ": " + damage + "%";
+        damageText.text = "Player " + playerNumber + ": " + (int)damage + "%";
     }
 
 

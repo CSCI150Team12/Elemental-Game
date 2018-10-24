@@ -6,6 +6,12 @@ public class MagmaBit : MonoBehaviour {
 
     public bool hasJoint = false;
     public Vector3 flattenAmount;
+    public Spell spell;
+
+    private void Start()
+    {
+        Destroy(this.gameObject, 7);
+    }
 
     private void FixedUpdate()
     {
@@ -21,17 +27,30 @@ public class MagmaBit : MonoBehaviour {
             GetComponent<FixedJoint>().enableCollision = false;
             GetComponent<Collider>().isTrigger = true;
             hasJoint = true;
+            OnTouch(collision.gameObject);
             if (collision.gameObject.name.Contains("Player"))
             {
                 flattenAmount = new Vector3(0.001f, 0.001f, 0.001f);
-                collision.gameObject.GetComponent<PlayerController>().TakeDamage(1);
             }
             else
             {
                 flattenAmount = new Vector3(-0.002f, 0.001f, -0.002f);
             }
         }
+    }
 
+    private void OnTriggerEnter(Collider other)
+    {
+        OnTouch(other.gameObject);
+    }
+
+    private void OnTouch(GameObject obj)
+    {
+        if (obj.name.Contains("Player"))
+        {
+            obj.GetComponent<PlayerController>().TakeDamage(1);
+            spell.ApplyEffect(obj);
+        }
     }
 
     private void Flatten(Vector3 scale)

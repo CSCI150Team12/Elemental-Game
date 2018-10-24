@@ -21,6 +21,7 @@ public class MagmaSpell : Spell {
             {
                 GameObject obj = Instantiate(bit, transform.position + new Vector3(Random.Range(0f, 0.5f), Random.Range(0f, 0.5f), Random.Range(0f, 0.5f)), transform.rotation);
                 obj.GetComponent<Rigidbody>().velocity = transform.TransformPoint(bitVelocity) * Random.Range(0.9f, 1.1f);
+                obj.GetComponent<MagmaBit>().spell = this;
             }
             yield return new WaitForSeconds(Random.Range(0.0005f, 0.001f));
         }

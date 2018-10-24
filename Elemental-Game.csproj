@@ -361,6 +361,7 @@
     <Compile Include="Assets\Scripts\Spells\MagmaSpell.cs" />
     <Compile Include="Assets\Scripts\Spells\Spell.cs" />
     <Compile Include="Assets\Scripts\Spells\WaterSpell.cs" />
+    <Compile Include="Assets\SpellEffect.cs" />
     <Compile Include="Assets\TwoFireballsSpell.cs" />
   </ItemGroup>
   <ItemGroup>

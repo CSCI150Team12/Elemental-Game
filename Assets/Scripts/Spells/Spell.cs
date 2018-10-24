@@ -32,7 +32,6 @@ public class Spell : MonoBehaviour {
 
     public virtual void Update()
     {
-        print(lifeTime);
         if (!dying && hasLifespan && lifeTime <= Time.time && started)
         {
             Die();
@@ -60,7 +59,7 @@ public class Spell : MonoBehaviour {
 
     protected virtual void OnParticleCollision(GameObject other)
     {
-        if ((triggerForce != 0f || triggerEffectName != "") && other.GetComponentInParent<Rigidbody>())
+        if ((triggerForce != 0f || triggerEffectName != "" || damageAmount != 0) && other.GetComponentInParent<Rigidbody>())
         {
             RaycastHit hit;
             if (Physics.Raycast(transform.position, transform.forward, out hit, 100, 1 << 9))
@@ -90,7 +89,6 @@ public class Spell : MonoBehaviour {
         }
         foreach (MeshRenderer meshRenderer in GetComponentsInChildren<MeshRenderer>())
         {
-            print(meshRenderer.transform);
             meshRenderer.enabled = true;
         }
         started = true;
@@ -126,9 +124,9 @@ public class Spell : MonoBehaviour {
         dying = true;
     }
 
-    protected virtual void ApplyEffect(GameObject obj)
+    public virtual void ApplyEffect(GameObject obj)
     {
-        if (triggerEffectName != "" && !obj.transform.Find(triggerEffectName + " Effect(Clone)") && obj.name != "Player" && obj.gameObject.layer != 9)
+        if (triggerEffectName != "" && !obj.transform.Find(triggerEffectName + " Effect(Clone)") && obj.gameObject.layer != 9)
         {
             Instantiate(Resources.Load("Prefabs/Spells/" + triggerEffectName + " Effect"), obj.transform);
         }

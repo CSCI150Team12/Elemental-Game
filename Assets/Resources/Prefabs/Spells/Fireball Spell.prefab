@@ -115,7 +115,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isChild: 0
-  dying: 1
+  dying: 0
   hasLifespan: 1
   oneShot: 1
   lifespan: 5

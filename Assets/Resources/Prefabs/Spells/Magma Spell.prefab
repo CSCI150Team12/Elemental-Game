@@ -58,7 +58,8 @@ MonoBehaviour:
   lifespan: 1
   offset: {x: 0, y: 1.25, z: 1.5}
   triggerForce: 0
-  triggerEffectName: 
+  triggerEffectName: Fire
+  damageAmount: 0
   deathDelay: 0
   animationVar: IsChanneling
   started: 0
