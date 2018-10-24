@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-
+    public int playerNumber = 1;
     public float moveSpeed = 4f;
     public float rotateSpeed = 10f;
+    public float damage = 0f;
     public float jumpForce = 300f;
     public string spellStr = "Water";
     public GameObject pelvis;
@@ -14,21 +15,23 @@ public class PlayerController : MonoBehaviour
     private Transform root;
     private Spell currentSpell;
     private Animator animator;
+    private bool canJump = true;
+    private bool canCast = true;
 
-    Vector3 forward, right;
+    Vector3 camForward, right;
 
     void Start()
     {
-        forward = Camera.main.transform.forward;
-        forward.y = 0;
-        forward = forward.normalized;
+        camForward = Camera.main.transform.forward;
+        camForward.y = 0;
+        camForward = camForward.normalized;
         right = Camera.main.transform.right;
         animator = GetComponent<Animator>();
         root = transform.Find("Root");
         SetRagdoll(false, true);
     }
 
-    void Update()
+    void FixedUpdate()
     {
         Move();
         GetInput();
@@ -40,7 +43,7 @@ public class PlayerController : MonoBehaviour
 
     void GetInput()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (canJump && Input.GetAxis("Jump P"+playerNumber) == 1)
         {
             StartCoroutine(Jump());
         }
@@ -48,23 +51,24 @@ public class PlayerController : MonoBehaviour
         {
             SetRagdoll(ragdollToggle);
         }
-        if (Input.GetKeyDown(KeyCode.Alpha1))
-        {
-            spellStr = "Water";
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha2))
+        if (Input.GetButtonDown("Air P" + playerNumber))
         {
             spellStr = "Air";
+            print(playerNumber);
         }
-        if (Input.GetKeyDown(KeyCode.Alpha3))
+        if (Input.GetButtonDown("Fire P" + playerNumber))
         {
             spellStr = "Fire";
         }
-        if (Input.GetKeyDown(KeyCode.Alpha4))
+        if (Input.GetButtonDown("Water P" + playerNumber))
+        {
+            spellStr = "Water";
+        }
+        if (Input.GetButtonDown("Earth P" + playerNumber))
         {
             spellStr = "Earth";
         }
-        if (Input.GetMouseButtonDown(0))
+        if (canCast && Input.GetAxis("Cast P" + playerNumber) == 1)
         {
             StartCoroutine(CastSpell());
         }
@@ -72,28 +76,44 @@ public class PlayerController : MonoBehaviour
 
     void Move()
     {
-        Vector3 direction = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
-        Vector3 rightMovement = right * moveSpeed * Time.deltaTime * Input.GetAxis("Horizontal");
-        Vector3 upMovement = forward * moveSpeed * Time.deltaTime * Input.GetAxis("Vertical");
-        Vector3 heading = (rightMovement + upMovement).normalized;
+        Vector3 direction = Input.GetAxis("Turn X P" + playerNumber) * right + -camForward * Input.GetAxis("Turn Y P" + playerNumber);
+        Vector3 rightMovement = right * moveSpeed * Time.deltaTime * Input.GetAxis("Move X P" + playerNumber);
+        Vector3 upMovement = camForward * moveSpeed * Time.deltaTime * Input.GetAxis("Move Y P" + playerNumber);
+        float forwardDot = Vector3.Dot(upMovement + rightMovement, transform.forward);
 
         if (direction.magnitude > 0.2f)
         {
-            transform.forward = Vector3.RotateTowards(transform.forward, heading, rotateSpeed * Time.deltaTime, 0.0f);
-            animator.SetBool("IsRunning", true);
+            transform.forward = Vector3.RotateTowards(transform.forward, direction.normalized, rotateSpeed * Time.deltaTime, 0.0f);
         }
         else
         {
-            animator.SetBool("IsRunning", false);
+            transform.forward = Vector3.RotateTowards(transform.forward, (upMovement+rightMovement).normalized, rotateSpeed * Time.deltaTime, 0.0f);
         }
-        transform.position += rightMovement + upMovement;
+
+        if (forwardDot > 0)
+        {
+            animator.SetFloat("RunFront", 1f);
+        }
+        else if (forwardDot < 0)
+        {
+            animator.SetFloat("RunFront", -1f);
+        }
+        else
+        {
+            animator.SetFloat("RunFront", 0);
+        }
+
+        transform.GetComponent<Rigidbody>().MovePosition(transform.position + rightMovement + upMovement);
     }
 
     IEnumerator Jump()
     {
         animator.SetTrigger("Jump");
-        yield return new WaitForSeconds(0.3f);
+        canJump = false;
+        yield return new WaitForSeconds(0.2f);
         GetComponent<Rigidbody>().AddForce(0f, jumpForce, 0f);
+        yield return new WaitForSeconds(1f);
+        canJump = true;
     }
 
     IEnumerator CastSpell()
@@ -110,10 +130,13 @@ public class PlayerController : MonoBehaviour
         {
             animator.SetTrigger("GroundHit");
         }
+        canCast = false;
         yield return new WaitForSeconds(0.3f);
         spellPrefab.transform.position = transform.TransformPoint(spellComponent.offset); ;
         spellPrefab.transform.rotation = transform.rotation;
         spellComponent.Initialize();
+        yield return new WaitForSeconds(1f);
+        canCast = true;
     }
 
     void SetRagdoll(bool isRagdoll = true, bool initial = false)
