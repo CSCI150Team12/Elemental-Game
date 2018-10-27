@@ -23,9 +23,9 @@ GameObject:
   - component: {fileID: 199579319136567670}
   - component: {fileID: 114002952765589164}
   - component: {fileID: 136252174586217600}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: Air Spell
-  m_TagString: Untagged
+  m_TagString: Spells
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -37,7 +37,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1826144526382956}
   m_LocalRotation: {x: 0, y: 0, z: -1, w: 0.00000028088027}
-  m_LocalPosition: {x: -0.121, y: -0.051, z: 0.565}
+  m_LocalPosition: {x: 5.211114, y: 2.9208112, z: 11.090907}
   m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_Children: []
   m_Father: {fileID: 0}
@@ -3657,7 +3657,7 @@ ParticleSystem:
     maxCollisionShapes: 256
     quality: 0
     voxelSize: 0.5
-    collisionMessages: 0
+    collisionMessages: 1
     collidesWithDynamic: 1
     interiorCollisions: 0
   TriggerModule:

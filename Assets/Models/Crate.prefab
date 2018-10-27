@@ -21,12 +21,12 @@ GameObject:
   - component: {fileID: 4155813088463502}
   - component: {fileID: 33849963592963198}
   - component: {fileID: 23203758875227928}
-  - component: {fileID: 65832731721509684}
   - component: {fileID: 54920261493375470}
-  - component: {fileID: 114458166092630636}
-  m_Layer: 0
+  - component: {fileID: 64932557305931330}
+  - component: {fileID: 114261049281697716}
+  m_Layer: 11
   m_Name: Crate
-  m_TagString: Destroy
+  m_TagString: DestroyObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -38,7 +38,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1252631068931052}
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 10.359961, y: 1.17, z: 1.6}
+  m_LocalPosition: {x: 0.83, y: 1.49, z: 7.220102}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 0}
@@ -102,8 +102,8 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &65832731721509684
-BoxCollider:
+--- !u!64 &64932557305931330
+MeshCollider:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -111,10 +111,12 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 2.1, y: 2.1, z: 2.1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &114458166092630636
+  serializedVersion: 3
+  m_Convex: 1
+  m_CookingOptions: 14
+  m_SkinWidth: 0.01
+  m_Mesh: {fileID: 4300000, guid: c45400a4abc2f4356bc92bcbdcfc66c9, type: 3}
+--- !u!114 &114261049281697716
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -122,7 +124,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1252631068931052}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f43f7b400fef7456eaa21fd35d8ab7f6, type: 3}
+  m_Script: {fileID: 11500000, guid: 35c7f57b3f89f492db428d120743d4c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   destroyedVersion: {fileID: 1992192378427604, guid: 7b089283a8575434fabc9151aaaeb86e,
