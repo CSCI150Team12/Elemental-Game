@@ -58,10 +58,11 @@ MonoBehaviour:
   dying: 0
   hasLifespan: 1
   lifespan: 0
-  offset: {x: 0, y: 1.5, z: 0.5}
+  offset: {x: 0, y: 1.5, z: 1.5}
   triggerForce: 25
   triggerEffectName: 
   deathDelay: 0.45
+  animationVar: IsChanneling
 --- !u!136 &136252174586217600
 CapsuleCollider:
   m_ObjectHideFlags: 1

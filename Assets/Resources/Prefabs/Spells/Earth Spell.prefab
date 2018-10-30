@@ -218,3 +218,4 @@ MonoBehaviour:
   triggerForce: 0
   triggerEffectName: 
   deathDelay: 2
+  animationVar: GroundHit

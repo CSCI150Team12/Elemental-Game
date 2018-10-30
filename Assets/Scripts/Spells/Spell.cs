@@ -12,17 +12,19 @@ public class Spell : MonoBehaviour {
     public float triggerForce = 0f;
     public string triggerEffectName = "";
     public float deathDelay = 0f;
+    public string animationVar = "IsChanneling";
+    public bool started = false;
     private float lifeTime;
 
     
     public virtual void Start()
     {
-        lifeTime = Time.time + lifespan;
+        Stop(true);
     }
 
     public virtual void Update()
     {
-        if (!dying && hasLifespan && lifeTime <= Time.time)
+        if (!dying && hasLifespan && lifeTime <= Time.time && started)
         {
             Die();
         }
@@ -45,12 +47,48 @@ public class Spell : MonoBehaviour {
         }
     }
 
+    public virtual void Initialize()
+    {
+        lifeTime = Time.time + lifespan;
+        foreach (ParticleSystem particleSystem in GetComponentsInChildren<ParticleSystem>())
+        {
+            particleSystem.Play();
+        }
+        foreach (Collider collider in GetComponentsInChildren<Collider>())
+        {
+            collider.enabled = true;
+        }
+        foreach (MeshRenderer meshRenderer in GetComponentsInChildren<MeshRenderer>())
+        {
+            print(meshRenderer.transform);
+            meshRenderer.enabled = true;
+        }
+        started = true;
+    }
+
+    public virtual void Stop(bool isHidden = false)
+    {
+        foreach(ParticleSystem particleSystem in GetComponentsInChildren<ParticleSystem>())
+        {
+            particleSystem.Stop();
+        }
+        foreach (Collider collider in GetComponentsInChildren<Collider>())
+        {
+            GetComponent<Collider>().enabled = false;
+        }
+        if (isHidden)
+        {
+            foreach (MeshRenderer collider in GetComponentsInChildren<MeshRenderer>())
+            {
+                GetComponent<MeshRenderer>().enabled = false;
+            }
+        }
+    }
+
     public virtual void Die()
     {
-        if (GetComponent<ParticleSystem>())
-        {
-            GetComponent<ParticleSystem>().Stop();
-        }
+        Stop();
+
         Destroy(gameObject, deathDelay);
         dying = true;
     }

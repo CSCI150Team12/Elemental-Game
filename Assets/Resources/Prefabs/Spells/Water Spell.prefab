@@ -70,10 +70,12 @@ MonoBehaviour:
   dying: 0
   hasLifespan: 1
   lifespan: 2
-  offset: {x: 0, y: 1.25, z: 0.5}
+  offset: {x: 0, y: 1.25, z: 1.5}
   triggerForce: 15
   triggerEffectName: 
   deathDelay: 0.75
+  animationVar: IsChanneling
+  started: 0
 --- !u!198 &198804773874465898
 ParticleSystem:
   m_ObjectHideFlags: 1
