@@ -75,6 +75,7 @@ MonoBehaviour:
   triggerEffectName: Fire
   deathDelay: 0.5
   animationVar: IsChanneling
+  started: 0
 --- !u!198 &198804773874465898
 ParticleSystem:
   m_ObjectHideFlags: 1
