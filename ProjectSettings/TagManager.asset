@@ -3,7 +3,20 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - FinalRing
+  - QuaternaryRing
+  - TertiaryRing
+  - CenterRing
+  - Boundary
+  - FinalRing2
+  - FinalObject2
+  - FinalObject
+  - QObject
+  - TObject
+  - SObject
+  - CObject
+  - SecondaryRing
   layers:
   - Default
   - TransparentFX
