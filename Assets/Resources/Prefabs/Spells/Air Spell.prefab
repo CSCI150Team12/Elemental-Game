@@ -22,8 +22,7 @@ GameObject:
   - component: {fileID: 198804773874465898}
   - component: {fileID: 199579319136567670}
   - component: {fileID: 114002952765589164}
-  - component: {fileID: 136252174586217600}
-  m_Layer: 9
+  m_Layer: 10
   m_Name: Air Spell
   m_TagString: Spells
   m_Icon: {fileID: 0}
@@ -63,19 +62,7 @@ MonoBehaviour:
   triggerEffectName: 
   deathDelay: 0.45
   animationVar: IsChanneling
---- !u!136 &136252174586217600
-CapsuleCollider:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1826144526382956}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  m_Radius: 4.003862
-  m_Height: 9.639654
-  m_Direction: 1
-  m_Center: {x: 0.6500748, y: -0.429554, z: 5.554421}
+  started: 0
 --- !u!198 &198804773874465898
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -3480,7 +3467,7 @@ ParticleSystem:
     serializedVersion: 3
     type: 1
     collisionMode: 0
-    colliderForce: 1
+    colliderForce: 5
     multiplyColliderForceByParticleSize: 0
     multiplyColliderForceByParticleSpeed: 0
     multiplyColliderForceByCollisionAngle: 0
@@ -3654,7 +3641,7 @@ ParticleSystem:
     radiusScale: 1
     collidesWith:
       serializedVersion: 2
-      m_Bits: 512
+      m_Bits: 4294967295
     maxCollisionShapes: 256
     quality: 0
     voxelSize: 0.5

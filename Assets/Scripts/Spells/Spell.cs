@@ -1,5 +1,4 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Spell : MonoBehaviour {
@@ -7,19 +6,29 @@ public class Spell : MonoBehaviour {
     public bool isChild = true;
     public bool dying = false;
     public bool hasLifespan = false;
+    public bool oneShot = false;
     public float lifespan = 0f;
     public Vector3 offset = Vector3.zero;
     public float triggerForce = 0f;
     public string triggerEffectName = "";
+    public float damageAmount = 0;
     public float deathDelay = 0f;
     public string animationVar = "IsChanneling";
     public bool started = false;
+    public float startSpeed = 0f;
     private float lifeTime;
+    protected Vector3 velocity = Vector3.zero;
+    
+    
 
     
     public virtual void Start()
     {
         Stop(true);
+        if (oneShot)
+        {
+            StartCoroutine(OneShot());
+        }
     }
 
     public virtual void Update()
@@ -30,9 +39,28 @@ public class Spell : MonoBehaviour {
         }
     }
 
-    public virtual void OnTriggerStay(Collider other)
+    public virtual void FixedUpdate()
     {
-        if ((triggerForce != 0f || triggerEffectName != "" ) && other.GetComponentInParent<Rigidbody>())
+        transform.position += velocity;
+    }
+
+    protected virtual void OnTriggerEnter(Collider other)
+    {
+        if (other.GetComponentInParent<Rigidbody>())
+        {
+            other.GetComponentInParent<Rigidbody>().AddForce(velocity * triggerForce);
+            ApplyEffect(other.gameObject);
+            PlayerController player = other.gameObject.GetComponent<PlayerController>();
+            if (player)
+            {
+                player.TakeDamage(damageAmount);
+            }
+        }
+    }
+
+    protected virtual void OnParticleCollision(GameObject other)
+    {
+        if ((triggerForce != 0f || triggerEffectName != "" || damageAmount != 0) && other.GetComponentInParent<Rigidbody>())
         {
             RaycastHit hit;
             if (Physics.Raycast(transform.position, transform.forward, out hit, 100, 1 << 9))
@@ -40,9 +68,11 @@ public class Spell : MonoBehaviour {
                 return;
             }
             other.GetComponentInParent<Rigidbody>().AddForce(transform.forward * triggerForce);
-            if (triggerEffectName != "" && !other.transform.Find(triggerEffectName + " Effect(Clone)") && other.name != "Player" && other.gameObject.layer != 9)
+            ApplyEffect(other);
+            PlayerController player = other.gameObject.GetComponent<PlayerController>();
+            if (player)
             {
-                Instantiate(Resources.Load("Prefabs/Spells/" + triggerEffectName + " Effect"), other.transform);
+                player.TakeDamage(damageAmount);
             }
         }
     }
@@ -60,7 +90,6 @@ public class Spell : MonoBehaviour {
         }
         foreach (MeshRenderer meshRenderer in GetComponentsInChildren<MeshRenderer>())
         {
-            print(meshRenderer.transform);
             meshRenderer.enabled = true;
         }
         started = true;
@@ -82,6 +111,25 @@ public class Spell : MonoBehaviour {
             {
                 GetComponent<MeshRenderer>().enabled = false;
             }
+        }
+    }
+
+    public virtual void SetVelocity(Vector3 vector3)
+    {
+        velocity = vector3 * startSpeed;
+    }
+
+    protected virtual IEnumerator OneShot()
+    {
+        yield return new WaitForSeconds(0.1f);
+        dying = true;
+    }
+
+    public virtual void ApplyEffect(GameObject obj)
+    {
+        if (triggerEffectName != "" && !obj.transform.Find(triggerEffectName + " Effect(Clone)") && obj.gameObject.layer != 9)
+        {
+            Instantiate(Resources.Load("Prefabs/Spells/" + triggerEffectName + " Effect"), obj.transform);
         }
     }
 

@@ -1,15 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
     public int playerNumber = 1;
+    public Text damageText;
     public float moveSpeed = 4f;
     public float rotateSpeed = 10f;
     public float damage = 0f;
     public float jumpForce = 300f;
-    public string spellStr = "Water";
+    public string spellStr = "Fire";
     public GameObject pelvis;
     private bool ragdollToggle = false;
     private Transform root;
@@ -53,20 +55,19 @@ public class PlayerController : MonoBehaviour
         }
         if (Input.GetButtonDown("Air P" + playerNumber))
         {
-            spellStr = "Air";
-            print(playerNumber);
+            spellStr = "Fireball";
         }
         if (Input.GetButtonDown("Fire P" + playerNumber))
         {
-            spellStr = "Fire";
+            spellStr = "Bigger Fireball";
         }
         if (Input.GetButtonDown("Water P" + playerNumber))
         {
-            spellStr = "Water";
+            spellStr = "Two Fireballs";
         }
         if (Input.GetButtonDown("Earth P" + playerNumber))
         {
-            spellStr = "Earth";
+            spellStr = "Magma";
         }
         if (canCast && Input.GetAxis("Cast P" + playerNumber) == 1)
         {
@@ -120,10 +121,13 @@ public class PlayerController : MonoBehaviour
     {
         GameObject spellPrefab = (GameObject)Instantiate(Resources.Load("Prefabs/Spells/" + spellStr + " Spell"));
         Spell spellComponent = spellPrefab.GetComponent<Spell>();
-        if (spellComponent.animationVar == "IsChanneling")
+        currentSpell = spellComponent;
+        if (spellComponent.isChild)
         {
             spellPrefab.transform.parent = transform;
-            currentSpell = spellPrefab.GetComponent<Spell>();
+        }
+        if (spellComponent.animationVar == "IsChanneling")
+        {
             animator.SetBool("IsChanneling", true);
         }
         else if (spellComponent.animationVar == "GroundHit")
@@ -134,10 +138,18 @@ public class PlayerController : MonoBehaviour
         yield return new WaitForSeconds(0.3f);
         spellPrefab.transform.position = transform.TransformPoint(spellComponent.offset); ;
         spellPrefab.transform.rotation = transform.rotation;
+        spellComponent.SetVelocity(transform.forward);
         spellComponent.Initialize();
         yield return new WaitForSeconds(1f);
         canCast = true;
     }
+
+    public void TakeDamage(float amount)
+    {
+        damage += amount;
+        damageText.text = "Player " + playerNumber + ": " + (int)damage + "%";
+    }
+
 
     void SetRagdoll(bool isRagdoll = true, bool initial = false)
     {
@@ -147,7 +159,7 @@ public class PlayerController : MonoBehaviour
             col.enabled = isRagdoll;
             col.GetComponent<Rigidbody>().isKinematic = !isRagdoll;
         }
-        GetComponent<BoxCollider>().enabled = !isRagdoll;
+        GetComponent<CapsuleCollider>().enabled = !isRagdoll;
         GetComponent<Rigidbody>().isKinematic = isRagdoll;
         animator.enabled = !isRagdoll;
         ragdollToggle = !isRagdoll;
