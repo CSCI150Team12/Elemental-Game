@@ -4,9 +4,8 @@ using UnityEngine;
 
 public class WaterSpell : Spell
 {
-    protected override void OnParticleCollision(GameObject other)
+    private void OnTriggerEnter(Collider other)
     {
-        base.OnParticleCollision(other);
         Transform fireEffect = other.transform.Find("Fire Effect(Clone)");
         if (fireEffect)
         {

@@ -7,12 +7,16 @@ TagManager:
   - FinalRing
   - QuaternaryRing
   - TertiaryRing
-  - SecondRing
   - CenterRing
   - Boundary
-  - Spells
-  - DestroyObject
-  - Object
+  - FinalRing2
+  - FinalObject2
+  - FinalObject
+  - QObject
+  - TObject
+  - SObject
+  - CObject
+  - SecondaryRing
   layers:
   - Default
   - TransparentFX
@@ -25,8 +29,8 @@ TagManager:
   - PostProcessing
   - Ground
   - Spell
-  - Player 1
-  - Player 2
+  - 
+  - 
   - 
   - 
   - 
