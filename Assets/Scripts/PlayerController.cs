@@ -1,56 +1,51 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
-
+    public int playerNumber = 1;
+    public Slider damageUI;
     public float moveSpeed = 4f;
     public float rotateSpeed = 10f;
+    public float damage = 0f;
     public float jumpForce = 300f;
-    public string spellStr = "Water";
+    public string spellStr = "Fire";
     public GameObject pelvis;
     private bool ragdollToggle = false;
     private Transform root;
-    public Animator animator;
+    private Spell currentSpell;
+    private Animator animator;
+    private bool canJump = true;
+    private bool canCast = true;
 
-    Vector3 forward, right;
+    Vector3 camForward, right;
 
     void Start()
     {
-        forward = Camera.main.transform.forward;
-        forward.y = 0;
-        forward = forward.normalized;
+        camForward = Camera.main.transform.forward;
+        camForward.y = 0;
+        camForward = camForward.normalized;
         right = Camera.main.transform.right;
         animator = GetComponent<Animator>();
         root = transform.Find("Root");
         SetRagdoll(false, true);
     }
 
-    void Update()
+    void FixedUpdate()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha1))
-        {
-            spellStr = "Water";
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha2))
-        {
-            spellStr = "Air";
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha3))
-        {
-            spellStr = "Fire";
-        }
-        if (Input.GetKeyDown(KeyCode.Alpha4))
-        {
-            spellStr = "Earth";
-        }
-        if (Input.GetMouseButtonDown(0))
-        {
-            CastSpell();
-        }
         Move();
-        if (Input.GetKeyDown(KeyCode.Space))
+        GetInput();
+        if(currentSpell != null && currentSpell.dying)
+        {
+            animator.SetBool("IsChanneling", false);
+        }
+    }
+
+    void GetInput()
+    {
+        if (canJump && Input.GetAxis("Jump P"+playerNumber) == 1)
         {
             StartCoroutine(Jump());
         }
@@ -58,44 +53,103 @@ public class PlayerController : MonoBehaviour
         {
             SetRagdoll(ragdollToggle);
         }
+        if (Input.GetButtonDown("Air P" + playerNumber))
+        {
+            spellStr = "Fireball";
+        }
+        if (Input.GetButtonDown("Fire P" + playerNumber))
+        {
+            spellStr = "Bigger Fireball";
+        }
+        if (Input.GetButtonDown("Water P" + playerNumber))
+        {
+            spellStr = "Two Fireballs";
+        }
+        if (Input.GetButtonDown("Earth P" + playerNumber))
+        {
+            spellStr = "Magma";
+        }
+        if (canCast && Input.GetAxis("Cast P" + playerNumber) == 1)
+        {
+            StartCoroutine(CastSpell());
+        }
     }
 
     void Move()
     {
-        Vector3 direction = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
-        Vector3 rightMovement = right * moveSpeed * Time.deltaTime * Input.GetAxis("Horizontal");
-        Vector3 upMovement = forward * moveSpeed * Time.deltaTime * Input.GetAxis("Vertical");
-        Vector3 heading = (rightMovement + upMovement).normalized;
+        Vector3 direction = Input.GetAxis("Turn X P" + playerNumber) * right + -camForward * Input.GetAxis("Turn Y P" + playerNumber);
+        Vector3 rightMovement = right * moveSpeed * Time.deltaTime * Input.GetAxis("Move X P" + playerNumber);
+        Vector3 upMovement = camForward * moveSpeed * Time.deltaTime * Input.GetAxis("Move Y P" + playerNumber);
+        float forwardDot = Vector3.Dot(upMovement + rightMovement, transform.forward);
 
         if (direction.magnitude > 0.2f)
         {
-            transform.forward = Vector3.RotateTowards(transform.forward, heading, rotateSpeed * Time.deltaTime, 0.0f);
-            animator.SetBool("IsRunning", true);
+            transform.forward = Vector3.RotateTowards(transform.forward, direction.normalized, rotateSpeed * Time.deltaTime, 0.0f);
         }
         else
         {
-            animator.SetBool("IsRunning", false);
+            transform.forward = Vector3.RotateTowards(transform.forward, (upMovement+rightMovement).normalized, rotateSpeed * Time.deltaTime, 0.0f);
         }
-        transform.position += rightMovement + upMovement;
+
+        if (forwardDot > 0)
+        {
+            animator.SetFloat("RunFront", 1f);
+        }
+        else if (forwardDot < 0)
+        {
+            animator.SetFloat("RunFront", -1f);
+        }
+        else
+        {
+            animator.SetFloat("RunFront", 0);
+        }
+
+        transform.GetComponent<Rigidbody>().MovePosition(transform.position + rightMovement + upMovement);
     }
 
     IEnumerator Jump()
     {
         animator.SetTrigger("Jump");
-        yield return new WaitForSeconds(0.3f);
+        canJump = false;
+        yield return new WaitForSeconds(0.2f);
         GetComponent<Rigidbody>().AddForce(0f, jumpForce, 0f);
+        yield return new WaitForSeconds(1f);
+        canJump = true;
     }
 
-    void CastSpell()
+    IEnumerator CastSpell()
     {
         GameObject spellPrefab = (GameObject)Instantiate(Resources.Load("Prefabs/Spells/" + spellStr + " Spell"));
-        spellPrefab.transform.position = transform.TransformPoint(spellPrefab.GetComponent<Spell>().offset); ;
-        spellPrefab.transform.rotation = transform.rotation;
-        if (spellPrefab.GetComponent<Spell>().isChild)
+        Spell spellComponent = spellPrefab.GetComponent<Spell>();
+        currentSpell = spellComponent;
+        if (spellComponent.isChild)
         {
             spellPrefab.transform.parent = transform;
         }
+        if (spellComponent.animationVar == "IsChanneling")
+        {
+            animator.SetBool("IsChanneling", true);
+        }
+        else if (spellComponent.animationVar == "GroundHit")
+        {
+            animator.SetTrigger("GroundHit");
+        }
+        canCast = false;
+        yield return new WaitForSeconds(0.3f);
+        spellPrefab.transform.position = transform.TransformPoint(spellComponent.offset); ;
+        spellPrefab.transform.rotation = transform.rotation;
+        spellComponent.SetVelocity(transform.forward);
+        spellComponent.Initialize();
+        yield return new WaitForSeconds(1f);
+        canCast = true;
     }
+
+    public void TakeDamage(float amount)
+    {
+        damage += amount;
+        damageUI.value = damage;
+    }
+
 
     void SetRagdoll(bool isRagdoll = true, bool initial = false)
     {
@@ -105,7 +159,7 @@ public class PlayerController : MonoBehaviour
             col.enabled = isRagdoll;
             col.GetComponent<Rigidbody>().isKinematic = !isRagdoll;
         }
-        GetComponent<BoxCollider>().enabled = !isRagdoll;
+        GetComponent<CapsuleCollider>().enabled = !isRagdoll;
         GetComponent<Rigidbody>().isKinematic = isRagdoll;
         animator.enabled = !isRagdoll;
         ragdollToggle = !isRagdoll;
