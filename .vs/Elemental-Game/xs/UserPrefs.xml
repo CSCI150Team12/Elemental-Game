@@ -1,11 +1,13 @@
 ﻿<Properties StartupConfiguration="{31A3256A-6F20-14C7-D50D-174046A142A0}|">
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/OnParticleCollisions.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/DestroyByBoundary.cs">
     <Files>
-      <File FileName="Assets/ActivateGravity.cs" Line="35" Column="34" />
-      <File FileName="Assets/DestroyOnPCollision.cs" Line="21" Column="6" />
       <File FileName="Assets/Scripts/Spells/Spell.cs" Line="1" Column="1" />
-      <File FileName="Assets/OnParticleCollisions.cs" Line="10" Column="10" />
+      <File FileName="Assets/Scripts/GameTimer.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/PlayerSpawner.cs" Line="21" Column="1" />
+      <File FileName="Assets/Scripts/PlayerDeath.cs" Line="17" Column="10" />
+      <File FileName="Assets/Scripts/Spells/EarthSpell.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/DestroyByBoundary.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

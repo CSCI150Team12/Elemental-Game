@@ -1,5 +1,50 @@
 Base path: /Applications/Unity/Unity.app/Contents
 Cmd: initializeCompiler
+Cmd: compileComputeKernel
+  api=14 insize=1470 outsize=1049 ok=1
+Cmd: translateComputeKernel
+  api=14 insize=1093 outsize=1081 ok=1
+Cmd: compileComputeKernel
+  api=14 insize=16784 outsize=6089 ok=1
+Cmd: compileComputeKernel
+  api=14 insize=16784 outsize=6689 ok=1
+Cmd: compileComputeKernel
+  api=14 insize=16784 outsize=8249 ok=1
+Cmd: compileComputeKernel
+  api=14 insize=16784 outsize=8805 ok=1
+Cmd: compileComputeKernel
+  api=14 insize=16784 outsize=10993 ok=1
+Cmd: compileComputeKernel
+  api=14 insize=16784 outsize=8737 ok=1
+Cmd: compileComputeKernel
+  api=14 insize=16784 outsize=11233 ok=1
+Cmd: compileComputeKernel
+  api=14 insize=16784 outsize=12465 ok=1
+Cmd: translateComputeKernel
+  api=14 insize=5469 outsize=9609 ok=1
+Cmd: translateComputeKernel
+  api=14 insize=6033 outsize=10353 ok=1
+Cmd: translateComputeKernel
+  api=14 insize=7301 outsize=12881 ok=1
+Cmd: translateComputeKernel
+  api=14 insize=7897 outsize=14625 ok=1
+Cmd: translateComputeKernel
+  api=14 insize=6921 outsize=12757 ok=1
+Cmd: translateComputeKernel
+  api=14 insize=9009 outsize=17033 ok=1
+Cmd: translateComputeKernel
+  api=14 insize=8773 outsize=16165 ok=1
+Cmd: translateComputeKernel
+  api=14 insize=9369 outsize=18101 ok=1
 Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: compileComputeKernel
+  api=14 insize=5004 outsize=5509 ok=1
+Cmd: translateComputeKernel
+  api=14 insize=5765 outsize=8357 ok=1
+Cmd: compileComputeKernel
+  api=14 insize=9166 outsize=9621 ok=1
+Cmd: translateComputeKernel
+  api=14 insize=1193 outsize=1313 ok=1
 
 Quitting shader compiler process
