@@ -8808,7 +8808,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 625250104}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.04, y: 0.96, z: 3.86}
+  m_LocalPosition: {x: 1.08, y: 0.96, z: -1.99}
   m_LocalScale: {x: 2, y: 0.1, z: 2}
   m_Children: []
   m_Father: {fileID: 0}
@@ -9803,7 +9803,7 @@ Prefab:
     - target: {fileID: 114695055738679228, guid: f7b8be48a557c8a4f89fc114c14136ad,
         type: 2}
       propertyPath: spellStr
-      value: Ice
+      value: Steam
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f7b8be48a557c8a4f89fc114c14136ad, type: 2}

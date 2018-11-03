@@ -95,7 +95,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1539147121424164}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.811904, y: 1.28, z: 0.44187927}
+  m_LocalPosition: {x: 1.7911816, y: 2.96, z: -2.1675768}
   m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_Children:
   - {fileID: 4056652371512612}
@@ -120,13 +120,13 @@ MonoBehaviour:
   oneShot: 1
   lifespan: 5
   offset: {x: 0, y: 1.25, z: 1.5}
-  triggerForce: 1000
+  triggerForce: 250
   triggerEffectName: Fire
   damageAmount: 10
   deathDelay: 1
   animationVar: IsChanneling
   started: 0
-  startSpeed: 0.2
+  startSpeed: 0.5
 --- !u!135 &135834966761195270
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -137,7 +137,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 3.5
+  m_Radius: 5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!198 &198028588525780786
 ParticleSystem:

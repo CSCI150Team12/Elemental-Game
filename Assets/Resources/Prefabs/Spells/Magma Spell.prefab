@@ -56,7 +56,7 @@ MonoBehaviour:
   hasLifespan: 1
   oneShot: 0
   lifespan: 1
-  offset: {x: 0, y: 1.25, z: 1.5}
+  offset: {x: 0, y: 1.25, z: 2}
   triggerForce: 0
   triggerEffectName: Fire
   damageAmount: 0
@@ -65,4 +65,4 @@ MonoBehaviour:
   started: 0
   startSpeed: 0
   bit: {fileID: 1598674198883228, guid: 3fbb719bd25e2944f909bd6a5c72153a, type: 2}
-  bitVelocity: {x: 0, y: 0, z: 10}
+  bitVelocity: {x: 0, y: 0, z: 20}

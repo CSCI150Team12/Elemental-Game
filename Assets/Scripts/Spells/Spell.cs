@@ -47,12 +47,18 @@ public class Spell : MonoBehaviour {
     {
         if (other.GetComponentInParent<Rigidbody>())
         {
-            other.GetComponentInParent<Rigidbody>().AddForce(velocity * triggerForce);
+            
             ApplyEffect(other.gameObject);
             PlayerController player = other.gameObject.GetComponent<PlayerController>();
             if (player)
             {
                 player.TakeDamage(damageAmount);
+                player.GetComponent<Rigidbody>().AddForce(velocity.normalized * DamageForceScale(player, 1500f));
+                print(velocity.normalized * DamageForceScale(player, 100f));
+            }
+            else
+            {
+                other.GetComponentInParent<Rigidbody>().AddForce(velocity.normalized * triggerForce);
             }
         }
     }
@@ -66,14 +72,24 @@ public class Spell : MonoBehaviour {
             {
                 return;
             }
-            other.GetComponentInParent<Rigidbody>().AddForce(transform.forward * triggerForce);
+            
             ApplyEffect(other);
             PlayerController player = other.gameObject.GetComponent<PlayerController>();
             if (player)
             {
                 player.TakeDamage(damageAmount);
+                player.GetComponent<Rigidbody>().AddForce(transform.forward * DamageForceScale(player));
+            }
+            else
+            {
+                other.GetComponentInParent<Rigidbody>().AddForce(transform.forward * triggerForce);
             }
         }
+    }
+
+    private float DamageForceScale(PlayerController player, float factor = 1.25f)
+    {
+        return (triggerForce + (player.damage * factor) / triggerForce);
     }
 
     public virtual void Initialize()
