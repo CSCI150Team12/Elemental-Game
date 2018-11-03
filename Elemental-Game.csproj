@@ -363,6 +363,8 @@
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\PlayerDeath.cs" />
     <Compile Include="Assets\Scripts\PlayerSpawner.cs" />
+    <Compile Include="Assets\Scripts\SpellEffect.cs" />
+    <Compile Include="Assets\Scripts\SpellField.cs" />
     <Compile Include="Assets\Scripts\Spells\AirSpell.cs" />
     <Compile Include="Assets\Scripts\Spells\EarthSpell.cs" />
     <Compile Include="Assets\Scripts\Spells\FireSpell.cs" />
@@ -371,7 +373,6 @@
     <Compile Include="Assets\Scripts\Spells\Spell.cs" />
     <Compile Include="Assets\Scripts\Spells\WaterSpell.cs" />
     <Compile Include="Assets\SpellBit.cs" />
-    <Compile Include="Assets\SpellEffect.cs" />
     <Compile Include="Assets\TwoFireballsSpell.cs" />
   </ItemGroup>
   <ItemGroup>

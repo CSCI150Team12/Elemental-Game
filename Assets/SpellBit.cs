@@ -4,8 +4,11 @@ using UnityEngine;
 
 public class SpellBit : MonoBehaviour {
     public bool hasJoint = false;
-    public Vector3 flattenAmount;
     public Spell spell;
+    public float damageAmount = 1f;
+    public float slowFactor = 1.1f;
+    private Vector3 flattenAmount;
+    private PlayerController player;
 
     private void Start()
     {
@@ -45,9 +48,11 @@ public class SpellBit : MonoBehaviour {
 
     private void OnTouch(GameObject obj)
     {
-        if (obj.name.Contains("Player"))
+        if (obj.GetComponent<PlayerController>())
         {
-            obj.GetComponent<PlayerController>().TakeDamage(1);
+            player = obj.GetComponent<PlayerController>();
+            player.TakeDamage(damageAmount);
+            player.moveSpeed /= slowFactor;
             spell.ApplyEffect(obj);
         }
     }
@@ -60,7 +65,16 @@ public class SpellBit : MonoBehaviour {
         }
         else
         {
-            Destroy(gameObject);
+            Die();
         }
+    }
+
+    private void Die()
+    {
+        if (player)
+        {
+            player.moveSpeed *= slowFactor;
+        }
+        Destroy(gameObject);
     }
 }

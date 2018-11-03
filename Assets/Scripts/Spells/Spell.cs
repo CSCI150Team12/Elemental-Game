@@ -41,7 +41,10 @@ public class Spell : MonoBehaviour {
 
     public virtual void FixedUpdate()
     {
-        transform.position += velocity;
+        if (!GetComponent<Rigidbody>())
+        {
+            transform.position += velocity;
+        }
     }
 
     protected virtual void OnTriggerEnter(Collider other)
@@ -115,6 +118,10 @@ public class Spell : MonoBehaviour {
         if (bit)
         {
             StartCoroutine(EmitBits());
+        }
+        if (GetComponent<Rigidbody>())
+        {
+            GetComponent<Rigidbody>().velocity = velocity;
         }
         started = true;
     }
