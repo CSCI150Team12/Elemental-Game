@@ -8,7 +8,7 @@ public class Spell : MonoBehaviour {
     public bool hasLifespan = false;
     public bool oneShot = false;
     public float lifespan = 0f;
-    public Vector3 offset = Vector3.zero;
+    public Vector3 offset = new Vector3(0, 1.25f, 1.5f);
     public float triggerForce = 0f;
     public string triggerEffectName = "";
     public float damageAmount = 0;
@@ -128,7 +128,7 @@ public class Spell : MonoBehaviour {
     {
         if (triggerEffectName != "" && !obj.transform.Find(triggerEffectName + " Effect(Clone)") && obj.gameObject.layer != 9)
         {
-            Instantiate(Resources.Load("Prefabs/Spells/" + triggerEffectName + " Effect"), obj.transform);
+            Instantiate(Resources.Load("Prefabs/Spell Effects/" + triggerEffectName + " Effect"), obj.transform);
         }
     }
 

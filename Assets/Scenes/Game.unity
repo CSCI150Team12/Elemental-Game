@@ -9803,7 +9803,7 @@ Prefab:
     - target: {fileID: 114695055738679228, guid: f7b8be48a557c8a4f89fc114c14136ad,
         type: 2}
       propertyPath: spellStr
-      value: Fire
+      value: Ice
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f7b8be48a557c8a4f89fc114c14136ad, type: 2}
@@ -19761,7 +19761,7 @@ Prefab:
     - target: {fileID: 114695055738679228, guid: f7b8be48a557c8a4f89fc114c14136ad,
         type: 2}
       propertyPath: spellStr
-      value: Fire
+      value: Ice
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f7b8be48a557c8a4f89fc114c14136ad, type: 2}

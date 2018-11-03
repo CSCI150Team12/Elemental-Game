@@ -19,6 +19,7 @@ public class PlayerController : MonoBehaviour
     private Animator animator;
     private bool canJump = true;
     private bool canCast = true;
+    private bool frozen = false;
 
     Vector3 camForward, right;
 
@@ -35,9 +36,12 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        Move();
-        GetInput();
-        if(currentSpell != null && currentSpell.dying)
+        if (!frozen)
+        {
+            Move();
+            GetInput();
+        }
+        if (currentSpell != null && currentSpell.dying)
         {
             animator.SetBool("IsChanneling", false);
         }
@@ -148,6 +152,19 @@ public class PlayerController : MonoBehaviour
     {
         damage += amount;
         damageUI.value = damage;
+    }
+
+    public void SetFrozen(bool isFrozen)
+    {
+        frozen = isFrozen;
+        if (frozen)
+        {
+            animator.enabled = false;
+        }
+        else
+        {
+            animator.enabled = true;
+        }
     }
 
 

@@ -56,6 +56,9 @@ MonoBehaviour:
   damagePerSecond: 5
   lifespan: 5
   deathspan: 1
+  offset: {x: 0, y: 0, z: 0}
+  freezeObj: 0
+  shrinkDeath: 0
 --- !u!198 &198586537832111028
 ParticleSystem:
   m_ObjectHideFlags: 1
