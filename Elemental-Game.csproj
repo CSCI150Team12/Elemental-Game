@@ -307,7 +307,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\FireballSpell.cs" />
-    <Compile Include="Assets\MagmaBit.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Attributes\GetSetAttribute.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Attributes\MinAttribute.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Attributes\TrackballAttribute.cs" />
@@ -371,6 +370,7 @@
     <Compile Include="Assets\Scripts\Spells\MagmaSpell.cs" />
     <Compile Include="Assets\Scripts\Spells\Spell.cs" />
     <Compile Include="Assets\Scripts\Spells\WaterSpell.cs" />
+    <Compile Include="Assets\SpellBit.cs" />
     <Compile Include="Assets\SpellEffect.cs" />
     <Compile Include="Assets\TwoFireballsSpell.cs" />
   </ItemGroup>

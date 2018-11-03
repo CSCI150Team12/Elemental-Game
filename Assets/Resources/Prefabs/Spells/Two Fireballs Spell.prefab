@@ -190,6 +190,8 @@ MonoBehaviour:
   animationVar: IsChanneling
   started: 0
   startSpeed: 0.2
+  bit: {fileID: 0}
+  bitVelocity: {x: 0, y: 0, z: 0}
 --- !u!135 &135059152843552224
 SphereCollider:
   m_ObjectHideFlags: 1
@@ -293,8 +295,8 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 1.1
-      minScalar: 1
+      scalar: 0.7
+      minScalar: 0.5
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -784,7 +786,7 @@ ParticleSystem:
     gravityModifier:
       serializedVersion: 2
       minMaxState: 0
-      scalar: -0.3
+      scalar: -0.6
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -14006,8 +14008,8 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 1.1
-      minScalar: 1
+      scalar: 0.7
+      minScalar: 0.5
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -14497,7 +14499,7 @@ ParticleSystem:
     gravityModifier:
       serializedVersion: 2
       minMaxState: 0
-      scalar: -0.3
+      scalar: -0.6
       minScalar: 0
       maxCurve:
         serializedVersion: 2

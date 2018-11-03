@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4896439545882978}
   - component: {fileID: 198804773874465898}
   - component: {fileID: 199579319136567670}
-  - component: {fileID: 114868361014150098}
+  - component: {fileID: 114036694351522190}
   m_Layer: 0
   m_Name: Fire Spell
   m_TagString: Untagged
@@ -42,7 +42,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -179.99998}
---- !u!114 &114868361014150098
+--- !u!114 &114036694351522190
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -50,14 +50,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1826144526382956}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 768b2c735654a7d418c519443605c9eb, type: 3}
+  m_Script: {fileID: 11500000, guid: dae8ae4f62175154d877d2c3c1e04093, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   isChild: 1
   dying: 0
   hasLifespan: 1
   oneShot: 0
-  lifespan: 2
+  lifespan: 1
   offset: {x: 0, y: 1.25, z: 2}
   triggerForce: 0
   triggerEffectName: Fire
@@ -66,6 +66,8 @@ MonoBehaviour:
   animationVar: IsChanneling
   started: 0
   startSpeed: 0
+  bit: {fileID: 0}
+  bitVelocity: {x: 0, y: 0, z: 0}
 --- !u!198 &198804773874465898
 ParticleSystem:
   m_ObjectHideFlags: 1

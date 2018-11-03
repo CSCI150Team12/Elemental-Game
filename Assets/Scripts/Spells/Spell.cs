@@ -18,8 +18,9 @@ public class Spell : MonoBehaviour {
     public float startSpeed = 0f;
     private float lifeTime;
     protected Vector3 velocity = Vector3.zero;
-    
-    
+    public GameObject bit;
+    public Vector3 bitVelocity;
+
 
     public virtual void Start()
     {
@@ -89,6 +90,10 @@ public class Spell : MonoBehaviour {
 
     private float DamageForceScale(PlayerController player, float factor = 1.25f)
     {
+        if (triggerForce == 0)
+        {
+            return 0;
+        }
         return (triggerForce + (player.damage * factor) / triggerForce);
     }
 
@@ -106,6 +111,10 @@ public class Spell : MonoBehaviour {
         foreach (MeshRenderer meshRenderer in GetComponentsInChildren<MeshRenderer>())
         {
             meshRenderer.enabled = true;
+        }
+        if (bit)
+        {
+            StartCoroutine(EmitBits());
         }
         started = true;
     }
@@ -145,6 +154,20 @@ public class Spell : MonoBehaviour {
         if (triggerEffectName != "" && !obj.transform.Find(triggerEffectName + " Effect(Clone)") && obj.gameObject.layer != 9)
         {
             Instantiate(Resources.Load("Prefabs/Spell Effects/" + triggerEffectName + " Effect"), obj.transform);
+        }
+    }
+
+    private IEnumerator EmitBits()
+    {
+        for (int i = 0; i < 200; i++)
+        {
+            for (int j = 0; j < 2; j++)
+            {
+                GameObject obj = Instantiate(bit, transform.position + new Vector3(Random.Range(0f, 0.5f), Random.Range(0f, 0.5f), Random.Range(0f, 0.5f)), transform.rotation);
+                obj.GetComponent<Rigidbody>().velocity = transform.TransformPoint(bitVelocity) * Random.Range(0.9f, 1.1f);
+                obj.GetComponent<SpellBit>().spell = this;
+            }
+            yield return new WaitForSeconds(Random.Range(0.0005f, 0.001f));
         }
     }
 

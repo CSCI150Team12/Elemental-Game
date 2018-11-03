@@ -19,7 +19,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4800087127163700}
-  - component: {fileID: 114964418172030336}
+  - component: {fileID: 114743292441787446}
   m_Layer: 0
   m_Name: Magma Spell
   m_TagString: Untagged
@@ -40,7 +40,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114964418172030336
+--- !u!114 &114743292441787446
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -48,7 +48,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1325667744103010}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 215d7f493b80875498d135b4b6a706b4, type: 3}
+  m_Script: {fileID: 11500000, guid: dae8ae4f62175154d877d2c3c1e04093, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   isChild: 1
@@ -60,7 +60,7 @@ MonoBehaviour:
   triggerForce: 0
   triggerEffectName: Fire
   damageAmount: 0
-  deathDelay: 0
+  deathDelay: 0.1
   animationVar: IsChanneling
   started: 0
   startSpeed: 0

@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4896439545882978}
   - component: {fileID: 198804773874465898}
   - component: {fileID: 199579319136567670}
-  - component: {fileID: 114002952765589164}
+  - component: {fileID: 114774285767674256}
   m_Layer: 10
   m_Name: Air Spell
   m_TagString: Untagged
@@ -42,7 +42,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -179.99998}
---- !u!114 &114002952765589164
+--- !u!114 &114774285767674256
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -50,19 +50,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 1826144526382956}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b375fd7eebe7ea74ba56a6ca8c6dff42, type: 3}
+  m_Script: {fileID: 11500000, guid: dae8ae4f62175154d877d2c3c1e04093, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   isChild: 1
   dying: 0
   hasLifespan: 1
+  oneShot: 0
   lifespan: 0
   offset: {x: 0, y: 1.5, z: 1.5}
   triggerForce: 25
   triggerEffectName: 
+  damageAmount: 0
   deathDelay: 0.45
   animationVar: IsChanneling
   started: 0
+  startSpeed: 0
+  bit: {fileID: 0}
+  bitVelocity: {x: 0, y: 0, z: 0}
 --- !u!198 &198804773874465898
 ParticleSystem:
   m_ObjectHideFlags: 1
@@ -1266,7 +1271,7 @@ ParticleSystem:
         m_RotationOrder: 4
     separateAxes: 0
   ColorModule:
-    enabled: 1
+    enabled: 0
     gradient:
       serializedVersion: 2
       minMaxState: 1
@@ -4612,7 +4617,7 @@ ParticleSystemRenderer:
   m_ReflectionProbeUsage: 0
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 112567829807c6c44ad3db7fca252939, type: 2}
+  - {fileID: 2100000, guid: a94c5ff1481c1414b967cb1949519b5f, type: 2}
   - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
