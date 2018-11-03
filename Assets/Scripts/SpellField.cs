@@ -5,6 +5,9 @@ using UnityEngine;
 public class SpellField : MonoBehaviour {
 
     private Vector3 size = Vector3.one*3;
+    public float gravityFactor = 300f;
+    public float sizeFactor = 0.06f;
+    public bool hasFire = true;
 
     private void OnTriggerStay(Collider other)
     {
@@ -16,13 +19,20 @@ public class SpellField : MonoBehaviour {
                 body.transform.position = transform.position - new Vector3(0,1,0);
                 body.transform.parent = transform.parent;
                 body.transform.localScale = Vector3.zero;
-                Destroy(other.GetComponentInChildren<Rigidbody>());
-                Destroy(other);
-                size += Vector3.one * .06f;
+                if (!hasFire)
+                {
+                    Destroy(other);
+                }
+                else
+                {
+                    Destroy(other.GetComponentInChildren<Rigidbody>());
+                    Destroy(other);
+                }
+                size += Vector3.one * sizeFactor;
             }
             else
             {
-                body.AddForce((transform.position - body.transform.position).normalized * 300 / (transform.position - body.transform.position).magnitude);
+                body.AddForce((transform.position - body.transform.position).normalized * gravityFactor / (transform.position - body.transform.position).magnitude);
             }
         }
         ApplyEffect(other.gameObject);
@@ -30,7 +40,7 @@ public class SpellField : MonoBehaviour {
 
     public virtual void ApplyEffect(GameObject obj)
     {
-        if (!obj.transform.Find("Fire Effect(Clone)") && obj.gameObject.layer != 9)
+        if (!obj.transform.Find("Fire Effect(Clone)") && obj.gameObject.layer != 9 && hasFire)
         {
             Instantiate(Resources.Load("Prefabs/Spell Effects/Fire Effect"), obj.transform);
         }
@@ -38,7 +48,7 @@ public class SpellField : MonoBehaviour {
 
     private void Update()
     {
-        transform.parent.localScale = Vector3.MoveTowards(transform.parent.localScale, size, .05f);
+        transform.parent.localScale = Vector3.MoveTowards(transform.parent.localScale, size, sizeFactor);
     }
 
 }
