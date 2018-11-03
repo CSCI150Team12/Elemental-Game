@@ -4,17 +4,21 @@ using UnityEngine;
 
 public class SpellField : MonoBehaviour {
 
+    private Vector3 size = Vector3.one*3;
+
     private void OnTriggerStay(Collider other)
     {
         Rigidbody body = other.GetComponent<Rigidbody>();
         if (body && !body.GetComponent<Rigidbody>().isKinematic)
         {
-            if ((transform.position - body.transform.position).magnitude < 1)
+            if ((transform.position - body.transform.position).magnitude < 4)
             {
                 body.transform.position = transform.position - new Vector3(0,1,0);
-                other.transform.parent = transform;
+                body.transform.parent = transform.parent;
+                body.transform.localScale = Vector3.zero;
                 Destroy(other.GetComponentInChildren<Rigidbody>());
                 Destroy(other);
+                size += Vector3.one * .06f;
             }
             else
             {
@@ -30,6 +34,11 @@ public class SpellField : MonoBehaviour {
         {
             Instantiate(Resources.Load("Prefabs/Spell Effects/Fire Effect"), obj.transform);
         }
+    }
+
+    private void Update()
+    {
+        transform.parent.localScale = Vector3.MoveTowards(transform.parent.localScale, size, .05f);
     }
 
 }
