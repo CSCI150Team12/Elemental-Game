@@ -27,8 +27,8 @@ public class ArenaCollapseScript : MonoBehaviour {
 	void Update () {
         float t = Time.time - startTime;
         int seconds = (int)t;
-
-        if (seconds == 120) {
+        if (true) ;
+        else if (seconds == 120) {
             if (gameObject.tag == "CenterRing") {
                 gameObject.GetComponent<Rigidbody>().isKinematic = false;
                 gameObject.GetComponent<Rigidbody>().useGravity = true;
@@ -87,7 +87,7 @@ public class ArenaCollapseScript : MonoBehaviour {
             if (gameObject.tag == "FinalRing2") {
                 gameObject.GetComponent<Rigidbody>().isKinematic = false;
                 gameObject.GetComponent<Rigidbody>().useGravity = true;
-                for (int i = 0; i < fobject2.Length; i ++) {
+                for (int i = 0; i < fobject2.Length; i++) {
                     fobject2[i].GetComponent<Rigidbody>().isKinematic = false;
                     fobject2[i].GetComponent<MeshCollider>().convex = false;
                 }

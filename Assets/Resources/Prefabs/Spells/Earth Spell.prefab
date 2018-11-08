@@ -26,7 +26,7 @@ GameObject:
   - component: {fileID: 54716901029288036}
   m_Layer: 9
   m_Name: Earth Spell
-  m_TagString: Spells
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -69,8 +69,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1373458495106926}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.198641, y: 1.4178438, z: 4.7344003}
-  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_LocalPosition: {x: 3.2220001, y: -1.1, z: -1.48}
+  m_LocalScale: {x: 2, y: 2, z: 0.5}
   m_Children:
   - {fileID: 4556165208098260}
   m_Father: {fileID: 0}
@@ -218,3 +218,4 @@ MonoBehaviour:
   triggerForce: 0
   triggerEffectName: 
   deathDelay: 2
+  animationVar: GroundHit
