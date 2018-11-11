@@ -7,6 +7,7 @@ public class Spell : MonoBehaviour {
     public bool dying = false;
     public bool hasLifespan = false;
     public bool oneShot = false;
+    public bool noCast = false;
     public float lifespan = 0f;
     public Vector3 offset = new Vector3(0, 1.25f, 1.5f);
     public float triggerForce = 0f;
@@ -18,8 +19,6 @@ public class Spell : MonoBehaviour {
     public float startSpeed = 0f;
     private float lifeTime;
     protected Vector3 velocity = Vector3.zero;
-    public GameObject bit;
-    public Vector3 bitVelocity;
     public bool stopAnimation = false;
 
 
@@ -29,6 +28,10 @@ public class Spell : MonoBehaviour {
         if (oneShot)
         {
             StartCoroutine(OneShot());
+        }
+        if (noCast)
+        {
+            Initialize();
         }
     }
 
@@ -116,9 +119,9 @@ public class Spell : MonoBehaviour {
         {
             meshRenderer.enabled = true;
         }
-        if (bit)
+        if (GetComponent<BitEmitter>())
         {
-            StartCoroutine(EmitBits());
+            GetComponent<BitEmitter>().Initialize();
         }
         if (GetComponent<Rigidbody>())
         {
@@ -162,20 +165,6 @@ public class Spell : MonoBehaviour {
         if (triggerEffectName != "" && !obj.transform.Find(triggerEffectName + " Effect(Clone)") && obj.gameObject.layer != 9)
         {
             Instantiate(Resources.Load("Prefabs/Spell Effects/" + triggerEffectName + " Effect"), obj.transform);
-        }
-    }
-
-    private IEnumerator EmitBits()
-    {
-        for (int i = 0; i < 200; i++)
-        {
-            for (int j = 0; j < 2; j++)
-            {
-                GameObject obj = Instantiate(bit, transform.position + new Vector3(Random.Range(0f, 0.5f), Random.Range(0f, 0.5f), Random.Range(0f, 0.5f)), transform.rotation);
-                obj.GetComponent<Rigidbody>().velocity = transform.TransformPoint(bitVelocity) * Random.Range(0.9f, 1.1f);
-                obj.GetComponent<SpellBit>().spell = this;
-            }
-            yield return new WaitForSeconds(Random.Range(0.0005f, 0.001f));
         }
     }
 

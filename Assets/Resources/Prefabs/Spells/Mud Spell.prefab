@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4800087127163700}
   - component: {fileID: 114743292441787446}
+  - component: {fileID: 114775888167119380}
   m_Layer: 0
   m_Name: Mud Spell
   m_TagString: Untagged
@@ -64,5 +65,23 @@ MonoBehaviour:
   animationVar: IsChanneling
   started: 0
   startSpeed: 0
+  stopAnimation: 0
+--- !u!114 &114775888167119380
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1325667744103010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: adb9d264c9c2d6749ba9f4b964b4ad43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   bit: {fileID: 1598674198883228, guid: 72b1d826c9fe8f342b4c1bb335a6034e, type: 2}
-  bitVelocity: {x: 0, y: 0, z: 20}
+  bitVelocity: {x: 0, y: 0, z: 15}
+  bitAmount: 400
+  bitDuration: 10
+  emissionRate: 2
+  isSticky: 1
+  useGravity: 1
+  initialOffset: {x: 0, y: 0, z: 4}

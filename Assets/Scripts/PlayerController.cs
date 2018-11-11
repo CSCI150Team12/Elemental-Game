@@ -151,7 +151,7 @@ public class PlayerController : MonoBehaviour
         spellPrefab.transform.rotation = transform.rotation;
         spellComponent.SetVelocity(transform.forward);
         spellComponent.Initialize();
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(spellComponent.lifespan + 1);
         canCast = true;
     }
 

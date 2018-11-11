@@ -125,5 +125,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasJoint: 0
-  flattenAmount: {x: 0, y: 0, z: 0}
   spell: {fileID: 0}
+  damageAmount: 1
+  slowFactor: 1
+  attractor: {fileID: 0}
+  attractorSpeed: 1
+  isSticky: 1

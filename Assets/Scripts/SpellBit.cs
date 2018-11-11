@@ -7,28 +7,37 @@ public class SpellBit : MonoBehaviour {
     public Spell spell;
     public float damageAmount = 1f;
     public float slowFactor = 1.1f;
+    public float duration = 10f;
     private Vector3 flattenAmount;
     private PlayerController player;
+    public GameObject attractor;
+    public float attractorSpeed = 1f;
+    public bool isSticky = true;
 
     private void Start()
     {
-        Destroy(this.gameObject, 7);
+        StartCoroutine(Lifespan());
     }
 
     private void FixedUpdate()
     {
         Flatten(flattenAmount);
+        if (attractor)
+        {
+            GetComponent<Rigidbody>().velocity += ((attractor.transform.position - transform.position).normalized * attractorSpeed);
+        }
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (!collision.gameObject.name.Contains(gameObject.name) && !hasJoint)
+        if (!collision.gameObject.name.Contains(gameObject.name) && !hasJoint && isSticky)
         {
             gameObject.AddComponent<FixedJoint>();
             GetComponent<FixedJoint>().connectedBody = collision.rigidbody;
             GetComponent<FixedJoint>().enableCollision = false;
             GetComponent<Collider>().isTrigger = true;
             hasJoint = true;
+            GetComponent<Rigidbody>().mass = 0;
             OnTouch(collision.gameObject);
             if (collision.gameObject.name.Contains("Player") || collision.gameObject.layer != LayerMask.NameToLayer("Ground"))
             {
@@ -38,6 +47,7 @@ public class SpellBit : MonoBehaviour {
             {
                 flattenAmount = new Vector3(-0.002f, 0.001f, -0.002f);
             }
+            attractor = null;
         }
     }
 
@@ -76,5 +86,11 @@ public class SpellBit : MonoBehaviour {
             player.moveSpeed *= slowFactor;
         }
         Destroy(gameObject);
+    }
+
+    private IEnumerator Lifespan()
+    {
+        yield return new WaitForSeconds(duration);
+        Die();
     }
 }
