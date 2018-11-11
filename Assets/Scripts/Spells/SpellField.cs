@@ -10,7 +10,7 @@ public class SpellField : MonoBehaviour {
     private void OnTriggerStay(Collider other)
     {
         Rigidbody body = other.GetComponent<Rigidbody>();
-        if (body && !body.GetComponent<Rigidbody>().isKinematic)
+        if (body && !body.GetComponent<Rigidbody>().isKinematic && (transform.position - body.transform.position).magnitude > 0)
         {
             body.AddForce((transform.position - body.transform.position).normalized * gravityModifier / (transform.position - body.transform.position).magnitude);
         }

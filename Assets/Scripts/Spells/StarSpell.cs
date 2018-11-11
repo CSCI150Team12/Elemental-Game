@@ -15,7 +15,7 @@ public class StarSpell : MonoBehaviour {
         scale = transform.localScale;
         transform.localScale = Vector3.zero;
         spell = GetComponent<Spell>();
-        field = GetComponent<SpellField>();
+        field = GetComponentInChildren<SpellField>();
         gravityModifier = field.gravityModifier;
         field.gravityModifier = 0f;
     }

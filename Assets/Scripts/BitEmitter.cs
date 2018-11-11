@@ -6,6 +6,7 @@ public class BitEmitter : MonoBehaviour {
 
     public GameObject bit;
     public Vector3 bitVelocity;
+    public float bitDrag = 5;
     public Vector3 expulsionVelocity = Vector3.zero;
     public bool useExpulsionGravity = true;
     public int bitAmount = 400;
@@ -60,7 +61,7 @@ public class BitEmitter : MonoBehaviour {
                 spellBit.isSticky = isSticky;
                 if (!useGravity)
                 {
-                    spellBit.GetComponent<Rigidbody>().drag = 5;
+                    spellBit.GetComponent<Rigidbody>().drag = bitDrag;
                 }
                 spellBits.Add(spellBit);
             }

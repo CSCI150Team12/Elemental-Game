@@ -353,6 +353,9 @@
     <Compile Include="Assets\PostProcessing\Utilities\CustomMotionTexture\ExampleWheelController.cs" />
     <Compile Include="Assets\Scripts\ArenaCollapseScript.cs" />
     <Compile Include="Assets\Scripts\BitEmitter.cs" />
+    <Compile Include="Assets\Scripts\Collectables\BlackHole2.cs" />
+    <Compile Include="Assets\Scripts\Collectables\HealthPotionScript.cs" />
+    <Compile Include="Assets\Scripts\Collectables\SpeedBoost.cs" />
     <Compile Include="Assets\Scripts\CountdownTimer.cs" />
     <Compile Include="Assets\Scripts\DestroyByBoundary.cs" />
     <Compile Include="Assets\Scripts\FireballSpell.cs" />

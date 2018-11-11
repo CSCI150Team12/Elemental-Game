@@ -62,7 +62,6 @@ public class Spell : MonoBehaviour {
             {
                 player.TakeDamage(damageAmount);
                 player.GetComponent<Rigidbody>().AddForce(velocity.normalized * DamageForceScale(player, 1500f));
-                print(velocity.normalized * DamageForceScale(player, 100f));
             }
             else
             {

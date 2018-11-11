@@ -13,6 +13,7 @@ public class SpellBit : MonoBehaviour {
     public GameObject attractor;
     public float attractorSpeed = 1f;
     public bool isSticky = true;
+    public bool flattenDeath = true;
     public bool touchDeath = false;
     public new Vector3 constantForce = Vector3.zero;
 
@@ -52,13 +53,16 @@ public class SpellBit : MonoBehaviour {
                 GetComponent<FixedJoint>().enableCollision = false;
                 GetComponent<Collider>().isTrigger = true;
                 GetComponent<Rigidbody>().mass = 0;
-                if (collision.gameObject.name.Contains("Player") || collision.gameObject.layer != LayerMask.NameToLayer("Ground"))
+                if (flattenDeath)
                 {
-                    flattenAmount = new Vector3(0.001f, 0.001f, 0.001f);
-                }
-                else
-                {
-                    flattenAmount = new Vector3(-0.002f, 0.001f, -0.002f);
+                    if (collision.gameObject.name.Contains("Player") || collision.gameObject.layer != LayerMask.NameToLayer("Ground"))
+                    {
+                        flattenAmount = new Vector3(0.001f, 0.001f, 0.001f);
+                    }
+                    else
+                    {
+                        flattenAmount = new Vector3(-0.002f, 0.001f, -0.002f);
+                    }
                 }
                 attractor = null;
             }

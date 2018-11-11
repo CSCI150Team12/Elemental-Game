@@ -164,11 +164,13 @@ MonoBehaviour:
   hasJoint: 0
   spell: {fileID: 0}
   damageAmount: 0
-  slowFactor: 0
+  slowFactor: 1
   duration: 10
   attractor: {fileID: 0}
   attractorSpeed: 1
   isSticky: 0
+  touchDeath: 0
+  constantForce: {x: 0, y: 0, z: 0}
 --- !u!114 &114350555958088798
 MonoBehaviour:
   m_ObjectHideFlags: 1
