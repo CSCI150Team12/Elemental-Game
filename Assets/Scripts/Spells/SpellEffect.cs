@@ -10,6 +10,7 @@ public class SpellEffect : MonoBehaviour {
     public Vector3 offset = Vector3.zero;
     public bool freezeObj = false;
     public bool shrinkDeath = false;
+    public Vector3 shrinkDirection = new Vector3(1,1,1);
     private float startTime;
 
 	void Start () {
@@ -25,7 +26,7 @@ public class SpellEffect : MonoBehaviour {
             Die();
             if (transform.localScale.magnitude > 0 && shrinkDeath)
             {
-                transform.localScale -= new Vector3(1, 1, 1) * (1 / (deathspan*60));
+                transform.localScale -= shrinkDirection * (1 / (deathspan*60));
             }
         }
     }

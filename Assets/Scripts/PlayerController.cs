@@ -34,16 +34,23 @@ public class PlayerController : MonoBehaviour
         SetRagdoll(false, true);
     }
 
+    void Update()
+    {
+        if (!frozen)
+        {
+            GetInput();
+        }
+        if (currentSpell != null && (currentSpell.dying || currentSpell.stopAnimation))
+        {
+            animator.SetBool("IsChanneling", false);
+        }
+    }
+
     void FixedUpdate()
     {
         if (!frozen)
         {
             Move();
-            GetInput();
-        }
-        if (currentSpell != null && currentSpell.dying)
-        {
-            animator.SetBool("IsChanneling", false);
         }
     }
 

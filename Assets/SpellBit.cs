@@ -30,7 +30,7 @@ public class SpellBit : MonoBehaviour {
             GetComponent<Collider>().isTrigger = true;
             hasJoint = true;
             OnTouch(collision.gameObject);
-            if (collision.gameObject.name.Contains("Player"))
+            if (collision.gameObject.name.Contains("Player") || collision.gameObject.layer != LayerMask.NameToLayer("Ground"))
             {
                 flattenAmount = new Vector3(0.001f, 0.001f, 0.001f);
             }

@@ -20,6 +20,7 @@ public class Spell : MonoBehaviour {
     protected Vector3 velocity = Vector3.zero;
     public GameObject bit;
     public Vector3 bitVelocity;
+    public bool stopAnimation = false;
 
 
     public virtual void Start()
@@ -49,7 +50,7 @@ public class Spell : MonoBehaviour {
 
     protected virtual void OnTriggerEnter(Collider other)
     {
-        if (other.GetComponentInParent<Rigidbody>())
+        if (other.GetComponentInParent<Rigidbody>() && !GetComponent<SpellField>())
         {
             
             ApplyEffect(other.gameObject);
@@ -134,13 +135,13 @@ public class Spell : MonoBehaviour {
         }
         foreach (Collider collider in GetComponentsInChildren<Collider>())
         {
-            GetComponent<Collider>().enabled = false;
+            collider.enabled = false;
         }
         if (isHidden)
         {
             foreach (MeshRenderer collider in GetComponentsInChildren<MeshRenderer>())
             {
-                GetComponent<MeshRenderer>().enabled = false;
+                collider.enabled = false;
             }
         }
     }
@@ -153,7 +154,7 @@ public class Spell : MonoBehaviour {
     protected virtual IEnumerator OneShot()
     {
         yield return new WaitForSeconds(0.1f);
-        dying = true;
+        stopAnimation = true;
     }
 
     public virtual void ApplyEffect(GameObject obj)
