@@ -6,16 +6,39 @@ public class BitEmitter : MonoBehaviour {
 
     public GameObject bit;
     public Vector3 bitVelocity;
+    public Vector3 expulsionVelocity = Vector3.zero;
+    public bool useExpulsionGravity = true;
     public int bitAmount = 400;
     public float bitDuration = 10f;
     public float emissionRate = 1;
     public bool isSticky = true;
     public bool useGravity = true;
-    public Vector3 initialOffset = new Vector3(0, 0, 4);
+    public ArrayList spellBits = new ArrayList();
 
     public void Initialize()
     {
         StartCoroutine(EmitBits());
+    }
+
+    public void Expel()
+    {
+        if (transform.Find("Target"))
+        {
+            foreach (SpellBit spellBit in spellBits)
+            {
+                if (spellBit)
+                {
+                    spellBit.attractor = null;
+                    spellBit.GetComponent<Rigidbody>().velocity += transform.TransformDirection(expulsionVelocity);
+                    if (useExpulsionGravity)
+                    {
+                        spellBit.GetComponent<Rigidbody>().drag = 0;
+                        spellBit.GetComponent<Rigidbody>().useGravity = true;
+                    }
+                }
+            }
+            GetComponent<Spell>().Die();
+        }
     }
 
     private IEnumerator EmitBits()
@@ -39,6 +62,7 @@ public class BitEmitter : MonoBehaviour {
                 {
                     spellBit.GetComponent<Rigidbody>().drag = 5;
                 }
+                spellBits.Add(spellBit);
             }
             yield return new WaitForSeconds(Random.Range(0.0005f, 0.001f));
         }

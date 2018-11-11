@@ -83,12 +83,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bit: {fileID: 1697970382107080, guid: a040abe63973543448b0ba90ca2fc9fd, type: 2}
   bitVelocity: {x: 0, y: 0, z: 5}
+  expulsionVelocity: {x: 0, y: 0, z: 50}
+  useExpulsionGravity: 0
   bitAmount: 1
   bitDuration: 15
   emissionRate: 1
   isSticky: 0
   useGravity: 0
-  initialOffset: {x: 0, y: 0, z: 0}
 --- !u!114 &114743292441787446
 MonoBehaviour:
   m_ObjectHideFlags: 1

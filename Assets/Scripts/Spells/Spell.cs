@@ -171,7 +171,6 @@ public class Spell : MonoBehaviour {
     public virtual void Die()
     {
         Stop();
-
         Destroy(gameObject, deathDelay);
         dying = true;
     }

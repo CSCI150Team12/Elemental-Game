@@ -19,6 +19,7 @@ public class PlayerController : MonoBehaviour
     private Animator animator;
     private bool canJump = true;
     private bool canCast = true;
+    private float castReset = 0f;
     private bool frozen = false;
 
     Vector3 camForward, right;
@@ -43,6 +44,8 @@ public class PlayerController : MonoBehaviour
         if (currentSpell != null && (currentSpell.dying || currentSpell.stopAnimation))
         {
             animator.SetBool("IsChanneling", false);
+            currentSpell = null;
+            canCast = true;
         }
     }
 
@@ -66,23 +69,32 @@ public class PlayerController : MonoBehaviour
         }
         if (Input.GetButtonDown("Air P" + playerNumber))
         {
-            spellStr = "Fireball";
+            spellStr = "Mudball";
         }
         if (Input.GetButtonDown("Fire P" + playerNumber))
         {
-            spellStr = "Bigger Fireball";
+            spellStr = "Magmaball";
         }
         if (Input.GetButtonDown("Water P" + playerNumber))
         {
-            spellStr = "Two Fireballs";
+            spellStr = "Black Hole Ball";
         }
         if (Input.GetButtonDown("Earth P" + playerNumber))
         {
-            spellStr = "Magma";
+            spellStr = "Steam Ball";
         }
-        if (canCast && Input.GetAxis("Cast P" + playerNumber) == 1)
+        if (castReset < Time.time && Input.GetAxis("Cast P" + playerNumber) == 1)
         {
-            StartCoroutine(CastSpell());
+            castReset = Time.time + 1f;
+            if (canCast)
+            {
+                StartCoroutine(CastSpell());
+            }
+            else if (currentSpell && currentSpell.GetComponent<BitEmitter>())
+            {
+                currentSpell.GetComponent<BitEmitter>().Expel();
+            }
+            
         }
     }
 
@@ -114,7 +126,6 @@ public class PlayerController : MonoBehaviour
         {
             animator.SetFloat("RunFront", 0);
         }
-
         transform.GetComponent<Rigidbody>().MovePosition(transform.position + rightMovement + upMovement);
     }
 
@@ -151,8 +162,6 @@ public class PlayerController : MonoBehaviour
         spellPrefab.transform.rotation = transform.rotation;
         spellComponent.SetVelocity(transform.forward);
         spellComponent.Initialize();
-        yield return new WaitForSeconds(spellComponent.lifespan + 1);
-        canCast = true;
     }
 
     public void TakeDamage(float amount)

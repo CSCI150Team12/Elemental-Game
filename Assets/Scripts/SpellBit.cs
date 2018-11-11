@@ -13,9 +13,15 @@ public class SpellBit : MonoBehaviour {
     public GameObject attractor;
     public float attractorSpeed = 1f;
     public bool isSticky = true;
+    public bool touchDeath = false;
+    public new Vector3 constantForce = Vector3.zero;
 
     private void Start()
     {
+        if (slowFactor <= 0)
+        {
+            slowFactor = 1;
+        }
         StartCoroutine(Lifespan());
     }
 
@@ -26,29 +32,37 @@ public class SpellBit : MonoBehaviour {
         {
             GetComponent<Rigidbody>().velocity += ((attractor.transform.position - transform.position).normalized * attractorSpeed);
         }
+        GetComponent<Rigidbody>().velocity += constantForce;
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (!collision.gameObject.name.Contains(gameObject.name) && !hasJoint && isSticky)
+        if (!collision.gameObject.name.Contains(gameObject.name) && !hasJoint)
         {
-            gameObject.AddComponent<FixedJoint>();
-            GetComponent<FixedJoint>().connectedBody = collision.rigidbody;
-            GetComponent<FixedJoint>().enableCollision = false;
-            GetComponent<Collider>().isTrigger = true;
-            hasJoint = true;
-            GetComponent<Rigidbody>().mass = 0;
             OnTouch(collision.gameObject);
-            if (collision.gameObject.name.Contains("Player") || collision.gameObject.layer != LayerMask.NameToLayer("Ground"))
+            if (touchDeath)
             {
-                flattenAmount = new Vector3(0.001f, 0.001f, 0.001f);
+                Die();
             }
-            else
+            if (isSticky)
             {
-                flattenAmount = new Vector3(-0.002f, 0.001f, -0.002f);
+                gameObject.AddComponent<FixedJoint>();
+                hasJoint = true;
+                GetComponent<FixedJoint>().connectedBody = collision.rigidbody;
+                GetComponent<FixedJoint>().enableCollision = false;
+                GetComponent<Collider>().isTrigger = true;
+                GetComponent<Rigidbody>().mass = 0;
+                if (collision.gameObject.name.Contains("Player") || collision.gameObject.layer != LayerMask.NameToLayer("Ground"))
+                {
+                    flattenAmount = new Vector3(0.001f, 0.001f, 0.001f);
+                }
+                else
+                {
+                    flattenAmount = new Vector3(-0.002f, 0.001f, -0.002f);
+                }
+                attractor = null;
             }
-            attractor = null;
-        }
+        }  
     }
 
     private void OnTriggerEnter(Collider other)
