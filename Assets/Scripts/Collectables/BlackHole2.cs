@@ -21,7 +21,7 @@ public class BlackHole2 : MonoBehaviour {
 
 
 
-        PC.spellStr = "Black Hole Spell";      // Changed speed to 8
+        PC.spellStr = "Black Hole";      // Changed speed to 8
 
         GetComponent<MeshRenderer>().enabled = false;   //Makes the item disappear
 
