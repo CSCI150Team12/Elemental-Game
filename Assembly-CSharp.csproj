@@ -108,6 +108,7 @@
     <Compile Include="Assets\PostProcessing\Runtime\Utils\RenderTextureFactory.cs" />
     <Compile Include="Assets\PostProcessing\Utilities\CustomMotionTexture\ExampleWheelController.cs" />
     <Compile Include="Assets\Scripts\ArenaCollapseScript.cs" />
+    <Compile Include="Assets\Scripts\AudioScript.cs" />
     <Compile Include="Assets\Scripts\CountdownTimer.cs" />
     <Compile Include="Assets\Scripts\DDOL.cs" />
     <Compile Include="Assets\Scripts\DestroyByBoundary.cs" />
