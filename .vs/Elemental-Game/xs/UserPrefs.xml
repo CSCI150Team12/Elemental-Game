@@ -5,9 +5,11 @@
       <File FileName="Assets/Scripts/Spells/Spell.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/GameTimer.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/PlayerSpawner.cs" Line="21" Column="1" />
-      <File FileName="Assets/Scripts/PlayerDeath.cs" Line="17" Column="10" />
+      <File FileName="Assets/Scripts/PlayerDeath.cs" Line="14" Column="30" />
       <File FileName="Assets/Scripts/Spells/EarthSpell.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/DestroyByBoundary.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/GameOverMenu.cs" Line="10" Column="37" />
+      <File FileName="Assets/Scripts/ArenaCollapseScript.cs" Line="36" Column="23" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

@@ -11,7 +11,7 @@ public class PlayerDeath : MonoBehaviour {
     //private int playerLife2 = 4;
 
     void FixedUpdate() {
-        if (p.position.y < -2f) {
+        if (p.position.y < -1f) {
             playerOnMap = false;
             Player1Life();
         }
