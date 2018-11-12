@@ -368,6 +368,7 @@
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\PlayerDeath.cs" />
     <Compile Include="Assets\Scripts\PlayerSpawner.cs" />
+    <Compile Include="Assets\Scripts\QuicksandSpell.cs" />
     <Compile Include="Assets\Scripts\SpellBit.cs" />
     <Compile Include="Assets\Scripts\Spells\AirSpell.cs" />
     <Compile Include="Assets\Scripts\Spells\EarthSpell.cs" />

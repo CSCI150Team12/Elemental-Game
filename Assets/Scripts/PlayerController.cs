@@ -69,15 +69,15 @@ public class PlayerController : MonoBehaviour
         }
         if (Input.GetButtonDown("Air P" + playerNumber))
         {
-            spellStr = "Mudball";
+            spellStr = "Earth";
         }
         if (Input.GetButtonDown("Fire P" + playerNumber))
         {
-            spellStr = "Magmaball";
+            spellStr = "Quicksand";
         }
         if (Input.GetButtonDown("Water P" + playerNumber))
         {
-            spellStr = "Black Hole Ball";
+            spellStr = "Glass";
         }
         if (Input.GetButtonDown("Earth P" + playerNumber))
         {

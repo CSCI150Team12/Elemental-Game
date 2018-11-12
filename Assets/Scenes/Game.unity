@@ -10148,7 +10148,7 @@ Prefab:
     - target: {fileID: 114695055738679228, guid: f7b8be48a557c8a4f89fc114c14136ad,
         type: 2}
       propertyPath: spellStr
-      value: Glass
+      value: Quicksand
       objectReference: {fileID: 0}
     - target: {fileID: 114695055738679228, guid: f7b8be48a557c8a4f89fc114c14136ad,
         type: 2}
