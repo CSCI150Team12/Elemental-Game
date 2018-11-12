@@ -306,6 +306,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\ElementCombination.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Attributes\GetSetAttribute.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Attributes\MinAttribute.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Attributes\TrackballAttribute.cs" />
@@ -381,6 +382,7 @@
     <Compile Include="Assets\Scripts\Spells\StarSpell.cs" />
     <Compile Include="Assets\Scripts\Spells\TwoFireballsSpell.cs" />
     <Compile Include="Assets\Scripts\Spells\WaterSpell.cs" />
+    <Compile Include="Assets\SpellQueue.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Materials\Spells\Blackhole_GradientSmoothing.shader" />
