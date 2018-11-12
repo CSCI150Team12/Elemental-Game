@@ -42,7 +42,7 @@ public class ElementCombination : MonoBehaviour
         //elements.Add("Earth + Magma", "Volcano");
         //elements.Add("Earth + Mud", "Swamp");
         //Collectible items/Extra
-        elements.Add("Blackhole + Fire", "Star");
+        elements.Add("Black Hole + Fire", "Star");
     }
 
     public string GetElement(string element1, string element2)

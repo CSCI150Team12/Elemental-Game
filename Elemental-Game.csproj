@@ -357,6 +357,7 @@
     <Compile Include="Assets\Scripts\Collectables\BlackHole2.cs" />
     <Compile Include="Assets\Scripts\Collectables\HealthPotionScript.cs" />
     <Compile Include="Assets\Scripts\Collectables\SpeedBoost.cs" />
+    <Compile Include="Assets\Scripts\CollectableSpawner.cs" />
     <Compile Include="Assets\Scripts\CountdownTimer.cs" />
     <Compile Include="Assets\Scripts\DestroyByBoundary.cs" />
     <Compile Include="Assets\Scripts\FireballSpell.cs" />

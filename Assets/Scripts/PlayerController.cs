@@ -86,12 +86,19 @@ public class PlayerController : MonoBehaviour
         {
             spellQueue.Enqueue("Earth");
         }
-        if (castReset < Time.time && Input.GetAxis("Cast P" + playerNumber) == 1)
+        if (castReset < Time.time && (Input.GetAxis("Cast P" + playerNumber) == 1 || Input.GetButtonDown("Cast2 P" + playerNumber)))
         {
             castReset = Time.time + 1f;
             if (canCast)
             {
-                StartCoroutine(CastSpell(spellQueue.Dequeue()));
+                if (Input.GetAxis("Cast P" + playerNumber) == 1)
+                {
+                    StartCoroutine(CastSpell(spellQueue.Dequeue()));
+                }else if (Input.GetButtonDown("Cast2 P" + playerNumber))
+                {
+                    StartCoroutine(CastSpell(spellQueue.Pop()));
+                }
+                
             }
             else if (currentSpell && currentSpell.GetComponent<BitEmitter>())
             {
