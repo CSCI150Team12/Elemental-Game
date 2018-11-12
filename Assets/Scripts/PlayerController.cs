@@ -2,16 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class PlayerController : MonoBehaviour
 {
     public int playerNumber = 1;
     public Slider damageUI;
+    public TMP_Text spellQueueUI;
     public float moveSpeed = 4f;
     public float rotateSpeed = 10f;
     public float damage = 0f;
     public float jumpForce = 300f;
-    public string spellStr = "Fire";
+    private SpellQueue spellQueue;
     public GameObject pelvis;
     private bool ragdollToggle = false;
     private Transform root;
@@ -33,6 +35,7 @@ public class PlayerController : MonoBehaviour
         animator = GetComponent<Animator>();
         root = transform.Find("Root");
         SetRagdoll(false, true);
+        spellQueue = gameObject.AddComponent<SpellQueue>();
     }
 
     void Update()
@@ -69,26 +72,26 @@ public class PlayerController : MonoBehaviour
         }
         if (Input.GetButtonDown("Air P" + playerNumber))
         {
-            spellStr = "Earth";
+            spellQueue.Enqueue("Air");
         }
         if (Input.GetButtonDown("Fire P" + playerNumber))
         {
-            spellStr = "Quicksand";
+            spellQueue.Enqueue("Fire");
         }
         if (Input.GetButtonDown("Water P" + playerNumber))
         {
-            spellStr = "Glass";
+            spellQueue.Enqueue("Water");
         }
         if (Input.GetButtonDown("Earth P" + playerNumber))
         {
-            spellStr = "Steam Ball";
+            spellQueue.Enqueue("Earth");
         }
         if (castReset < Time.time && Input.GetAxis("Cast P" + playerNumber) == 1)
         {
             castReset = Time.time + 1f;
             if (canCast)
             {
-                StartCoroutine(CastSpell());
+                StartCoroutine(CastSpell(spellQueue.Dequeue()));
             }
             else if (currentSpell && currentSpell.GetComponent<BitEmitter>())
             {
@@ -139,7 +142,7 @@ public class PlayerController : MonoBehaviour
         canJump = true;
     }
 
-    IEnumerator CastSpell()
+    IEnumerator CastSpell(string spellStr)
     {
         GameObject spellPrefab = (GameObject)Instantiate(Resources.Load("Prefabs/Spells/" + spellStr + " Spell"));
         Spell spellComponent = spellPrefab.GetComponent<Spell>();
@@ -162,6 +165,11 @@ public class PlayerController : MonoBehaviour
         spellPrefab.transform.rotation = transform.rotation;
         spellComponent.SetVelocity(transform.forward);
         spellComponent.Initialize();
+    }
+
+    public void AddElement(string element)
+    {
+        spellQueue.Enqueue(element);
     }
 
     public void TakeDamage(float amount)

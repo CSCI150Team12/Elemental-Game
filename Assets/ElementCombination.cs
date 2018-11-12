@@ -18,29 +18,29 @@ public class ElementCombination : MonoBehaviour
         elements.Add("Water + Earth", "Mud");
         //Complexity 3
         elements.Add("Air + Fireball", "Two Fireballs");
-        elements.Add("Air + Ice", "Snow");
-        elements.Add("Air + Sand", "Tornado");
-        elements.Add("Air + Steam", "Fog");
+        //elements.Add("Air + Ice", "Snow");
+        //elements.Add("Air + Sand", "Tornado");
+        //elements.Add("Air + Steam", "Fog");
         elements.Add("Air + Magma", "Stone");
-        elements.Add("Air + Mud", "Dirt");
+        //elements.Add("Air + Mud", "Dirt");
         elements.Add("Fire + Fireball", "Bigger Fireball");
         elements.Add("Fire + Ice", "Water");
         elements.Add("Fire + Sand", "Glass");
         elements.Add("Fire + Steam", "Air");
-        elements.Add("Fire + Magma", "Plasma");
-        elements.Add("Fire + Mud", "Brick");
-        elements.Add("Water + Fireball", "Steam Ball");
-        elements.Add("Water + Ice", "Glacier");
+        //elements.Add("Fire + Magma", "Plasma");
+        //elements.Add("Fire + Mud", "Brick");
+        elements.Add("Water + Fireball", "Steamball");
+        //elements.Add("Water + Ice", "Glacier");
         elements.Add("Water + Sand", "Quicksand");
-        elements.Add("Water + Steam", "Cloud");
-        elements.Add("Water + Magma", "Obsidian");
+        //elements.Add("Water + Steam", "Cloud");
+        //elements.Add("Water + Magma", "Obsidian");
         elements.Add("Water + Mud", "Mud");
-        elements.Add("Earth + Fireball", "Magma Ball");
-        elements.Add("Earth + Ice", "Tundra");
-        elements.Add("Earth + Sand", "Desert");
-        elements.Add("Earth + Steam", "Geyser");
-        elements.Add("Earth + Magma", "Volcano");
-        elements.Add("Earth + Mud", "Swamp");
+        elements.Add("Earth + Fireball", "Magmaball");
+        //elements.Add("Earth + Ice", "Tundra");
+        //elements.Add("Earth + Sand", "Desert");
+        //elements.Add("Earth + Steam", "Geyser");
+        //elements.Add("Earth + Magma", "Volcano");
+        //elements.Add("Earth + Mud", "Swamp");
         //Collectible items/Extra
         elements.Add("Blackhole + Fire", "Star");
     }

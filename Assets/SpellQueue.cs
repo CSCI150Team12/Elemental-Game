@@ -2,15 +2,18 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 
 public class SpellQueue : MonoBehaviour
 {
     LinkedList<string> spellQueue = new LinkedList<string>();
     ElementCombination elementCombination;
+    TMP_Text spellQueueUI;
     public void Start()
     {
         elementCombination = gameObject.AddComponent<ElementCombination>();
+        spellQueueUI = GetComponent<PlayerController>().spellQueueUI;
     }
     public void Enqueue(string element) // add last 
     {
@@ -32,17 +35,32 @@ public class SpellQueue : MonoBehaviour
             }
         }
         spellQueue.AddLast(result);
+        UpdateUI();
     }
    public string  Dequeue() // remove first/head 
     {
         string result = spellQueue.First.Value;
         spellQueue.RemoveFirst();
+        UpdateUI();
         return result;
     }
     public string Pop() // remove last/tail  
     {
         string result = spellQueue.Last.Value;
         spellQueue.RemoveLast();
+        UpdateUI();
         return result;
+    }
+    private void UpdateUI()
+    {
+        if (spellQueueUI)
+        {
+            spellQueueUI.text = "";
+            foreach(string element in spellQueue)
+            {
+                spellQueueUI.text += element + " | ";
+            }
+            spellQueueUI.text = spellQueueUI.text.TrimEnd(' ', '|');
+        }
     }
 }
