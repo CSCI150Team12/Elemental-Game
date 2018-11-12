@@ -118,7 +118,7 @@ MeshCollider:
   m_Mesh: {fileID: 4300012, guid: a7b5c061937834d4aacd0dcbf8277143, type: 3}
 --- !u!114 &114463318798492012
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1507649953330256}

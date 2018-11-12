@@ -22,7 +22,7 @@ public class ArenaCollapseScript : MonoBehaviour {
         sobject = GameObject.FindGameObjectsWithTag("SObject");
         cobject = GameObject.FindGameObjectsWithTag("CObject");
     }
-	
+
 	// Update is called once per frame
 	void Update () {
         float t = Time.time - startTime;
@@ -33,7 +33,7 @@ public class ArenaCollapseScript : MonoBehaviour {
                 gameObject.GetComponent<Rigidbody>().useGravity = true;
                 for (int i = 0; i < cobject.Length; i++) {
                     cobject[i].GetComponent<Rigidbody>().isKinematic = false;
-                    cobject[i].GetComponent<MeshCollider>().convex = false;
+                    //cobject[i].GetComponent<MeshCollider>().convex = false;
 
                 }
             }
@@ -44,7 +44,7 @@ public class ArenaCollapseScript : MonoBehaviour {
                 gameObject.GetComponent<Rigidbody>().useGravity = true;
                 for (int i = 0; i < sobject.Length; i++) {
                     sobject[i].GetComponent<Rigidbody>().isKinematic = false;
-                    sobject[i].GetComponent<MeshCollider>().enabled = false;
+                    //sobject[i].GetComponent<MeshCollider>().convex = false;
 
                 }
             }
@@ -55,7 +55,7 @@ public class ArenaCollapseScript : MonoBehaviour {
                 gameObject.GetComponent<Rigidbody>().useGravity = true;
                 for (int i = 0; i < tobject.Length; i++) {
                     tobject[i].GetComponent<Rigidbody>().isKinematic = false;
-                    tobject[i].GetComponent<MeshCollider>().enabled = false;
+                    //tobject[i].GetComponent<MeshCollider>().convex = false;
 
                 }
             }
@@ -66,7 +66,7 @@ public class ArenaCollapseScript : MonoBehaviour {
                 gameObject.GetComponent<Rigidbody>().useGravity = true;
                 for (int i = 0; i < qobject.Length; i++) {
                     qobject[i].GetComponent<Rigidbody>().isKinematic = false;
-                    qobject[i].GetComponent<MeshCollider>().enabled = false;
+                    //qobject[i].GetComponent<MeshCollider>().convex = false;
 
                 }
             }
@@ -77,7 +77,7 @@ public class ArenaCollapseScript : MonoBehaviour {
                 gameObject.GetComponent<Rigidbody>().useGravity = true;
                 for (int i = 0; i < fobject.Length; i++) {
                     fobject[i].GetComponent<Rigidbody>().isKinematic = false;
-                    fobject[i].GetComponent<MeshCollider>().enabled = false;
+                    //fobject[i].GetComponent<MeshCollider>().convex = false;
 
                 }
             }
@@ -88,7 +88,7 @@ public class ArenaCollapseScript : MonoBehaviour {
                 gameObject.GetComponent<Rigidbody>().useGravity = true;
                 for (int i = 0; i < fobject2.Length; i++) {
                     fobject2[i].GetComponent<Rigidbody>().isKinematic = false;
-                    fobject2[i].GetComponent<MeshCollider>().enabled = false;
+                    //fobject2[i].GetComponent<MeshCollider>().convex = false;
                 }
             }
         }
