@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2017
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elemental-Game", "Elemental-Game.csproj", "{0811C728-799A-81BC-2896-2356E646F56C}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.Postprocessing.Runtime", "Unity.Postprocessing.Runtime.csproj", "{49FCAFB7-7D0A-B3F6-2171-B4248A94EC21}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elemental-Game", "Elemental-Game.csproj", "{0811C728-799A-81BC-2896-2356E646F56C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.TextMeshPro", "Unity.TextMeshPro.csproj", "{07A21C90-D344-AE1A-8456-9910C203B41A}"
 EndProject
@@ -35,14 +35,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{0811C728-799A-81BC-2896-2356E646F56C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0811C728-799A-81BC-2896-2356E646F56C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0811C728-799A-81BC-2896-2356E646F56C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0811C728-799A-81BC-2896-2356E646F56C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{49FCAFB7-7D0A-B3F6-2171-B4248A94EC21}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{49FCAFB7-7D0A-B3F6-2171-B4248A94EC21}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{49FCAFB7-7D0A-B3F6-2171-B4248A94EC21}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{49FCAFB7-7D0A-B3F6-2171-B4248A94EC21}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0811C728-799A-81BC-2896-2356E646F56C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0811C728-799A-81BC-2896-2356E646F56C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0811C728-799A-81BC-2896-2356E646F56C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0811C728-799A-81BC-2896-2356E646F56C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{07A21C90-D344-AE1A-8456-9910C203B41A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{07A21C90-D344-AE1A-8456-9910C203B41A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{07A21C90-D344-AE1A-8456-9910C203B41A}.Release|Any CPU.ActiveCfg = Release|Any CPU
