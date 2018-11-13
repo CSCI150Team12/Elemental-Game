@@ -7,6 +7,7 @@ public class Spell : MonoBehaviour {
     public bool dying = false;
     public bool hasLifespan = false;
     public bool oneShot = false;
+    public bool noCast = false;
     public float lifespan = 0f;
     public Vector3 offset = new Vector3(0, 1.25f, 1.5f);
     public float triggerForce = 0f;
@@ -18,8 +19,7 @@ public class Spell : MonoBehaviour {
     public float startSpeed = 0f;
     private float lifeTime;
     protected Vector3 velocity = Vector3.zero;
-    public GameObject bit;
-    public Vector3 bitVelocity;
+    public bool stopAnimation = false;
 
 
     public virtual void Start()
@@ -28,6 +28,10 @@ public class Spell : MonoBehaviour {
         if (oneShot)
         {
             StartCoroutine(OneShot());
+        }
+        if (noCast)
+        {
+            Initialize();
         }
     }
 
@@ -49,7 +53,7 @@ public class Spell : MonoBehaviour {
 
     protected virtual void OnTriggerEnter(Collider other)
     {
-        if (other.GetComponentInParent<Rigidbody>())
+        if (other.GetComponentInParent<Rigidbody>() && !GetComponent<SpellField>())
         {
             
             ApplyEffect(other.gameObject);
@@ -58,7 +62,6 @@ public class Spell : MonoBehaviour {
             {
                 player.TakeDamage(damageAmount);
                 player.GetComponent<Rigidbody>().AddForce(velocity.normalized * DamageForceScale(player, 1500f));
-                print(velocity.normalized * DamageForceScale(player, 100f));
             }
             else
             {
@@ -115,9 +118,9 @@ public class Spell : MonoBehaviour {
         {
             meshRenderer.enabled = true;
         }
-        if (bit)
+        if (GetComponent<BitEmitter>())
         {
-            StartCoroutine(EmitBits());
+            GetComponent<BitEmitter>().Initialize();
         }
         if (GetComponent<Rigidbody>())
         {
@@ -134,13 +137,13 @@ public class Spell : MonoBehaviour {
         }
         foreach (Collider collider in GetComponentsInChildren<Collider>())
         {
-            GetComponent<Collider>().enabled = false;
+            collider.enabled = false;
         }
         if (isHidden)
         {
             foreach (MeshRenderer collider in GetComponentsInChildren<MeshRenderer>())
             {
-                GetComponent<MeshRenderer>().enabled = false;
+                collider.enabled = false;
             }
         }
     }
@@ -153,7 +156,7 @@ public class Spell : MonoBehaviour {
     protected virtual IEnumerator OneShot()
     {
         yield return new WaitForSeconds(0.1f);
-        dying = true;
+        stopAnimation = true;
     }
 
     public virtual void ApplyEffect(GameObject obj)
@@ -164,24 +167,9 @@ public class Spell : MonoBehaviour {
         }
     }
 
-    private IEnumerator EmitBits()
-    {
-        for (int i = 0; i < 200; i++)
-        {
-            for (int j = 0; j < 2; j++)
-            {
-                GameObject obj = Instantiate(bit, transform.position + new Vector3(Random.Range(0f, 0.5f), Random.Range(0f, 0.5f), Random.Range(0f, 0.5f)), transform.rotation);
-                obj.GetComponent<Rigidbody>().velocity = transform.TransformPoint(bitVelocity) * Random.Range(0.9f, 1.1f);
-                obj.GetComponent<SpellBit>().spell = this;
-            }
-            yield return new WaitForSeconds(Random.Range(0.0005f, 0.001f));
-        }
-    }
-
     public virtual void Die()
     {
         Stop();
-
         Destroy(gameObject, deathDelay);
         dying = true;
     }

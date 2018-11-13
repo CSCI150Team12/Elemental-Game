@@ -299,6 +299,8 @@ GameObject:
   - component: {fileID: 54837648036926096}
   - component: {fileID: 114695055738679228}
   - component: {fileID: 136140496064433670}
+  - component: {fileID: 114539691983330444}
+  - component: {fileID: 114761650014326560}
   m_Layer: 12
   m_Name: Wizard_with_ragdoll
   m_TagString: Untagged
@@ -1823,6 +1825,17 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &114539691983330444
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1338885616941192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dddbb105f85d1aa4f9a9f0c761638071, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114695055738679228
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1835,12 +1848,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerNumber: 2
+  damageUI: {fileID: 0}
   moveSpeed: 4
   rotateSpeed: 10
   damage: 0
   jumpForce: 300
   spellStr: Water
   pelvis: {fileID: 1801454307402824}
+--- !u!114 &114761650014326560
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1338885616941192}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fa4b46bb9a7d6a449316dfeb5b96243, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!135 &135905844301194830
 SphereCollider:
   m_ObjectHideFlags: 1

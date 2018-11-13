@@ -4,18 +4,37 @@ using UnityEngine;
 
 public class EarthSpell : Spell
 {
-	
-	public override void Update () {
+
+    private GameObject tile;
+
+    public override void Initialize()
+    {
+        RaycastHit hit;
+        if (Physics.Raycast(transform.position, new Vector3(0, 1, 0), out hit, 100, 1 << 9) && !hit.transform.GetComponentInChildren<EarthSpell>())
+        {
+            transform.position = hit.transform.position;
+            transform.rotation = hit.transform.rotation;
+            tile = hit.transform.gameObject;
+            transform.parent = hit.transform;
+            base.Initialize();
+        }
+        else
+        {
+            Die();
+        }
+    }
+
+    public override void Update () {
         base.Update();
-        if (started)
+        if (started && transform.parent.GetComponent<Rigidbody>().isKinematic)
         {
             if (dying)
             {
-                Slide(-5f, -1.1f, 1);
+                Slide(-5f, 0f, 2);
             }
             else
             {
-                Slide(5f, -1.1f, 1);
+                Slide(5f, 0f, 2);
             }
         }
         
@@ -25,7 +44,14 @@ public class EarthSpell : Spell
     {
         if ((transform.position.y < max && speed > 0) || (transform.position.y > min && speed < 0 ))
         {
-            transform.position += new Vector3(0, speed * Time.deltaTime, 0);
+            tile.transform.position += new Vector3(0, speed * Time.deltaTime, 0);
+            transform.Find("Body").localScale += new Vector3(0, 0, 2.5f * speed * Time.deltaTime);
+            transform.Find("Body").position -= new Vector3(0, speed * Time.deltaTime, 0);
         }
+    }
+
+    public override void Die()
+    {
+        base.Die();
     }
 }

@@ -59,13 +59,16 @@ MonoBehaviour:
   oneShot: 0
   lifespan: 1
   offset: {x: 0, y: 1.25, z: 1.5}
-  triggerForce: 10
+  triggerForce: 20
   triggerEffectName: 
   damageAmount: 0.3
   deathDelay: 1
   animationVar: IsChanneling
   started: 0
   startSpeed: 0
+  bit: {fileID: 0}
+  bitVelocity: {x: 0, y: 0, z: 0}
+  stopAnimation: 0
 --- !u!198 &198804773874465898
 ParticleSystem:
   m_ObjectHideFlags: 1

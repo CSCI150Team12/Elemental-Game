@@ -2,16 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class PlayerController : MonoBehaviour
 {
     public int playerNumber = 1;
     public Slider damageUI;
+    public TMP_Text spellQueueUI;
     public float moveSpeed = 4f;
     public float rotateSpeed = 10f;
     public float damage = 0f;
     public float jumpForce = 300f;
-    public string spellStr = "Fire";
+    private SpellQueue spellQueue;
     public GameObject pelvis;
     private bool ragdollToggle = false;
     private Transform root;
@@ -19,6 +21,7 @@ public class PlayerController : MonoBehaviour
     private Animator animator;
     private bool canJump = true;
     private bool canCast = true;
+    private float castReset = 0f;
     private bool frozen = false;
 
     Vector3 camForward, right;
@@ -32,6 +35,21 @@ public class PlayerController : MonoBehaviour
         animator = GetComponent<Animator>();
         root = transform.Find("Root");
         SetRagdoll(false, true);
+        spellQueue = gameObject.AddComponent<SpellQueue>();
+    }
+
+    void Update()
+    {
+        if (!frozen)
+        {
+            GetInput();
+        }
+        if (currentSpell != null && (currentSpell.dying || currentSpell.stopAnimation))
+        {
+            animator.SetBool("IsChanneling", false);
+            currentSpell = null;
+            canCast = true;
+        }
     }
 
     void FixedUpdate()
@@ -39,11 +57,6 @@ public class PlayerController : MonoBehaviour
         if (!frozen)
         {
             Move();
-            GetInput();
-        }
-        if (currentSpell != null && currentSpell.dying)
-        {
-            animator.SetBool("IsChanneling", false);
         }
     }
 
@@ -59,23 +72,39 @@ public class PlayerController : MonoBehaviour
         }
         if (Input.GetButtonDown("Air P" + playerNumber))
         {
-            spellStr = "Fireball";
+            spellQueue.Enqueue("Air");
         }
         if (Input.GetButtonDown("Fire P" + playerNumber))
         {
-            spellStr = "Bigger Fireball";
+            spellQueue.Enqueue("Fire");
         }
         if (Input.GetButtonDown("Water P" + playerNumber))
         {
-            spellStr = "Two Fireballs";
+            spellQueue.Enqueue("Water");
         }
         if (Input.GetButtonDown("Earth P" + playerNumber))
         {
-            spellStr = "Magma";
+            spellQueue.Enqueue("Earth");
         }
-        if (canCast && Input.GetAxis("Cast P" + playerNumber) == 1)
+        if (castReset < Time.time && (Input.GetAxis("Cast P" + playerNumber) == 1 || Input.GetButtonDown("Cast2 P" + playerNumber)))
         {
-            StartCoroutine(CastSpell());
+            castReset = Time.time + 1f;
+            if (canCast)
+            {
+                if (Input.GetAxis("Cast P" + playerNumber) == 1)
+                {
+                    StartCoroutine(CastSpell(spellQueue.Dequeue()));
+                }else if (Input.GetButtonDown("Cast2 P" + playerNumber))
+                {
+                    StartCoroutine(CastSpell(spellQueue.Pop()));
+                }
+                
+            }
+            else if (currentSpell && currentSpell.GetComponent<BitEmitter>())
+            {
+                currentSpell.GetComponent<BitEmitter>().Expel();
+            }
+            
         }
     }
 
@@ -107,7 +136,6 @@ public class PlayerController : MonoBehaviour
         {
             animator.SetFloat("RunFront", 0);
         }
-
         transform.GetComponent<Rigidbody>().MovePosition(transform.position + rightMovement + upMovement);
     }
 
@@ -121,7 +149,7 @@ public class PlayerController : MonoBehaviour
         canJump = true;
     }
 
-    IEnumerator CastSpell()
+    IEnumerator CastSpell(string spellStr)
     {
         GameObject spellPrefab = (GameObject)Instantiate(Resources.Load("Prefabs/Spells/" + spellStr + " Spell"));
         Spell spellComponent = spellPrefab.GetComponent<Spell>();
@@ -144,8 +172,11 @@ public class PlayerController : MonoBehaviour
         spellPrefab.transform.rotation = transform.rotation;
         spellComponent.SetVelocity(transform.forward);
         spellComponent.Initialize();
-        yield return new WaitForSeconds(1f);
-        canCast = true;
+    }
+
+    public void AddElement(string element)
+    {
+        spellQueue.Enqueue(element);
     }
 
     public void TakeDamage(float amount)
