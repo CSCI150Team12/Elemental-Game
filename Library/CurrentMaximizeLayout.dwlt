@@ -23,7 +23,7 @@ MonoBehaviour:
   m_MinSize: {x: 581, y: 450}
   m_MaxSize: {x: 14002, y: 14021}
   vertical: 0
-  controlID: 6389
+  controlID: 5652
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -126,7 +126,7 @@ MonoBehaviour:
   m_MinSize: {x: 304, y: 450}
   m_MaxSize: {x: 10000, y: 14021}
   vertical: 1
-  controlID: 6390
+  controlID: 5612
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -150,7 +150,7 @@ MonoBehaviour:
   m_MinSize: {x: 304, y: 200}
   m_MaxSize: {x: 8004, y: 4021}
   vertical: 0
-  controlID: 6355
+  controlID: 5590
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -203,9 +203,9 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 904c0100
-    m_LastClickedID: 85136
-    m_ExpandedIDs: c4daf7ff50ebf7ff824ff8ffce33f9ffae39f9ff163ef9ff744df9ffb8a6fcfff0a7fcffcc27fdff9441fdff4c74fdff7289fdffa295ffffa0b4ffff52ddfffff4ffffff00000000b0870000c0870000f08700002ec300003ec3000070c3000072f000005ef80000d0f8000020fb000042fc000034fe0000c40f0100fa0f01008435010094350100c6350100904c0100784d0100d04e01008c500100be500100
+    m_SelectedIDs: 74130000
+    m_LastClickedID: 0
+    m_ExpandedIDs: da1eedffee44edffaae5ffffe4fbffff00000000e64a0000184b0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -221,7 +221,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 0
-      m_ClientGUIView: {fileID: 0}
+      m_ClientGUIView: {fileID: 5}
     m_SearchString: 
   m_ExpandedScenes:
   - Game
@@ -322,9 +322,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: -0.029506417, y: 0.9411173, z: -0.085227706, w: -0.32582802}
   m_Size:
-    m_Target: 24.552261
+    m_Target: 32.31164
     speed: 2
-    m_Value: 24.552261
+    m_Value: 32.31164
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -502,20 +502,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets/Resources/Prefabs/Spells
   m_ViewMode: 1
   m_StartGridSize: 70
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/Resources/Prefabs/Spells
   m_LastFoldersGridSize: 70
   m_LastProjectPath: /Users/jovani/Documents/GitHub/Elemental-Game
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 251}
-    m_SelectedIDs: 4c4f0000
-    m_LastClickedID: 20300
-    m_ExpandedIDs: 00000000344d0000484d0000bc4d0000c44e000016500000705000006a530000fe530000965d0000985d00009a5d00009c5d00009e5d0000a05d0000a25d000000ca9a3b
+    m_SelectedIDs: 7e140000
+    m_LastClickedID: 5246
+    m_ExpandedIDs: 00000000b60f0000d60f00008410000002120000e013000066140000a41800006c19000030460000324600003446000036460000384600003a4600003c46000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -543,7 +543,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000344d0000484d0000bc4d0000c44e000016500000705000006a530000fe530000965d0000985d00009a5d00009c5d00009e5d0000a05d0000a25d000000ca9a3b
+    m_ExpandedIDs: 00000000b60f0000d60f00008410000002120000e013000066140000a41800006c19000030460000324600003446000036460000384600003a4600003c46000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -568,9 +568,9 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 904c0100
-    m_LastClickedInstanceID: 85136
-    m_HadKeyboardFocusLastEvent: 0
+    m_SelectedInstanceIDs: 74130000
+    m_LastClickedInstanceID: 4980
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c62300005e310000302c00001c29000096310000382e0000746f000030e20000da3a0000344900006244000040430000d26c0000d2d10200f6de0000780f0000a2280000bee20000a4e40000684bf2ffb2c3ffffcc2b00000000000070f2fbff224cf8ffcadb0200e23b0000880c00006e0b0000f80b0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -626,7 +626,7 @@ MonoBehaviour:
   m_AnimEditor: {fileID: 0}
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 79288
+  m_LastSelectedObjectID: 23630
 --- !u!114 &14
 MonoBehaviour:
   m_ObjectHideFlags: 52
