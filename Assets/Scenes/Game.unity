@@ -5434,8 +5434,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Button: {fileID: 461598534}
-  hoverButtonSFX: {fileID: 0}
-  clickButtonSFX: {fileID: 0}
+  hoverButtonSFX: {fileID: 8300000, guid: 51aa57914038548b1b1131e1f4c62596, type: 3}
+  clickButtonSFX: {fileID: 8300000, guid: 90b81c0869bc24c8d8f31c4487fef5f5, type: 3}
 --- !u!4 &368591371 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4200649020935196, guid: b99fbfd81fc0f484fb2376aa85693b5f,
@@ -6719,7 +6719,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &461598533
 Transform:
   m_ObjectHideFlags: 0
@@ -6743,7 +6743,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 59d2bcac65d294e14aa7b33b44e0e78c, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -9421,7 +9421,7 @@ GameObject:
   - component: {fileID: 620203615}
   - component: {fileID: 620203619}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: PauseCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14098,7 +14098,7 @@ GameObject:
   - component: {fileID: 908284803}
   - component: {fileID: 908284802}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: HealthCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -17079,7 +17079,7 @@ GameObject:
   - component: {fileID: 1085529362}
   - component: {fileID: 1085529366}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: GameOverCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
