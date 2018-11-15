@@ -1,15 +1,19 @@
 ﻿<Properties StartupConfiguration="{31A3256A-6F20-14C7-D50D-174046A142A0}|">
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/DestroyByBoundary.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/SpellQueue.cs">
     <Files>
       <File FileName="Assets/Scripts/Spells/Spell.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/GameTimer.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/PlayerSpawner.cs" Line="21" Column="1" />
-      <File FileName="Assets/Scripts/PlayerDeath.cs" Line="14" Column="30" />
+      <File FileName="Assets/Scripts/GameTimer.cs" Line="19" Column="58" />
+      <File FileName="Assets/Scripts/PlayerSpawner.cs" Line="17" Column="53" />
+      <File FileName="Assets/Scripts/PlayerDeath.cs" Line="28" Column="32" />
       <File FileName="Assets/Scripts/Spells/EarthSpell.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/DestroyByBoundary.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/GameOverMenu.cs" Line="10" Column="37" />
       <File FileName="Assets/Scripts/ArenaCollapseScript.cs" Line="36" Column="23" />
+      <File FileName="Assets/SpellQueue.cs" Line="66" Column="77" />
+      <File FileName="Assets/ElementCombination.cs" Line="24" Column="42" />
+      <File FileName="Assets/Scripts/MainMenu.cs" Line="6" Column="50" />
+      <File FileName="Assets/Scripts/PlayerController.cs" Line="12" Column="38" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

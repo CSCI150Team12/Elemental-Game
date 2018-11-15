@@ -3,7 +3,9 @@ guid: 9fa4b46bb9a7d6a449316dfeb5b96243
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - spellQueueUI: {instanceID: 0}
+  - spellIcon: {fileID: 11400000, guid: 5ab60415d586342758f7ba57580077d0, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

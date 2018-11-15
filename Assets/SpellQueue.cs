@@ -3,17 +3,21 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-
+using System.Text;
 
 public class SpellQueue : MonoBehaviour
 {
     LinkedList<string> spellQueue = new LinkedList<string>();
     ElementCombination elementCombination;
-    TMP_Text spellQueueUI;
+    public TMP_Text spellQueueUI;
+    public TMP_SpriteAsset spellIcon;
+    StringBuilder build;
+
     public void Start()
     {
         elementCombination = gameObject.AddComponent<ElementCombination>();
         spellQueueUI = GetComponent<PlayerController>().spellQueueUI;
+        spellIcon = GetComponent<PlayerController>().spellIcon;
     }
     public void Enqueue(string element) // add last 
     {
@@ -53,12 +57,17 @@ public class SpellQueue : MonoBehaviour
     }
     private void UpdateUI()
     {
+        build = new StringBuilder();
+
         if (spellQueueUI)
         {
             spellQueueUI.text = "";
             foreach(string element in spellQueue)
             {
-                spellQueueUI.text += element + " | ";
+                String newElement = element.Replace(" ", String.Empty); // Removes whitespace from element
+                build.Append("<sprite=\"" + newElement + "\" name=\"" + newElement + "\">");
+                spellQueueUI.SetText(build);
+
             }
             spellQueueUI.text = spellQueueUI.text.TrimEnd(' ', '|');
         }
