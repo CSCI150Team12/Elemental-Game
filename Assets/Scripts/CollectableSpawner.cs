@@ -58,17 +58,35 @@ public class CollectableSpawner : MonoBehaviour {
     {
         duration -= Time.deltaTime; // Decrements duration, when 0 no longer spawn items
 
-        if (duration < 60 & duration > 30)
+        if (duration < 100 & duration > 80)
         {
-            RangeX = 7f;
-            RangeZ = 7f;
-            spawnTimeMultiplier = 0.75f; 
+            RangeX = 8f;
+            RangeZ = 8f;
+            spawnTimeMultiplier = 0.75f;
         }
-        else if (duration < 30)
+        else if (duration < 80 & duration > 60)
+        {
+            RangeX = 5f;
+            RangeZ = 5f;
+            spawnTimeMultiplier = 0.5f;
+        }
+        else if (duration < 60 & duration > 40)
         {
             RangeX = 4f;
             RangeZ = 4f;
-            spawnTimeMultiplier = 0.5f;
+            spawnTimeMultiplier = 0.25f;
+        }
+        else if (duration < 40 & duration > 20)
+        {
+            RangeX = 3f;
+            RangeZ = 3f;
+            spawnTimeMultiplier = 0.1f;
+        }
+        else if (duration < 20)
+        {
+            RangeX = 2f;
+            RangeZ = 2f;
+            spawnTimeMultiplier = 0.05f;
         }
 
         newPosition = new Vector3(0f, 25f, 0f); // Resets the position to Default
