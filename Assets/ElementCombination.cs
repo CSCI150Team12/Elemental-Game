@@ -18,8 +18,8 @@ public class ElementCombination : MonoBehaviour
         elements.Add("Water + Earth", "Mud");
         //Complexity 3
         elements.Add("Air + Fireball", "Two Fireballs");
-        //elements.Add("Air + Ice", "Snow");
-        //elements.Add("Air + Sand", "Tornado");
+        elements.Add("Air + Ice", "Snow");
+        elements.Add("Air + Sand", "Tornado");
         //elements.Add("Air + Steam", "Fog");
         elements.Add("Air + Magma", "Stone");
         elements.Add("Air + Mud", "Mudball");
@@ -27,7 +27,8 @@ public class ElementCombination : MonoBehaviour
         elements.Add("Fire + Ice", "Water");
         elements.Add("Fire + Sand", "Glass");
         elements.Add("Fire + Steam", "Air");
-        //elements.Add("Fire + Magma", "Plasma");
+        elements.Add("Fire + Magma", "Plasma");
+        
         //elements.Add("Fire + Mud", "Brick");
         elements.Add("Water + Fireball", "Steam Ball");
         //elements.Add("Water + Ice", "Glacier");
@@ -41,6 +42,8 @@ public class ElementCombination : MonoBehaviour
         //elements.Add("Earth + Steam", "Geyser");
         //elements.Add("Earth + Magma", "Volcano");
         //elements.Add("Earth + Mud", "Swamp");
+        //Complexity 4
+        elements.Add("Air + Plasma", "Lightning");
         //Collectible items/Extra
         elements.Add("Black Hole + Fire", "Star");
     }

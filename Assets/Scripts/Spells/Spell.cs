@@ -13,11 +13,14 @@ public class Spell : MonoBehaviour {
     public float triggerForce = 0f;
     public string triggerEffectName = "";
     public float damageAmount = 0;
+    public float damagePerSecond = 0f;
     public float deathDelay = 0f;
+    public float turnSpeedModifier = 1f;
     public string animationVar = "IsChanneling";
     public bool started = false;
     public float startSpeed = 0f;
     private float lifeTime;
+    private PlayerController player;
     protected Vector3 velocity = Vector3.zero;
     public bool stopAnimation = false;
 
@@ -32,6 +35,15 @@ public class Spell : MonoBehaviour {
         if (noCast)
         {
             Initialize();
+        }
+    }
+
+    void DealDamage(GameObject other)
+    {
+        PlayerController player = other.GetComponent<PlayerController>();
+        if (player)
+        {
+            player.TakeDamage(damagePerSecond / 10);
         }
     }
 
@@ -68,6 +80,11 @@ public class Spell : MonoBehaviour {
                 other.GetComponentInParent<Rigidbody>().AddForce(velocity.normalized * triggerForce);
             }
         }
+    }
+
+    protected void OnTriggerStay(Collider other)
+    {
+        DealDamage(other.gameObject);
     }
 
     protected virtual void OnParticleCollision(GameObject other)
@@ -126,6 +143,11 @@ public class Spell : MonoBehaviour {
         {
             GetComponent<Rigidbody>().velocity = velocity;
         }
+        player = GetComponentInParent<PlayerController>();
+        if (player)
+        {
+            player.rotateSpeed /= turnSpeedModifier;
+        }
         started = true;
     }
 
@@ -171,6 +193,9 @@ public class Spell : MonoBehaviour {
     {
         Stop();
         Destroy(gameObject, deathDelay);
+        if (player){
+            player.rotateSpeed *= turnSpeedModifier;
+        }
         dying = true;
     }
 }

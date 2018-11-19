@@ -339,6 +339,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\ElementCombination.cs" />
+    <Compile Include="Assets\LightningSpell.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Attributes\GetSetAttribute.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Attributes\MinAttribute.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Attributes\TrackballAttribute.cs" />
@@ -415,6 +416,7 @@
     <Compile Include="Assets\Scripts\Spells\SpellEffect.cs" />
     <Compile Include="Assets\Scripts\Spells\SpellField.cs" />
     <Compile Include="Assets\Scripts\Spells\StarSpell.cs" />
+    <Compile Include="Assets\Scripts\Spells\TornadoSpell.cs" />
     <Compile Include="Assets\Scripts\Spells\TwoFireballsSpell.cs" />
     <Compile Include="Assets\Scripts\Spells\WaterSpell.cs" />
     <Compile Include="Assets\SpellQueue.cs" />
