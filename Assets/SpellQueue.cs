@@ -10,14 +10,12 @@ public class SpellQueue : MonoBehaviour
     LinkedList<string> spellQueue = new LinkedList<string>();
     ElementCombination elementCombination;
     public TMP_Text spellQueueUI;
-    public TMP_SpriteAsset spellIcon;
     StringBuilder build;
 
     public void Start()
     {
         elementCombination = gameObject.AddComponent<ElementCombination>();
         spellQueueUI = GetComponent<PlayerController>().spellQueueUI;
-        spellIcon = GetComponent<PlayerController>().spellIcon;
     }
     public void Enqueue(string element) // add last 
     {

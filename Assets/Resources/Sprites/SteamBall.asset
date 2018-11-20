@@ -21,12 +21,12 @@ MonoBehaviour:
     y: 0
     width: 64
     height: 64
-    xOffset: -32
-    yOffset: 32
-    xAdvance: 64
-    scale: 1
-    name: Steam Ball
-    hashCode: 1271556909
+    xOffset: 0
+    yOffset: 34.2
+    xAdvance: -74.9
+    scale: 2
+    name: SteamBall
+    hashCode: 948329805
     unicode: 0
     pivot: {x: -32, y: 32}
     sprite: {fileID: 21300000, guid: 541e4c8f2aa324b09885de204bdec8b0, type: 3}

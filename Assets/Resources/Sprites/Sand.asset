@@ -21,10 +21,10 @@ MonoBehaviour:
     y: 0
     width: 64
     height: 64
-    xOffset: -32
-    yOffset: 32
-    xAdvance: 64
-    scale: 1
+    xOffset: 0
+    yOffset: 34.2
+    xAdvance: -74.9
+    scale: 2
     name: Sand
     hashCode: 3019928
     unicode: 0

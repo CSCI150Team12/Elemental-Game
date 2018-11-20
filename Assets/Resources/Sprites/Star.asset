@@ -9,7 +9,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 84a92b25f83d49b9bc132d206b370281, type: 3}
-  m_Name: Sun
+  m_Name: Star
   m_EditorClassIdentifier: 
   hashCode: 91112
   material: {fileID: 21983009473419270}
@@ -21,12 +21,12 @@ MonoBehaviour:
     y: 0
     width: 64
     height: 64
-    xOffset: -32
-    yOffset: 32
-    xAdvance: 64
-    scale: 1
-    name: Sun
-    hashCode: 91112
+    xOffset: 0
+    yOffset: 34.2
+    xAdvance: -74.9
+    scale: 2
+    name: Star
+    hashCode: 3005684
     unicode: 0
     pivot: {x: -32, y: 32}
     sprite: {fileID: 21300000, guid: 4800140427d444fcf89b10f74af0d895, type: 3}
