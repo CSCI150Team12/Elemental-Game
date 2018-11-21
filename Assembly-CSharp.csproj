@@ -123,6 +123,7 @@
     <Compile Include="Assets\Scripts\GrassTile.cs" />
     <Compile Include="Assets\Scripts\HingeJointTarget.cs" />
     <Compile Include="Assets\Scripts\MainMenu.cs" />
+    <Compile Include="Assets\Scripts\OptionsMenu.cs" />
     <Compile Include="Assets\Scripts\PauseMenu.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\PlayerDeath.cs" />
