@@ -7,7 +7,7 @@ using UnityEngine;
 public class HealthPotionScript : MonoBehaviour
 {
 
-    public GameObject pickupEffect;     // Creates the game object
+   // public GameObject pickupEffect;     // Creates the game object
     private float holder;
 
     private void OnTriggerEnter(Collider other)
@@ -20,7 +20,7 @@ public class HealthPotionScript : MonoBehaviour
 
     IEnumerator Pickup(Collider player)
     {
-        Instantiate(pickupEffect, transform.position, transform.rotation);
+        //Instantiate(pickupEffect, transform.position, transform.rotation);
 
         PlayerController PC = player.GetComponent<PlayerController>();  // Obtain "PlayerController", properties
 

@@ -110,7 +110,7 @@
     <Compile Include="Assets\Scripts\ArenaCollapseScript.cs" />
     <Compile Include="Assets\Scripts\AudioScript.cs" />
     <Compile Include="Assets\Scripts\BitEmitter.cs" />
-    <Compile Include="Assets\Scripts\Collectables\BlackHole2.cs" />
+    <Compile Include="Assets\Scripts\Collectables\collectableClass.cs" />
     <Compile Include="Assets\Scripts\Collectables\HealthPotionScript.cs" />
     <Compile Include="Assets\Scripts\Collectables\SpeedBoost.cs" />
     <Compile Include="Assets\Scripts\CollectableSpawner.cs" />
@@ -122,6 +122,7 @@
     <Compile Include="Assets\Scripts\GameTimer.cs" />
     <Compile Include="Assets\Scripts\GrassTile.cs" />
     <Compile Include="Assets\Scripts\HingeJointTarget.cs" />
+    <Compile Include="Assets\Scripts\LifeSpell.cs" />
     <Compile Include="Assets\Scripts\MainMenu.cs" />
     <Compile Include="Assets\Scripts\PauseMenu.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
