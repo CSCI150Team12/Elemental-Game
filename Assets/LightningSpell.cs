@@ -24,12 +24,11 @@ public class LightningSpell : Spell {
         if (player) { 
             particleSystem.Play();
             GetComponent<Collider>().enabled = false;
-            ApplyEffect(other.gameObject);
-            StartCoroutine(alterParticles(player.gameObject));
+            StartCoroutine(alterParticles(player));
         }
     }
 
-    private IEnumerator alterParticles(GameObject obj)
+    private IEnumerator alterParticles(PlayerController player)
     {
         yield return new WaitForSeconds(0.15f);
         ParticleSystem.Particle[] particles = new ParticleSystem.Particle[particleSystem.particleCount];
@@ -40,10 +39,12 @@ public class LightningSpell : Spell {
         {
             for (int i = 0; i < count; i++)
             {
-                particles[i].position = obj.transform.position + Vector3.one * 0.05f;//Vector3.Lerp(particles[i].position, obj.transform.position, t);
+                particles[i].position = player.transform.position + Vector3.one * 0.05f;//Vector3.Lerp(particles[i].position, obj.transform.position, t);
             }
             particleSystem.SetParticles(particles, count);
         }
+        ApplyEffect(player.gameObject);
+        player.TakeDamage(damageAmount);
         yield return new WaitForSeconds(1f);
         particleSystem.Clear();
         Die();
