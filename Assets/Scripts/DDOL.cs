@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class DDOL : MonoBehaviour
 {
 
-    // Dont destroy on load
+    // Don't destroy 'ManagerObject' on load
     private void Awake()
     {
         DontDestroyOnLoad(gameObject);
