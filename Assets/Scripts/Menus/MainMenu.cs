@@ -8,10 +8,9 @@ public class MainMenu : MonoBehaviour
 
     public GameObject mainMenuUI;
 
-    // Start game
+    // Load 'Game' scene
     public void PlayGame()
     {
-        // Load 'Game' scene
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         Time.timeScale = 1f;
     }
