@@ -1,10 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class OptionsMenu : MonoBehaviour
 {
-
+    public AudioMixer audioMixer;
     public GameObject optionsMenuUI;
 
     // Hide options menu
@@ -12,6 +13,12 @@ public class OptionsMenu : MonoBehaviour
     {
         optionsMenuUI.SetActive(false);
         Time.timeScale = 1f;
+    }
+
+    // Set music volume
+    public void SetMusicVolume(float musicVolume)
+    {
+        audioMixer.SetFloat("MusicFaderVolume", musicVolume);
     }
 
     // Show options menu
