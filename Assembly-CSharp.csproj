@@ -61,6 +61,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\DLScript.cs" />
     <Compile Include="Assets\ElementCombination.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Attributes\GetSetAttribute.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Attributes\MinAttribute.cs" />
@@ -121,6 +122,7 @@
     <Compile Include="Assets\Scripts\FireballSpell.cs" />
     <Compile Include="Assets\Scripts\GameOverMenu.cs" />
     <Compile Include="Assets\Scripts\GameTimer.cs" />
+    <Compile Include="Assets\Scripts\GlobalVariables.cs" />
     <Compile Include="Assets\Scripts\GrassTile.cs" />
     <Compile Include="Assets\Scripts\HingeJointTarget.cs" />
     <Compile Include="Assets\Scripts\LifeSpell.cs" />
@@ -132,6 +134,7 @@
     <Compile Include="Assets\Scripts\QuicksandSpell.cs" />
     <Compile Include="Assets\Scripts\SpellBit.cs" />
     <Compile Include="Assets\Scripts\Spells\AirSpell.cs" />
+    <Compile Include="Assets\Scripts\Spells\DarkSpell.cs" />
     <Compile Include="Assets\Scripts\Spells\EarthSpell.cs" />
     <Compile Include="Assets\Scripts\Spells\FireSpell.cs" />
     <Compile Include="Assets\Scripts\Spells\IceSpell.cs" />
