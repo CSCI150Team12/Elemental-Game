@@ -6,4 +6,5 @@ public static class GlobalVariables
 {
     public static bool LightSwitch = true;
     public static int LightIntensity = 1;
+    public static bool MainCameraActive = true;
 }
