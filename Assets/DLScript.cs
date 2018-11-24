@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DLScript : MonoBehaviour {
 
-    public bool LightSwitch = true;
+     
     private Light myLight;
 	void Start ()
     {
@@ -15,5 +15,6 @@ public class DLScript : MonoBehaviour {
 	void Update ()
     {
         myLight.enabled = GlobalVariables.LightSwitch;
+        myLight.intensity = GlobalVariables.LightIntensity;
     }
 }

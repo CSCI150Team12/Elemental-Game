@@ -138,6 +138,7 @@
     <Compile Include="Assets\Scripts\Spells\EarthSpell.cs" />
     <Compile Include="Assets\Scripts\Spells\FireSpell.cs" />
     <Compile Include="Assets\Scripts\Spells\IceSpell.cs" />
+    <Compile Include="Assets\Scripts\Spells\LightSpell.cs" />
     <Compile Include="Assets\Scripts\Spells\MagmaSpell.cs" />
     <Compile Include="Assets\Scripts\Spells\Spell.cs" />
     <Compile Include="Assets\Scripts\Spells\SpellEffect.cs" />

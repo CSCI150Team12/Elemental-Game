@@ -2252,7 +2252,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6a30c0249fc360449b88b460500ddaa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LightSwitch: 1
 --- !u!1001 &174417394
 Prefab:
   m_ObjectHideFlags: 0
