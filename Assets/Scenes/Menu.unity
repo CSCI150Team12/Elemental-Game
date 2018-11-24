@@ -4127,6 +4127,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   audioMixer: {fileID: 24100000, guid: beef0b7fa275c47d1857a32015dd4205, type: 2}
   optionsMenuUI: {fileID: 595632484}
+  musicSlider: {fileID: 516533706}
+  sfxSlider: {fileID: 1058840848}
+  uiSlider: {fileID: 1161469925}
+  musicVar: 0
+  sfxVar: 0
+  uiVar: 0
 --- !u!114 &2123865840
 MonoBehaviour:
   m_ObjectHideFlags: 0

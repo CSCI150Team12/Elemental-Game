@@ -114,10 +114,10 @@
     <Compile Include="Assets\Scripts\Collectables\SpeedBoost.cs" />
     <Compile Include="Assets\Scripts\CollectableSpawner.cs" />
     <Compile Include="Assets\Scripts\CountdownTimer.cs" />
-    <Compile Include="Assets\Scripts\DDOL.cs" />
     <Compile Include="Assets\Scripts\DestroyByBoundary.cs" />
     <Compile Include="Assets\Scripts\ElementCombination.cs" />
     <Compile Include="Assets\Scripts\FireballSpell.cs" />
+    <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\GameTimer.cs" />
     <Compile Include="Assets\Scripts\GrassTile.cs" />
     <Compile Include="Assets\Scripts\HingeJointTarget.cs" />
