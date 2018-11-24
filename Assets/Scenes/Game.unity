@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657838, g: 0.49641234, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -521,6 +521,7 @@ GameObject:
   - component: {fileID: 41099425}
   - component: {fileID: 41099424}
   - component: {fileID: 41099423}
+  - component: {fileID: 41099422}
   m_Layer: 0
   m_Name: Crate (3)
   m_TagString: FinalObject
@@ -528,6 +529,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &41099422
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 41099421}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0c6495ead5254888b9915e57ba16f91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyed: {fileID: 1727650538923486, guid: 09560ce7490094396a5d3db491a250a7, type: 2}
 --- !u!64 &41099423
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -5491,6 +5504,7 @@ GameObject:
   - component: {fileID: 368688265}
   - component: {fileID: 368688264}
   - component: {fileID: 368688263}
+  - component: {fileID: 368688262}
   m_Layer: 0
   m_Name: Crate (4)
   m_TagString: FinalObject2
@@ -5498,6 +5512,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &368688262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 368688261}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0c6495ead5254888b9915e57ba16f91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyed: {fileID: 1727650538923486, guid: 09560ce7490094396a5d3db491a250a7, type: 2}
 --- !u!64 &368688263
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -5524,7 +5550,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -10558,7 +10584,7 @@ Prefab:
     - target: {fileID: 144110494156038882, guid: f7b8be48a557c8a4f89fc114c14136ad,
         type: 2}
       propertyPath: m_ConnectedAnchor.z
-      value: 0.09896704
+      value: 0.098967105
       objectReference: {fileID: 0}
     - target: {fileID: 144350095059110806, guid: f7b8be48a557c8a4f89fc114c14136ad,
         type: 2}
@@ -10573,7 +10599,7 @@ Prefab:
     - target: {fileID: 144350095059110806, guid: f7b8be48a557c8a4f89fc114c14136ad,
         type: 2}
       propertyPath: m_ConnectedAnchor.z
-      value: 0.00000006676321
+      value: -0.000000016590164
       objectReference: {fileID: 0}
     - target: {fileID: 144121624126630036, guid: f7b8be48a557c8a4f89fc114c14136ad,
         type: 2}
@@ -10583,7 +10609,7 @@ Prefab:
     - target: {fileID: 144121624126630036, guid: f7b8be48a557c8a4f89fc114c14136ad,
         type: 2}
       propertyPath: m_ConnectedAnchor.y
-      value: -0.000000074505806
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 144121624126630036, guid: f7b8be48a557c8a4f89fc114c14136ad,
         type: 2}
@@ -10603,7 +10629,7 @@ Prefab:
     - target: {fileID: 144400102267332114, guid: f7b8be48a557c8a4f89fc114c14136ad,
         type: 2}
       propertyPath: m_ConnectedAnchor.z
-      value: -0.19100016
+      value: -0.1910002
       objectReference: {fileID: 0}
     - target: {fileID: 144441899581949398, guid: f7b8be48a557c8a4f89fc114c14136ad,
         type: 2}
@@ -10618,7 +10644,7 @@ Prefab:
     - target: {fileID: 144441899581949398, guid: f7b8be48a557c8a4f89fc114c14136ad,
         type: 2}
       propertyPath: m_ConnectedAnchor.z
-      value: 0.19100027
+      value: 0.19100033
       objectReference: {fileID: 0}
     - target: {fileID: 144752156432311314, guid: f7b8be48a557c8a4f89fc114c14136ad,
         type: 2}
@@ -10628,7 +10654,7 @@ Prefab:
     - target: {fileID: 144752156432311314, guid: f7b8be48a557c8a4f89fc114c14136ad,
         type: 2}
       propertyPath: m_ConnectedAnchor.y
-      value: -0.0000004954636
+      value: -0.0000003837049
       objectReference: {fileID: 0}
     - target: {fileID: 144752156432311314, guid: f7b8be48a557c8a4f89fc114c14136ad,
         type: 2}
@@ -10643,7 +10669,7 @@ Prefab:
     - target: {fileID: 144506580864451728, guid: f7b8be48a557c8a4f89fc114c14136ad,
         type: 2}
       propertyPath: m_ConnectedAnchor.z
-      value: -0.00000006845221
+      value: -0.00000014808029
       objectReference: {fileID: 0}
     - target: {fileID: 144837772542472722, guid: f7b8be48a557c8a4f89fc114c14136ad,
         type: 2}
@@ -10658,7 +10684,7 @@ Prefab:
     - target: {fileID: 144837772542472722, guid: f7b8be48a557c8a4f89fc114c14136ad,
         type: 2}
       propertyPath: m_ConnectedAnchor.z
-      value: -0.09896711
+      value: -0.09896705
       objectReference: {fileID: 0}
     - target: {fileID: 144310013071231622, guid: f7b8be48a557c8a4f89fc114c14136ad,
         type: 2}
@@ -11776,6 +11802,7 @@ GameObject:
   - component: {fileID: 707273607}
   - component: {fileID: 707273606}
   - component: {fileID: 707273605}
+  - component: {fileID: 707273604}
   m_Layer: 0
   m_Name: Crate (5)
   m_TagString: FinalObject2
@@ -11783,6 +11810,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &707273604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 707273603}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0c6495ead5254888b9915e57ba16f91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyed: {fileID: 1727650538923486, guid: 09560ce7490094396a5d3db491a250a7, type: 2}
 --- !u!64 &707273605
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -11809,7 +11848,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -18134,6 +18173,7 @@ GameObject:
   - component: {fileID: 1134811434}
   - component: {fileID: 1134811433}
   - component: {fileID: 1134811432}
+  - component: {fileID: 1134811431}
   m_Layer: 0
   m_Name: Crate (1)
   m_TagString: FinalObject2
@@ -18141,6 +18181,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1134811431
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1134811430}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0c6495ead5254888b9915e57ba16f91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyed: {fileID: 1727650538923486, guid: 09560ce7490094396a5d3db491a250a7, type: 2}
 --- !u!64 &1134811432
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -18167,7 +18219,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -25427,6 +25479,7 @@ GameObject:
   - component: {fileID: 1759233731}
   - component: {fileID: 1759233730}
   - component: {fileID: 1759233729}
+  - component: {fileID: 1759233728}
   m_Layer: 0
   m_Name: Crate (6)
   m_TagString: FinalObject2
@@ -25434,6 +25487,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1759233728
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1759233727}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0c6495ead5254888b9915e57ba16f91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyed: {fileID: 1727650538923486, guid: 09560ce7490094396a5d3db491a250a7, type: 2}
 --- !u!64 &1759233729
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -25460,7 +25525,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
@@ -27666,6 +27731,7 @@ GameObject:
   - component: {fileID: 1865027557}
   - component: {fileID: 1865027556}
   - component: {fileID: 1865027555}
+  - component: {fileID: 1865027554}
   m_Layer: 0
   m_Name: Crate (2)
   m_TagString: FinalObject2
@@ -27673,6 +27739,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1865027554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1865027553}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0c6495ead5254888b9915e57ba16f91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyed: {fileID: 1727650538923486, guid: 09560ce7490094396a5d3db491a250a7, type: 2}
 --- !u!64 &1865027555
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -27699,7 +27777,7 @@ Rigidbody:
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
-  m_IsKinematic: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
