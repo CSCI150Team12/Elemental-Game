@@ -2,13 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LifeSpell : Spell {
+public class LifeSpell : Spell
+{
 
     private GameObject tile;
     private ArrayList objs = new ArrayList();
     private float holder;
-   // public GameObject pickupEffect;     // Creates the game object (Do I need this?)
-    private float duration = 5f;            // Duration of the spell
+    // public GameObject pickupEffect;     // Creates the game object (Do I need this?)
+    private float duration = 10f;            // Duration of the spell (10 Seconds)
 
     public override void Initialize()   // Transforms the ground
     {
@@ -38,12 +39,8 @@ public class LifeSpell : Spell {
     IEnumerator StandOn(Collider player)
     {
         //Instantiate(pickupEffect, transform.position, transform.rotation);
-
         PlayerController PC = player.GetComponent<PlayerController>();  // Obtain "PlayerController", properties
-
-
         holder = PC.damage;      // Moves damage into placeholder
-
         if (holder <= 0)       // If the user has less than 50 damage
         {
             PC.damage = 0;      // Then damge = 0
@@ -51,26 +48,23 @@ public class LifeSpell : Spell {
         }
         else                    // Else remove 20 damage from current damage
         {
-            PC.TakeDamage(-0.25f);
+            PC.TakeDamage(-2f);
         }
-
-
         yield return new WaitForSeconds(0);     // Timer
-
     }
 
     private void Update()   // Changes the tile back to normal
     {
-        
+
         duration -= Time.deltaTime; // Decrements duration, when 0 remove spell
-        
+
         if (duration <= 0)
         {
             Destroy(gameObject);    // Gets rid of the object  
             GetComponent<MeshRenderer>().enabled = false;   //Makes the item disappear
 
             GetComponent<Collider>().enabled = false;          //Makes the item disapper
-           
+
         }
     }
 

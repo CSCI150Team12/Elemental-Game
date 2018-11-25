@@ -22,10 +22,10 @@ GameObject:
   - component: {fileID: 33366590341856228}
   - component: {fileID: 23911203559702528}
   - component: {fileID: 54325259302589510}
-  - component: {fileID: 114224070121147682}
   - component: {fileID: 64150280750578650}
   - component: {fileID: 198331894979610506}
   - component: {fileID: 199047608376830510}
+  - component: {fileID: 114658958565565644}
   m_Layer: 0
   m_Name: Life Spell
   m_TagString: Untagged
@@ -118,7 +118,7 @@ MeshCollider:
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300012, guid: a7b5c061937834d4aacd0dcbf8277143, type: 3}
---- !u!114 &114224070121147682
+--- !u!114 &114658958565565644
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -223,7 +223,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 6
+      scalar: 5
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -330,7 +330,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 0.103773594, g: 0.009300461, b: 0.009300461, a: 1}
+      maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -551,7 +551,7 @@ ParticleSystem:
     startRotationX:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 6.283185
+      scalar: 0
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -768,7 +768,7 @@ ParticleSystem:
     serializedVersion: 5
     enabled: 1
     type: 4
-    angle: 10
+    angle: 25
     length: 5
     boxThickness: {x: 0, y: 0, z: 0}
     radiusThickness: 1
@@ -1033,7 +1033,7 @@ ParticleSystem:
         serializedVersion: 2
         m_Curve:
         - serializedVersion: 3
-          time: 0
+          time: 0.0019874573
           value: 1
           inSlope: 0
           outSlope: 0
@@ -1042,7 +1042,7 @@ ParticleSystem:
           inWeight: 0.33333334
           outWeight: 0.33333334
         - serializedVersion: 3
-          time: 0.4595337
+          time: 0.38964844
           value: 0
           inSlope: 1
           outSlope: 1
@@ -1530,7 +1530,7 @@ ParticleSystem:
     flipV: 0
     randomRow: 1
     sprites:
-    - sprite: {fileID: 0}
+    - sprite: {fileID: 21300000, guid: 869bb1afe228318499d29c772ba339c4, type: 3}
   VelocityModule:
     enabled: 0
     x:
@@ -4693,7 +4693,7 @@ ParticleSystemRenderer:
   m_ReflectionProbeUsage: 0
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: c9f208918020f1340bee586e02ebfb7d, type: 2}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
