@@ -5471,9 +5471,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e70970c408d694f8ab6b9aa04496bf9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Button: {fileID: 461598534}
-  hoverButtonSFX: {fileID: 8300000, guid: 51aa57914038548b1b1131e1f4c62596, type: 3}
-  clickButtonSFX: {fileID: 8300000, guid: 90b81c0869bc24c8d8f31c4487fef5f5, type: 3}
+  hoverSFX: {fileID: 0}
+  clickSFX: {fileID: 0}
 --- !u!4 &368591371 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4200649020935196, guid: b99fbfd81fc0f484fb2376aa85693b5f,

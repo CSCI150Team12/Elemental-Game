@@ -27,6 +27,12 @@ public class OptionsMenu : MonoBehaviour
         Time.timeScale = 1f;
     }
 
+    // Set graphics quality
+    public void SetGraphicsQuality(int graphicsQuality)
+    {
+        QualitySettings.SetQualityLevel(graphicsQuality);
+    }
+
     // Set music volume
     public void SetMusicVolume(float musicVolume)
     {

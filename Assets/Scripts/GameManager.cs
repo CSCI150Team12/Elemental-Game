@@ -20,19 +20,16 @@ public class GameManager : MonoBehaviour
         // Load volume settings
         if (PlayerPrefs.HasKey("MusicVolume"))
         {
-            Debug.Log("HasMKEY");
             audioMixer.SetFloat("MusicFaderVolume", PlayerPrefs.GetFloat("MusicVolume"));
         }
 
         if (PlayerPrefs.HasKey("SFXVolume"))
         {
-            Debug.Log("HasSKEY");
             audioMixer.SetFloat("SFXFaderVolume", PlayerPrefs.GetFloat("SFXVolume"));
         }
 
         if (PlayerPrefs.HasKey("UIVolume"))
         {
-            Debug.Log("HasUKEY");
             audioMixer.SetFloat("UIFaderVolume", PlayerPrefs.GetFloat("UIVolume"));
         }
 
