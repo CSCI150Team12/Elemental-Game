@@ -8,9 +8,11 @@ public class OptionsMenu : MonoBehaviour
 {
     public AudioMixer audioMixer;
     public GameObject optionsMenuUI;
+    public Dropdown graphicsDropdown;
     public Slider musicSlider;
     public Slider sfxSlider;
     public Slider uiSlider;
+    public int graphicsVar;
     public float musicVar;
     public float sfxVar;
     public float uiVar;
@@ -19,6 +21,7 @@ public class OptionsMenu : MonoBehaviour
     public void HideOptions()
     {
         // Save settings
+        PlayerPrefs.SetInt("GraphicsQuality", graphicsVar);
         PlayerPrefs.SetFloat("MusicVolume", musicVar);
         PlayerPrefs.SetFloat("SFXVolume", sfxVar);
         PlayerPrefs.SetFloat("UIVolume", uiVar);
@@ -31,6 +34,7 @@ public class OptionsMenu : MonoBehaviour
     public void SetGraphicsQuality(int graphicsQuality)
     {
         QualitySettings.SetQualityLevel(graphicsQuality);
+        graphicsVar = graphicsQuality;
     }
 
     // Set music volume
@@ -59,6 +63,11 @@ public class OptionsMenu : MonoBehaviour
     {
         optionsMenuUI.SetActive(true);
         Time.timeScale = 0f;
+
+        // Load graphics settings
+        graphicsVar = PlayerPrefs.GetInt("GraphicsQuality");
+        QualitySettings.SetQualityLevel(graphicsVar);
+        graphicsDropdown.value = graphicsVar;
 
         // Load volume settings
         if (PlayerPrefs.HasKey("MusicVolume"))

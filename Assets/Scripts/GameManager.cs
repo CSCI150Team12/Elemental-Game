@@ -17,6 +17,17 @@ public class GameManager : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        // Load graphics settings
+        if (PlayerPrefs.HasKey("GraphicsQuality"))
+        {
+            QualitySettings.SetQualityLevel(PlayerPrefs.GetInt("GraphicsQuality"));
+        }
+        else
+        {
+            QualitySettings.SetQualityLevel(3);
+
+        }
+
         // Load volume settings
         if (PlayerPrefs.HasKey("MusicVolume"))
         {
