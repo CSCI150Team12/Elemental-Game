@@ -11,7 +11,7 @@ public class SpeedBoost : MonoBehaviour {
     {
         if(other.CompareTag("Player"))    // If the player touches the item, then activate!
         {
-            StartCoroutine( Pickup(other) );  // StartCoroutine because of the timer
+            StartCoroutine(Pickup(other));  // StartCoroutine because of the timer
         }
     }
 
@@ -21,9 +21,7 @@ public class SpeedBoost : MonoBehaviour {
 
         PlayerController PC = player.GetComponent<PlayerController>();  // Obtain "PlayerController", properties
 
-        
-
-        PC.moveSpeed = 8f;      // Changed speed to 8
+        PC.moveSpeed = 9f;      // Changed speed to 8
 
         GetComponent<MeshRenderer>().enabled = false;   //Makes the item disappear
        
@@ -31,7 +29,7 @@ public class SpeedBoost : MonoBehaviour {
 
         yield return new WaitForSeconds(5);     // Timer
 
-        PC.moveSpeed = 4f;      // After Timer expires, then go back to original speed 4
+        PC.moveSpeed = 5f;      // After Timer expires, then go back to original speed 4
         Destroy(gameObject);    // Gets rid of the object
     }
 }

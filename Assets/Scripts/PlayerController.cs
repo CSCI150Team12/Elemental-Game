@@ -223,7 +223,6 @@ public class PlayerController : MonoBehaviour
             root.parent = transform;
         }
     }
-
 }
 
 

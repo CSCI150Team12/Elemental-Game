@@ -22,11 +22,11 @@ public class CameraScript : MonoBehaviour
 
         if (GlobalVariables.MainCameraActive == true)
         {
-            cameraMain.SetActive(true);
-            cameraMainAudioLis.enabled = true;
-
             cameraAerialAudioLis.enabled = false;
             cameraAerial.SetActive(false);
+
+            cameraMain.SetActive(true);
+            cameraMainAudioLis.enabled = true;
         }
         else
         {

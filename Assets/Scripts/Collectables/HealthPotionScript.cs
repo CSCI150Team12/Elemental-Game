@@ -7,14 +7,14 @@ using UnityEngine;
 public class HealthPotionScript : MonoBehaviour
 {
 
-   // public GameObject pickupEffect;     // Creates the game object
+    //public GameObject pickupEffect;     // Creates the game object, (Needed for sound?)
     private float holder;
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))    // If the player touches the item, then activate!
         {
-            StartCoroutine(Pickup(other));  // StartCoroutine because of the timer
+            StartCoroutine(Pickup(other));
         }
     }
 
@@ -23,8 +23,6 @@ public class HealthPotionScript : MonoBehaviour
         //Instantiate(pickupEffect, transform.position, transform.rotation);
 
         PlayerController PC = player.GetComponent<PlayerController>();  // Obtain "PlayerController", properties
-
-
 
         holder = PC.damage;      // Moves damage into placeholder
 
