@@ -25,7 +25,7 @@ public class GameManager : MonoBehaviour
         else
         {
             QualitySettings.SetQualityLevel(3);
-
+            PlayerPrefs.SetInt("GraphicsQuality", 3);
         }
 
         // Load volume settings
@@ -33,15 +33,27 @@ public class GameManager : MonoBehaviour
         {
             audioMixer.SetFloat("MusicFaderVolume", PlayerPrefs.GetFloat("MusicVolume"));
         }
+        else
+        {
+            PlayerPrefs.SetFloat("MusicVolume", 0f);
+        }
 
         if (PlayerPrefs.HasKey("SFXVolume"))
         {
             audioMixer.SetFloat("SFXFaderVolume", PlayerPrefs.GetFloat("SFXVolume"));
         }
+        else
+        {
+            PlayerPrefs.SetFloat("SFXVolume", 0f);
+        }
 
         if (PlayerPrefs.HasKey("UIVolume"))
         {
             audioMixer.SetFloat("UIFaderVolume", PlayerPrefs.GetFloat("UIVolume"));
+        }
+        else
+        {
+            PlayerPrefs.SetFloat("UIVolume", 0f);
         }
 
         // Load main menu (next scene)

@@ -9,10 +9,14 @@ public class OptionsMenu : MonoBehaviour
     public AudioMixer audioMixer;
     public GameObject optionsMenuUI;
     public Dropdown graphicsDropdown;
+    public Dropdown resolutionDropdown;
     public Slider musicSlider;
     public Slider sfxSlider;
     public Slider uiSlider;
+    public Resolution[] resolutions;
     public int graphicsVar;
+    public int resolutionVar;
+    public bool fullscreenVar;
     public float musicVar;
     public float sfxVar;
     public float uiVar;
@@ -28,6 +32,22 @@ public class OptionsMenu : MonoBehaviour
 
         optionsMenuUI.SetActive(false);
         Time.timeScale = 1f;
+    }
+
+    // Set screen resolution
+    public void SetResolution(int resolutionIndex)
+    {
+        Resolution screenResolution = resolutions[resolutionIndex];
+        Screen.SetResolution(screenResolution.width, screenResolution.height,
+                             Screen.fullScreen);
+        //TD: Update variable
+    }
+
+    // Set fullscreen
+    public void SetFullscreen(bool isFullscreen)
+    {
+        Screen.fullScreen = isFullscreen;
+        // TD: Update variable
     }
 
     // Set graphics quality
@@ -68,34 +88,56 @@ public class OptionsMenu : MonoBehaviour
         graphicsVar = PlayerPrefs.GetInt("GraphicsQuality");
         QualitySettings.SetQualityLevel(graphicsVar);
         graphicsDropdown.value = graphicsVar;
+        graphicsDropdown.RefreshShownValue();
 
-        // Load volume settings
-        if (PlayerPrefs.HasKey("MusicVolume"))
-        {
-            musicVar = PlayerPrefs.GetFloat("MusicVolume");
-            audioMixer.SetFloat("MusicFaderVolume", musicVar);
-            musicSlider.value = musicVar;
-        }
+        // Load music volume settings
+        musicVar = PlayerPrefs.GetFloat("MusicVolume");
+        audioMixer.SetFloat("MusicFaderVolume", musicVar);
+        musicSlider.value = musicVar;
 
-        if (PlayerPrefs.HasKey("SFXVolume"))
-        {
-            sfxVar = PlayerPrefs.GetFloat("SFXVolume");
-            audioMixer.SetFloat("SFXFaderVolume", sfxVar);
-            sfxSlider.value = sfxVar;
-        }
+        // Load SFX volume settings
+        sfxVar = PlayerPrefs.GetFloat("SFXVolume");
+        audioMixer.SetFloat("SFXFaderVolume", sfxVar);
+        sfxSlider.value = sfxVar;
 
-        if (PlayerPrefs.HasKey("UIVolume"))
-        {
-            uiVar = PlayerPrefs.GetFloat("UIVolume");
-            audioMixer.SetFloat("UIFaderVolume", uiVar);
-            uiSlider.value = uiVar;
-        }
+        // Load UI volume settings
+        uiVar = PlayerPrefs.GetFloat("UIVolume");
+        audioMixer.SetFloat("UIFaderVolume", uiVar);
+        uiSlider.value = uiVar;
     }
 
     // Use this for initialization
     void Start()
     {
+        // Load resolution settings
+        resolutions = Screen.resolutions;
+        resolutionDropdown.ClearOptions();
+        List<string> resolutionOptions = new List<string>();
+        for (int i = 0; i < resolutions.Length; i++)
+        {
+            string option = resolutions[i].width + "x" + resolutions[i].height;
+            resolutionOptions.Add(option);
+            if (resolutions[i].width == Screen.currentResolution.width &&
+                resolutions[i].height == Screen.currentResolution.height)
+            {
+                resolutionVar = i;
+            }
+        }
+        resolutionDropdown.AddOptions(resolutionOptions);
+        resolutionDropdown.value = resolutionVar;
+        resolutionDropdown.RefreshShownValue();
 
+        // Load fullscreen settings
+        if (PlayerPrefs.GetInt("FullscreenSetting") == 1)
+        {
+            fullscreenVar = true;
+        }
+        else
+        {
+            fullscreenVar = false;
+        }
+        Screen.fullScreen = fullscreenVar;
+        // TD: refresh toggle
     }
 
     // Update is called once per frame
