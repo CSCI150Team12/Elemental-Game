@@ -14,47 +14,35 @@ public class OptionsMenu : MonoBehaviour
     public Slider sfxSlider;
     public Slider uiSlider;
     public Resolution[] resolutions;
-    public int graphicsVar;
-    public int resolutionVar;
-    public bool fullscreenVar;
+    public Toggle fullscreenToggle;
     public float musicVar;
     public float sfxVar;
     public float uiVar;
+    public int graphicsVar;
+    public int resolutionVar;
+    public bool fullscreenVar;
 
     // Hide options menu
     public void HideOptions()
     {
         // Save settings
-        PlayerPrefs.SetInt("GraphicsQuality", graphicsVar);
         PlayerPrefs.SetFloat("MusicVolume", musicVar);
         PlayerPrefs.SetFloat("SFXVolume", sfxVar);
         PlayerPrefs.SetFloat("UIVolume", uiVar);
+        PlayerPrefs.SetInt("GraphicsQuality", graphicsVar);
+        PlayerPrefs.SetInt("ResolutionSetting", resolutionVar);
+        if (fullscreenVar)
+        {
+            PlayerPrefs.SetInt("FullscreenSetting", 1);
+
+        }
+        else
+        {
+            PlayerPrefs.SetInt("FullscreenSetting", 0);
+        }
 
         optionsMenuUI.SetActive(false);
         Time.timeScale = 1f;
-    }
-
-    // Set screen resolution
-    public void SetResolution(int resolutionIndex)
-    {
-        Resolution screenResolution = resolutions[resolutionIndex];
-        Screen.SetResolution(screenResolution.width, screenResolution.height,
-                             Screen.fullScreen);
-        //TD: Update variable
-    }
-
-    // Set fullscreen
-    public void SetFullscreen(bool isFullscreen)
-    {
-        Screen.fullScreen = isFullscreen;
-        // TD: Update variable
-    }
-
-    // Set graphics quality
-    public void SetGraphicsQuality(int graphicsQuality)
-    {
-        QualitySettings.SetQualityLevel(graphicsQuality);
-        graphicsVar = graphicsQuality;
     }
 
     // Set music volume
@@ -78,18 +66,39 @@ public class OptionsMenu : MonoBehaviour
         uiVar = uiVolume;
     }
 
+    // Set graphics quality
+    public void SetGraphicsQuality(int graphicsQuality)
+    {
+        QualitySettings.SetQualityLevel(graphicsQuality);
+        graphicsVar = graphicsQuality;
+    }
+
+    // Set screen resolution
+    public void SetResolution(int resolutionIndex)
+    {
+        Screen.SetResolution(resolutions[resolutionIndex].width,
+                             resolutions[resolutionIndex].height,
+                             Screen.fullScreen);
+        resolutionVar = resolutionIndex;
+    }
+
+    // Set fullscreen
+    public void SetFullscreen(bool isFullscreen)
+    {
+        Screen.fullScreen = isFullscreen;
+        fullscreenVar = isFullscreen;
+    }
+
     // Show options menu
     public void ShowOptions()
     {
         optionsMenuUI.SetActive(true);
         Time.timeScale = 0f;
+    }
 
-        // Load graphics settings
-        graphicsVar = PlayerPrefs.GetInt("GraphicsQuality");
-        QualitySettings.SetQualityLevel(graphicsVar);
-        graphicsDropdown.value = graphicsVar;
-        graphicsDropdown.RefreshShownValue();
-
+    // Use this for initialization
+    void Start()
+    {
         // Load music volume settings
         musicVar = PlayerPrefs.GetFloat("MusicVolume");
         audioMixer.SetFloat("MusicFaderVolume", musicVar);
@@ -104,11 +113,13 @@ public class OptionsMenu : MonoBehaviour
         uiVar = PlayerPrefs.GetFloat("UIVolume");
         audioMixer.SetFloat("UIFaderVolume", uiVar);
         uiSlider.value = uiVar;
-    }
 
-    // Use this for initialization
-    void Start()
-    {
+        // Load graphics settings
+        graphicsVar = PlayerPrefs.GetInt("GraphicsQuality");
+        QualitySettings.SetQualityLevel(graphicsVar);
+        graphicsDropdown.value = graphicsVar;
+        graphicsDropdown.RefreshShownValue();
+
         // Load resolution settings
         resolutions = Screen.resolutions;
         resolutionDropdown.ClearOptions();
@@ -117,27 +128,16 @@ public class OptionsMenu : MonoBehaviour
         {
             string option = resolutions[i].width + "x" + resolutions[i].height;
             resolutionOptions.Add(option);
-            if (resolutions[i].width == Screen.currentResolution.width &&
-                resolutions[i].height == Screen.currentResolution.height)
-            {
-                resolutionVar = i;
-            }
         }
         resolutionDropdown.AddOptions(resolutionOptions);
+        resolutionVar = PlayerPrefs.GetInt("ResolutionSetting");
         resolutionDropdown.value = resolutionVar;
         resolutionDropdown.RefreshShownValue();
 
         // Load fullscreen settings
-        if (PlayerPrefs.GetInt("FullscreenSetting") == 1)
-        {
-            fullscreenVar = true;
-        }
-        else
-        {
-            fullscreenVar = false;
-        }
-        Screen.fullScreen = fullscreenVar;
-        // TD: refresh toggle
+        fullscreenVar = (PlayerPrefs.GetInt("FullscreenSetting") == 1) 
+            ? true : false;
+        fullscreenToggle.isOn = fullscreenVar;
     }
 
     // Update is called once per frame

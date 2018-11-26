@@ -17,10 +17,44 @@ public class GameManager : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        // Load graphics settings
+        // Load or create music volume setting
+        if (PlayerPrefs.HasKey("MusicVolume"))
+        {
+            audioMixer.SetFloat("MusicFaderVolume", 
+                                PlayerPrefs.GetFloat("MusicVolume"));
+        }
+        else
+        {
+            PlayerPrefs.SetFloat("MusicVolume", 0f);
+        }
+
+        // Load or create SFX volume setting
+        if (PlayerPrefs.HasKey("SFXVolume"))
+        {
+            audioMixer.SetFloat("SFXFaderVolume", 
+                                PlayerPrefs.GetFloat("SFXVolume"));
+        }
+        else
+        {
+            PlayerPrefs.SetFloat("SFXVolume", 0f);
+        }
+
+        // Load or create UI volume setting
+        if (PlayerPrefs.HasKey("UIVolume"))
+        {
+            audioMixer.SetFloat("UIFaderVolume", 
+                                PlayerPrefs.GetFloat("UIVolume"));
+        }
+        else
+        {
+            PlayerPrefs.SetFloat("UIVolume", 0f);
+        }
+
+        // Load or create graphics settings
         if (PlayerPrefs.HasKey("GraphicsQuality"))
         {
-            QualitySettings.SetQualityLevel(PlayerPrefs.GetInt("GraphicsQuality"));
+            QualitySettings.SetQualityLevel(
+                PlayerPrefs.GetInt("GraphicsQuality"));
         }
         else
         {
@@ -28,32 +62,39 @@ public class GameManager : MonoBehaviour
             PlayerPrefs.SetInt("GraphicsQuality", 3);
         }
 
-        // Load volume settings
-        if (PlayerPrefs.HasKey("MusicVolume"))
+        // Load or create resolution setting
+        Resolution[] resolutions = Screen.resolutions;
+        if (PlayerPrefs.HasKey("ResolutionSetting"))
         {
-            audioMixer.SetFloat("MusicFaderVolume", PlayerPrefs.GetFloat("MusicVolume"));
+            int i = PlayerPrefs.GetInt("ResolutionSetting");
+            Screen.SetResolution(resolutions[i].width,
+                             resolutions[i].height,
+                             Screen.fullScreen);
         }
         else
         {
-            PlayerPrefs.SetFloat("MusicVolume", 0f);
+            int i = 0;
+            while (resolutions[i].width != Screen.currentResolution.width || 
+                   resolutions[i].height != Screen.currentResolution.height)
+            {
+                i++;
+            }
+            Screen.SetResolution(resolutions[i].width,
+                             resolutions[i].height,
+                             Screen.fullScreen);
+            PlayerPrefs.SetInt("ResolutionSetting", i);
         }
 
-        if (PlayerPrefs.HasKey("SFXVolume"))
+        // Load or create fullscreen setting
+        if (PlayerPrefs.HasKey("FullscreenSetting"))
         {
-            audioMixer.SetFloat("SFXFaderVolume", PlayerPrefs.GetFloat("SFXVolume"));
+            Screen.fullScreen = (PlayerPrefs.GetInt("FullscreenSetting") == 1)
+            ? true : false;
         }
         else
         {
-            PlayerPrefs.SetFloat("SFXVolume", 0f);
-        }
-
-        if (PlayerPrefs.HasKey("UIVolume"))
-        {
-            audioMixer.SetFloat("UIFaderVolume", PlayerPrefs.GetFloat("UIVolume"));
-        }
-        else
-        {
-            PlayerPrefs.SetFloat("UIVolume", 0f);
+            Screen.fullScreen = true;
+            PlayerPrefs.SetInt("FullscreenSetting", 1);
         }
 
         // Load main menu (next scene)

@@ -6954,6 +6954,7 @@ MonoBehaviour:
   musicSlider: {fileID: 516533706}
   sfxSlider: {fileID: 1058840848}
   uiSlider: {fileID: 1161469925}
+  fullscreenToggle: {fileID: 1241139552}
   graphicsVar: 0
   resolutionVar: 0
   fullscreenVar: 0
