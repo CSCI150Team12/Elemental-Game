@@ -11,8 +11,18 @@ public class MainMenu : MonoBehaviour
     // Load 'Game' scene
     public void PlayGame()
     {
+        StartCoroutine("DelayTime");
+        Time.timeScale = 1;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         Time.timeScale = 1f;
+    }
+
+    IEnumerator DelayTime()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(1);
+        }
     }
 
     // Hide main menu

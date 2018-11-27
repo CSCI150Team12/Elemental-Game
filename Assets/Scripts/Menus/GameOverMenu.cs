@@ -19,7 +19,6 @@ public class GameOverMenu : MonoBehaviour
     //Show 'game over' screen
     public void GameOver()
     {
-        Debug.Log("please work");
         gameOverMenuUI.SetActive(true);
         Time.timeScale = 0f;
     }
