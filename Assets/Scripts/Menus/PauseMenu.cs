@@ -61,6 +61,20 @@ public class PauseMenu : MonoBehaviour
 
     }
 
+    // Hide pause menu
+    public void HidePauseMenu()
+    {
+        pauseMenuUI.SetActive(false);
+        Time.timeScale = 1f;
+    }
+
+    // Show pause menu
+    public void ShowPauseMenu()
+    {
+        pauseMenuUI.SetActive(true);
+        Time.timeScale = 0f;
+    }
+
     // Quit game
     public void QuitGame()
     {

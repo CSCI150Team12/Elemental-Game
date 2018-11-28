@@ -139,10 +139,4 @@ public class OptionsMenu : MonoBehaviour
             ? true : false;
         fullscreenToggle.isOn = fullscreenVar;
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
 }
