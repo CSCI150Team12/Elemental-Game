@@ -1,4 +1,11 @@
+<<<<<<< HEAD
 /Users/shauntderharoutunian/Library/Unity/cache/packages/packages.unity.com/com.unity.postprocessing@2.0.9-preview
 /Users/shauntderharoutunian/Library/Unity/cache/packages/packages.unity.com/com.unity.render-pipelines.core@3.0.0-preview
 /Users/shauntderharoutunian/Library/Unity/cache/packages/packages.unity.com/com.unity.render-pipelines.lightweight@3.0.0-preview
 /Users/shauntderharoutunian/Library/Unity/cache/packages/packages.unity.com/com.unity.shadergraph@3.0.0-preview
+=======
+C:\Users\MediaCenter\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.postprocessing@2.0.9-preview
+C:\Users\MediaCenter\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.core@3.0.0-preview
+C:\Users\MediaCenter\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.render-pipelines.lightweight@3.0.0-preview
+C:\Users\MediaCenter\AppData\Local\Unity\cache\packages\packages.unity.com\com.unity.shadergraph@3.0.0-preview
+>>>>>>> Collectables_Revised_2

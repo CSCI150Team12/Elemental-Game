@@ -173,6 +173,7 @@ public class PlayerController : MonoBehaviour
         spellPrefab.transform.rotation = transform.rotation;
         spellComponent.SetVelocity(transform.forward);
         spellComponent.Initialize();
+      
     }
 
     public void AddElement(string element)
@@ -223,7 +224,6 @@ public class PlayerController : MonoBehaviour
             root.parent = transform;
         }
     }
-
 }
 
 
