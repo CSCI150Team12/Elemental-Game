@@ -4,36 +4,22 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
 
-public class GameOverMenu : MonoBehaviour
-{
+public class GameOverMenu : MonoBehaviour {
 
     public GameTimer gameTimer;
     public GameObject gameOverMenuUI;
 
-    //
-    void Awake()
-    {
+    void Awake() {
         gameTimer = GetComponent<GameTimer>();
     }
 
-    //Show 'game over' screen
-    public void GameOver()
-    {
+    public void GameOver() {
+        Debug.Log("please work");
         gameOverMenuUI.SetActive(true);
         Time.timeScale = 0f;
     }
 
-    // Start new game
-    public void Restart()
-    {
-        gameOverMenuUI.SetActive(false);
-        Time.timeScale = 1f;
-        SceneManager.LoadScene("Game");
-    }
-
-    // Load 'Menu' scene
-    public void LoadMenu()
-    {
+    public void LoadMenu() {
         Time.timeScale = 1f;
         SceneManager.LoadScene("Menu");
         gameOverMenuUI.SetActive(false);
