@@ -1,4 +1,5 @@
 ﻿<Properties StartupConfiguration="{31A3256A-6F20-14C7-D50D-174046A142A0}|">
+<<<<<<< HEAD
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
 <<<<<<< HEAD
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/PlayerDeath.cs">
@@ -22,12 +23,23 @@
       <File FileName="Assets/Scripts/PlayerController.cs" Line="1" Column="1" />
       <File FileName="Assets/destroyedobj.cs" Line="8" Column="1" />
 >>>>>>> Destructablecrate
+=======
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Menus/MainMenu.cs">
+    <Files>
+      <File FileName="Assets/Scripts/AudioScript.cs" Line="28" Column="5" />
+      <File FileName="Assets/Scripts/Menus/OptionsMenu.cs" Line="47" Column="5" />
+      <File FileName="Assets/Scripts/Menus/PauseMenu.cs" Line="9" Column="30" />
+      <File FileName="Assets/Scripts/GameManager.cs" Line="85" Column="56" />
+      <File FileName="Assets/Scripts/Menus/MainMenu.cs" Line="26" Column="6" />
+      <File FileName="Assets/Scripts/Menus/GameOverMenu.cs" Line="41" Column="2" />
+>>>>>>> master
     </Files>
   </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MultiItemStartupConfigurations />
 </Properties>
