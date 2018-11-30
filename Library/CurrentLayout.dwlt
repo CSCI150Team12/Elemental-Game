@@ -109,7 +109,11 @@ MonoBehaviour:
   m_MinSize: {x: 683, y: 492}
   m_MaxSize: {x: 14004, y: 14042}
   vertical: 0
+<<<<<<< HEAD
   controlID: 795
+=======
+  controlID: 1559
+>>>>>>> Destructablecrate
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -128,12 +132,20 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
+<<<<<<< HEAD
     width: 859
+=======
+    width: 1114
+>>>>>>> Destructablecrate
     height: 752
   m_MinSize: {x: 406, y: 492}
   m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
+<<<<<<< HEAD
   controlID: 796
+=======
+  controlID: 1560
+>>>>>>> Destructablecrate
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -152,12 +164,20 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
+<<<<<<< HEAD
     width: 859
+=======
+    width: 1114
+>>>>>>> Destructablecrate
     height: 481
   m_MinSize: {x: 406, y: 221}
   m_MaxSize: {x: 8006, y: 4021}
   vertical: 0
+<<<<<<< HEAD
   controlID: 797
+=======
+  controlID: 1561
+>>>>>>> Destructablecrate
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -174,7 +194,11 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
+<<<<<<< HEAD
     width: 250
+=======
+    width: 324
+>>>>>>> Destructablecrate
     height: 481
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
@@ -197,9 +221,15 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 250
     y: 0
     width: 609
+=======
+    x: 324
+    y: 0
+    width: 790
+>>>>>>> Destructablecrate
     height: 481
   m_MinSize: {x: 204, y: 221}
   m_MaxSize: {x: 4004, y: 4021}
@@ -227,7 +257,11 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 481
+<<<<<<< HEAD
     width: 859
+=======
+    width: 1114
+>>>>>>> Destructablecrate
     height: 271
   m_MinSize: {x: 232, y: 271}
   m_MaxSize: {x: 10002, y: 10021}
@@ -253,9 +287,15 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 859
     y: 0
     width: 581
+=======
+    x: 1114
+    y: 0
+    width: 326
+>>>>>>> Destructablecrate
     height: 752
   m_MinSize: {x: 277, y: 71}
   m_MaxSize: {x: 4002, y: 4021}
@@ -286,9 +326,15 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 252
     y: 19
     width: 605
+=======
+    x: 326
+    y: 19
+    width: 786
+>>>>>>> Destructablecrate
     height: 460
   m_PersistentViewDataDictionary: {fileID: 0}
   m_MaximizeOnPlay: 1
@@ -367,14 +413,24 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 94
+<<<<<<< HEAD
     width: 248
+=======
+    width: 322
+>>>>>>> Destructablecrate
     height: 460
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
+<<<<<<< HEAD
     m_SelectedIDs: 2a0a0000
     m_LastClickedID: 0
     m_ExpandedIDs: 4cfbffff00000000
+=======
+    m_SelectedIDs: 
+    m_LastClickedID: 0
+    m_ExpandedIDs: e4fbffff00000000
+>>>>>>> Destructablecrate
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -418,9 +474,15 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 252
     y: 94
     width: 605
+=======
+    x: 326
+    y: 94
+    width: 786
+>>>>>>> Destructablecrate
     height: 460
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SceneLighting: 1
@@ -429,9 +491,15 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
+<<<<<<< HEAD
     m_Target: {x: 289.88425, y: 85.576805, z: 6.796033}
     speed: 2
     m_Value: {x: 289.88425, y: 85.576805, z: 6.796033}
+=======
+    m_Target: {x: 8.100065, y: 2.0996816, z: 17.182137}
+    speed: 2
+    m_Value: {x: 8.100065, y: 2.0996816, z: 17.182137}
+>>>>>>> Destructablecrate
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -459,6 +527,7 @@ MonoBehaviour:
       speed: 2
       m_Value: 1
   m_Rotation:
+<<<<<<< HEAD
     m_Target: {x: 0, y: 0, z: 0, w: 1}
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
@@ -466,6 +535,15 @@ MonoBehaviour:
     m_Target: 972.7155
     speed: 2
     m_Value: 972.7155
+=======
+    m_Target: {x: 0, y: 1, z: 0, w: 0}
+    speed: 2
+    m_Value: {x: 0, y: 1, z: 0, w: 0}
+  m_Size:
+    m_Target: -2.5687144
+    speed: 2
+    m_Value: -2.5687144
+>>>>>>> Destructablecrate
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -600,7 +678,11 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 575
+<<<<<<< HEAD
     width: 857
+=======
+    width: 1112
+>>>>>>> Destructablecrate
     height: 250
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SearchFilter:
@@ -615,20 +697,27 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts
+    - Assets/Prefabs
   m_ViewMode: 1
   m_StartGridSize: 70
   m_LastFolders:
-  - Assets/Scripts
+  - Assets/Prefabs
   m_LastFoldersGridSize: 70
   m_LastProjectPath: /Users/shauntderharoutunian/Documents/GitHub/Elemental-Game
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
+<<<<<<< HEAD
     scrollPos: {x: 0, y: 176.99963}
     m_SelectedIDs: 9a320000
     m_LastClickedID: 12954
     m_ExpandedIDs: 000000007a32000062330000e0340000ec36000074370000d43b00009c4800009e480000a0480000a2480000a4480000a6480000a848000000ca9a3b
+=======
+    scrollPos: {x: 0, y: 178.99963}
+    m_SelectedIDs: c0180000
+    m_LastClickedID: 6336
+    m_ExpandedIDs: 00000000b60f0000d60f00009e1000000c12000026140000ac1400001a190000e2190000fe46000000470000024700000447000006470000084700000a47000000ca9a3b
+>>>>>>> Destructablecrate
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -656,7 +745,11 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
+<<<<<<< HEAD
     m_ExpandedIDs: 000000007a32000062330000e0340000ec36000074370000d43b00009c4800009e480000a0480000a2480000a4480000a6480000a848000000ca9a3b
+=======
+    m_ExpandedIDs: 00000000b60f0000d60f00009e1000000c12000026140000ac1400001a190000e2190000fe46000000470000024700000447000006470000084700000a47000000ca9a3b
+>>>>>>> Destructablecrate
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -684,7 +777,7 @@ MonoBehaviour:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 0
-    m_ExpandedInstanceIDs: c62300005e310000302c00001c29000096310000382e0000746f000030e20000da3a0000344900006244000040430000d26c0000d2d10200f6de0000780f0000a2280000bee20000a4e40000684bf2ffb2c3ffffcc2b00000000000070f2fbff224cf8ffcadb0200e23b0000880c00006e0b0000f80b0000
+    m_ExpandedInstanceIDs: c62300005e310000302c00001c29000096310000382e0000746f000030e20000da3a0000344900006244000040430000d26c0000d2d10200f6de0000780f0000a2280000bee20000a4e40000684bf2ffb2c3ffffcc2b00000000000070f2fbff224cf8ffcadb0200e23b0000880c00006e0b0000f80b00003e5d00009648fdff
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -739,7 +832,11 @@ MonoBehaviour:
   m_AnimEditor: {fileID: 0}
   m_LockTracker:
     m_IsLocked: 0
+<<<<<<< HEAD
   m_LastSelectedObjectID: 8454
+=======
+  m_LastSelectedObjectID: 26618
+>>>>>>> Destructablecrate
 --- !u!114 &19
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -902,9 +999,15 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 861
     y: 94
     width: 579
+=======
+    x: 1116
+    y: 94
+    width: 324
+>>>>>>> Destructablecrate
     height: 731
   m_PersistentViewDataDictionary: {fileID: 0}
   m_ObjectsLockedBeforeSerialization: []
