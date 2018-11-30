@@ -25,6 +25,7 @@ public class PlayerDeath : MonoBehaviour {
         }
         else
         {
+            p.velocity = Vector3.zero;
             s.SpawnPlayerCenter();
             playerLife--;
         }
