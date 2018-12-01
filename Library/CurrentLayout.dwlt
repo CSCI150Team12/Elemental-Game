@@ -13,14 +13,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_PixelRect:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 0
     y: 44
     width: 1440
-    height: 856
+    height: 802
+=======
+    x: 8
+    y: 51
+    width: 2544
+    height: 1021
+>>>>>>> Collectables_Revised_2
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 2}
-  m_MinSize: {x: 950, y: 421}
+  m_MinSize: {x: 950, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -41,9 +48,14 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
+<<<<<<< HEAD
     width: 1440
-    height: 856
-  m_MinSize: {x: 950, y: 300}
+    height: 802
+=======
+    width: 2544
+    height: 1021
+>>>>>>> Collectables_Revised_2
+  m_MinSize: {x: 950, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &3
 MonoBehaviour:
@@ -61,7 +73,11 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
+<<<<<<< HEAD
     width: 1440
+=======
+    width: 2544
+>>>>>>> Collectables_Revised_2
     height: 30
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
@@ -81,8 +97,13 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 836
+<<<<<<< HEAD
+    y: 782
     width: 1440
+=======
+    y: 1001
+    width: 2544
+>>>>>>> Collectables_Revised_2
     height: 20
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
@@ -99,17 +120,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Children:
   - {fileID: 6}
-  - {fileID: 9}
+  - {fileID: 11}
   m_Position:
     serializedVersion: 2
     x: 0
     y: 30
+<<<<<<< HEAD
     width: 1440
-    height: 806
-  m_MinSize: {x: 507, y: 371}
-  m_MaxSize: {x: 14002, y: 14021}
+    height: 752
+  m_MinSize: {x: 683, y: 492}
+  m_MaxSize: {x: 14004, y: 14042}
   vertical: 0
-  controlID: 75
+<<<<<<< HEAD
+  controlID: 795
+=======
+  controlID: 1559
+>>>>>>> Destructablecrate
+=======
+    width: 2544
+    height: 971
+  m_MinSize: {x: 683, y: 492}
+  m_MaxSize: {x: 14004, y: 14042}
+  vertical: 0
+  controlID: 62
+>>>>>>> Collectables_Revised_2
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -123,17 +157,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Children:
   - {fileID: 7}
-  - {fileID: 8}
+  - {fileID: 10}
   m_Position:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1163
-    height: 806
-  m_MinSize: {x: 232, y: 371}
-  m_MaxSize: {x: 10002, y: 14021}
+<<<<<<< HEAD
+<<<<<<< HEAD
+    width: 859
+=======
+    width: 1114
+>>>>>>> Destructablecrate
+    height: 752
+  m_MinSize: {x: 406, y: 492}
+  m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
-  controlID: 76
+<<<<<<< HEAD
+  controlID: 796
+=======
+  controlID: 1560
+>>>>>>> Destructablecrate
+=======
+    width: 1853
+    height: 971
+  m_MinSize: {x: 406, y: 492}
+  m_MaxSize: {x: 10002, y: 14042}
+  vertical: 1
+  controlID: 63
+>>>>>>> Collectables_Revised_2
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -142,26 +193,39 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 1
-  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Children: []
+  m_Children:
+  - {fileID: 8}
+  - {fileID: 9}
   m_Position:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 1163
-    height: 535
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 10}
-  m_Panes:
-  - {fileID: 12}
-  - {fileID: 13}
-  - {fileID: 14}
-  - {fileID: 10}
-  m_Selected: 3
-  m_LastSelected: 0
+<<<<<<< HEAD
+<<<<<<< HEAD
+    width: 859
+=======
+    width: 1114
+>>>>>>> Destructablecrate
+    height: 481
+  m_MinSize: {x: 406, y: 221}
+  m_MaxSize: {x: 8006, y: 4021}
+  vertical: 0
+<<<<<<< HEAD
+  controlID: 797
+=======
+  controlID: 1561
+>>>>>>> Destructablecrate
+=======
+    width: 1853
+    height: 670
+  m_MinSize: {x: 406, y: 221}
+  m_MaxSize: {x: 8006, y: 4021}
+  vertical: 0
+  controlID: 64
+>>>>>>> Collectables_Revised_2
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -177,20 +241,25 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 535
-    width: 1163
-    height: 271
-  m_MinSize: {x: 232, y: 271}
-  m_MaxSize: {x: 10002, y: 10021}
-  m_ActualView: {fileID: 15}
+    y: 0
+<<<<<<< HEAD
+<<<<<<< HEAD
+    width: 250
+=======
+    width: 324
+>>>>>>> Destructablecrate
+    height: 481
+=======
+    width: 247
+    height: 670
+>>>>>>> Collectables_Revised_2
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
+  m_ActualView: {fileID: 13}
   m_Panes:
-  - {fileID: 15}
-  - {fileID: 16}
-  - {fileID: 17}
-  - {fileID: 18}
-  - {fileID: 11}
+  - {fileID: 13}
   m_Selected: 0
-  m_LastSelected: 4
+  m_LastSelected: 0
 --- !u!114 &9
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -205,20 +274,112 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 1163
+<<<<<<< HEAD
+<<<<<<< HEAD
+    x: 250
     y: 0
-    width: 277
-    height: 806
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 19}
+    width: 609
+=======
+    x: 324
+    y: 0
+    width: 790
+>>>>>>> Destructablecrate
+    height: 481
+=======
+    x: 247
+    y: 0
+    width: 1606
+    height: 670
+>>>>>>> Collectables_Revised_2
+  m_MinSize: {x: 204, y: 221}
+  m_MaxSize: {x: 4004, y: 4021}
+  m_ActualView: {fileID: 14}
   m_Panes:
+  - {fileID: 14}
+  - {fileID: 15}
+  - {fileID: 16}
+  - {fileID: 12}
+  m_Selected: 0
+  m_LastSelected: 3
+--- !u!114 &10
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+    x: 0
+<<<<<<< HEAD
+    y: 481
+<<<<<<< HEAD
+    width: 859
+=======
+    width: 1114
+>>>>>>> Destructablecrate
+    height: 271
+=======
+    y: 670
+    width: 1853
+    height: 301
+>>>>>>> Collectables_Revised_2
+  m_MinSize: {x: 232, y: 271}
+  m_MaxSize: {x: 10002, y: 10021}
+  m_ActualView: {fileID: 17}
+  m_Panes:
+  - {fileID: 17}
+  - {fileID: 18}
   - {fileID: 19}
   - {fileID: 20}
+  m_Selected: 0
+  m_LastSelected: 2
+--- !u!114 &11
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+<<<<<<< HEAD
+<<<<<<< HEAD
+    x: 859
+    y: 0
+    width: 581
+=======
+    x: 1114
+    y: 0
+    width: 326
+>>>>>>> Destructablecrate
+    height: 752
+=======
+    x: 1853
+    y: 0
+    width: 691
+    height: 971
+>>>>>>> Collectables_Revised_2
+  m_MinSize: {x: 277, y: 71}
+  m_MaxSize: {x: 4002, y: 4021}
+  m_ActualView: {fileID: 21}
+  m_Panes:
   - {fileID: 21}
+  - {fileID: 22}
+  - {fileID: 23}
   m_Selected: 0
   m_LastSelected: 1
---- !u!114 &10
+--- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -238,12 +399,25 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 0
+<<<<<<< HEAD
+<<<<<<< HEAD
+    x: 252
     y: 19
-    width: 1161
-    height: 514
+    width: 605
+=======
+    x: 326
+    y: 19
+    width: 786
+>>>>>>> Destructablecrate
+    height: 460
+=======
+    x: 257
+    y: 100
+    width: 1602
+    height: 649
+>>>>>>> Collectables_Revised_2
   m_PersistentViewDataDictionary: {fileID: 0}
-  m_MaximizeOnPlay: 0
+  m_MaximizeOnPlay: 1
   m_Gizmos: 0
   m_Stats: 0
   m_SelectedSizes: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
@@ -253,10 +427,17 @@ MonoBehaviour:
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
-    m_HBaseRangeMin: -580.5
-    m_HBaseRangeMax: 580.5
-    m_VBaseRangeMin: -248.5
-    m_VBaseRangeMax: 248.5
+<<<<<<< HEAD
+    m_HBaseRangeMin: -360
+    m_HBaseRangeMax: 360
+    m_VBaseRangeMin: -178.5
+    m_VBaseRangeMax: 178.5
+=======
+    m_HBaseRangeMin: -801
+    m_HBaseRangeMax: 801
+    m_VBaseRangeMin: -316
+    m_VBaseRangeMax: 316
+>>>>>>> Collectables_Revised_2
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -265,7 +446,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 1
+    m_EnableMouseInput: 0
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1
@@ -274,30 +455,48 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 17
-      width: 1161
-      height: 497
+<<<<<<< HEAD
+      width: 1440
+      height: 714
+    m_Scale: {x: 2, y: 2}
+    m_Translation: {x: 720, y: 357}
+=======
+      width: 1602
+      height: 632
     m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 580.5, y: 248.5}
+    m_Translation: {x: 801, y: 316}
+>>>>>>> Collectables_Revised_2
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -580.5
-      y: -248.5
-      width: 1161
-      height: 497
+<<<<<<< HEAD
+      x: -360
+      y: -178.5
+      width: 720
+      height: 357
+=======
+      x: -801
+      y: -316
+      width: 1602
+      height: 632
+>>>>>>> Collectables_Revised_2
     m_MinimalGUI: 1
-  m_defaultScale: 1
+  m_defaultScale: 2
   m_TargetTexture: {fileID: 0}
   m_CurrentColorSpace: 0
-  m_LastWindowPixelSize: {x: 1161, y: 514}
+<<<<<<< HEAD
+  m_LastWindowPixelSize: {x: 2880, y: 1462}
+=======
+  m_LastWindowPixelSize: {x: 1602, y: 649}
+>>>>>>> Collectables_Revised_2
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000100000100
   m_XRRenderMode: 0
---- !u!114 &11
+--- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -317,16 +516,39 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 0
-    y: 629
-    width: 1161
-    height: 250
+    y: 94
+<<<<<<< HEAD
+    width: 248
+=======
+    width: 322
+>>>>>>> Destructablecrate
+    height: 460
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 9c1b0000
-    m_LastClickedID: 7068
-    m_ExpandedIDs: c2fbffff000000009c1b0000
+<<<<<<< HEAD
+    m_SelectedIDs: 2a0a0000
+    m_LastClickedID: 0
+    m_ExpandedIDs: 4cfbffff00000000
+=======
+    m_SelectedIDs: 
+    m_LastClickedID: 0
+    m_ExpandedIDs: e4fbffff00000000
+>>>>>>> Destructablecrate
+=======
+    x: 8
+    y: 100
+    width: 245
+    height: 649
+  m_PersistentViewDataDictionary: {fileID: 0}
+  m_TreeViewState:
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: 
+    m_LastClickedID: 0
+    m_ExpandedIDs: e6fbffff00000000
+>>>>>>> Collectables_Revised_2
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -342,7 +564,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 0
-      m_ClientGUIView: {fileID: 0}
+      m_ClientGUIView: {fileID: 8}
     m_SearchString: 
   m_ExpandedScenes:
   - Game
@@ -350,7 +572,7 @@ MonoBehaviour:
   m_LockTracker:
     m_IsLocked: 0
   m_CurrentSortingName: TransformSorting
---- !u!114 &12
+--- !u!114 &14
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -370,20 +592,49 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 0
+<<<<<<< HEAD
+<<<<<<< HEAD
+    x: 252
     y: 94
-    width: 1112
-    height: 514
+    width: 605
+=======
+    x: 326
+    y: 94
+    width: 786
+>>>>>>> Destructablecrate
+    height: 460
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SceneLighting: 1
-  lastFramingTime: 21679.065235972404
+  lastFramingTime: 10559.251054048538
+  m_2DMode: 1
+  m_isRotationLocked: 0
+  m_AudioPlay: 0
+  m_Position:
+<<<<<<< HEAD
+    m_Target: {x: 289.88425, y: 85.576805, z: 6.796033}
+    speed: 2
+    m_Value: {x: 289.88425, y: 85.576805, z: 6.796033}
+=======
+    m_Target: {x: 8.100065, y: 2.0996816, z: 17.182137}
+    speed: 2
+    m_Value: {x: 8.100065, y: 2.0996816, z: 17.182137}
+>>>>>>> Destructablecrate
+=======
+    x: 257
+    y: 100
+    width: 1602
+    height: 649
+  m_PersistentViewDataDictionary: {fileID: 0}
+  m_SceneLighting: 1
+  lastFramingTime: 14752.60153091549
   m_2DMode: 0
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 393, y: 148.5, z: 0}
+    m_Target: {x: 9.739921, y: 11.578825, z: 18.138115}
     speed: 2
-    m_Value: {x: 393, y: 148.5, z: 0}
+    m_Value: {x: 9.739921, y: 11.578825, z: 18.138115}
+>>>>>>> Collectables_Revised_2
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -403,25 +654,45 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
     yGrid:
-      m_Target: 1
-      speed: 2
-      m_Value: 1
-    zGrid:
       m_Target: 0
       speed: 2
       m_Value: 0
+    zGrid:
+      m_Target: 1
+      speed: 2
+      m_Value: 1
   m_Rotation:
+<<<<<<< HEAD
+<<<<<<< HEAD
     m_Target: {x: 0, y: 0, z: 0, w: 1}
     speed: 2
-    m_Value: {x: -0, y: 0, z: -0, w: -1}
+    m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 237.62282
+    m_Target: 972.7155
     speed: 2
-    m_Value: 237.62282
+    m_Value: 972.7155
+=======
+    m_Target: {x: 0, y: 1, z: 0, w: 0}
+    speed: 2
+    m_Value: {x: 0, y: 1, z: 0, w: 0}
+  m_Size:
+    m_Target: -2.5687144
+    speed: 2
+    m_Value: -2.5687144
+>>>>>>> Destructablecrate
+=======
+    m_Target: {x: 0.037830357, y: -0.96216136, z: 0.1888515, w: 0.19274229}
+    speed: 2
+    m_Value: {x: -0.037830357, y: 0.96216136, z: -0.1888515, w: -0.19274229}
+  m_Size:
+    m_Target: 1.8452344
+    speed: 2
+    m_Value: 1.8452344
+>>>>>>> Collectables_Revised_2
   m_Ortho:
-    m_Target: 0
+    m_Target: 1
     speed: 2
-    m_Value: 0
+    m_Value: 1
   m_ShowGlobalGrid: 1
   m_LastSceneViewRotation: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
   m_LastSceneViewOrtho: 0
@@ -429,7 +700,7 @@ MonoBehaviour:
   m_ReplacementString: 
   m_LastLockedObject: {fileID: 0}
   m_ViewIsLockedToObject: 0
---- !u!114 &13
+--- !u!114 &15
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -454,7 +725,7 @@ MonoBehaviour:
     width: 1051
     height: 638
   m_PersistentViewDataDictionary: {fileID: 0}
---- !u!114 &14
+--- !u!114 &16
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -530,7 +801,7 @@ MonoBehaviour:
   m_CurrentEditor: 1
   m_LayerEditor:
     m_SelectedLayerIndex: 0
---- !u!114 &15
+--- !u!114 &17
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -550,10 +821,21 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 0
-    y: 629
-    width: 1161
+    y: 575
+<<<<<<< HEAD
+    width: 857
+=======
+    width: 1112
+>>>>>>> Destructablecrate
     height: 250
+=======
+    x: 8
+    y: 770
+    width: 1851
+    height: 280
+>>>>>>> Collectables_Revised_2
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SearchFilter:
     m_NameFilter: 
@@ -567,20 +849,38 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets/Prefabs
   m_ViewMode: 1
   m_StartGridSize: 70
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/Prefabs
   m_LastFoldersGridSize: 70
-  m_LastProjectPath: /Users/jovani/Documents/GitHub/Elemental-Game
+<<<<<<< HEAD
+  m_LastProjectPath: /Users/shauntderharoutunian/Documents/GitHub/Elemental-Game
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 55}
-    m_SelectedIDs: ca120000
-    m_LastClickedID: 4810
-    m_ExpandedIDs: 00000000c00f0000e00f00008e1000000e120000f0130000ba1800008e1900009e3c0000a03c0000a23c0000a43c0000a63c0000a83c0000aa3c000000ca9a3b
+<<<<<<< HEAD
+    scrollPos: {x: 0, y: 176.99963}
+    m_SelectedIDs: 9a320000
+    m_LastClickedID: 12954
+    m_ExpandedIDs: 000000007a32000062330000e0340000ec36000074370000d43b00009c4800009e480000a0480000a2480000a4480000a6480000a848000000ca9a3b
+=======
+    scrollPos: {x: 0, y: 178.99963}
+    m_SelectedIDs: c0180000
+    m_LastClickedID: 6336
+    m_ExpandedIDs: 00000000b60f0000d60f00009e1000000c12000026140000ac1400001a190000e2190000fe46000000470000024700000447000006470000084700000a47000000ca9a3b
+>>>>>>> Destructablecrate
+=======
+  m_LastProjectPath: C:\Users\MediaCenter\Documents\GitHub\Elemental-Game
+  m_LockTracker:
+    m_IsLocked: 0
+  m_FolderTreeState:
+    scrollPos: {x: 0, y: 213}
+    m_SelectedIDs: 64190000
+    m_LastClickedID: 6500
+    m_ExpandedIDs: 00000000f20f000014100000e010000072120000a4120000a21400002c15000050190000be1900008c1a0000684700006a4700006c4700006e47000070470000724700007447000000ca9a3b
+>>>>>>> Collectables_Revised_2
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -596,7 +896,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 8}
+      m_ClientGUIView: {fileID: 10}
     m_SearchString: 
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
@@ -608,7 +908,15 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000c00f0000e00f00008e1000000e120000f0130000ba1800008e1900009e3c0000a03c0000a23c0000a43c0000a63c0000a83c0000aa3c0000
+<<<<<<< HEAD
+<<<<<<< HEAD
+    m_ExpandedIDs: 000000007a32000062330000e0340000ec36000074370000d43b00009c4800009e480000a0480000a2480000a4480000a6480000a848000000ca9a3b
+=======
+    m_ExpandedIDs: 00000000b60f0000d60f00009e1000000c12000026140000ac1400001a190000e2190000fe46000000470000024700000447000006470000084700000a47000000ca9a3b
+>>>>>>> Destructablecrate
+=======
+    m_ExpandedIDs: 00000000f20f000014100000e010000072120000a4120000a21400002c15000050190000be1900008c1a0000684700006a4700006c4700006e470000704700007247000074470000
+>>>>>>> Collectables_Revised_2
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -635,8 +943,13 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
+<<<<<<< HEAD
+    m_HadKeyboardFocusLastEvent: 0
+    m_ExpandedInstanceIDs: c62300005e310000302c00001c29000096310000382e0000746f000030e20000da3a0000344900006244000040430000d26c0000d2d10200f6de0000780f0000a2280000bee20000a4e40000684bf2ffb2c3ffffcc2b00000000000070f2fbff224cf8ffcadb0200e23b0000880c00006e0b0000f80b00003e5d00009648fdff
+=======
     m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: c62300005e310000302c00001c29000096310000382e0000746f000030e20000da3a0000344900006244000040430000d26c0000d2d10200f6de0000780f0000a2280000bee20000a4e40000684bf2ffb2c3ffffcc2b00000000000070f2fbff224cf8ffcadb0200e23b0000880c00006e0b0000f80b0000
+    m_ExpandedInstanceIDs: c62300005e310000302c00001c29000096310000382e0000746f000030e20000da3a0000344900006244000040430000d26c0000d2d10200f6de0000780f0000a2280000bee20000a4e40000684bf2ffb2c3ffffcc2b000070f2fbff224cf8ffcadb0200e23b0000880c00006e0b0000f80b00000000000090470000
+>>>>>>> Collectables_Revised_2
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -652,7 +965,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 0}
+      m_ClientGUIView: {fileID: 10}
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
       m_InstanceID: 0
@@ -660,10 +973,10 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 0}
+    m_ScrollPosition: {x: 0, y: 105}
     m_GridSize: 70
   m_DirectoriesAreaWidth: 246
---- !u!114 &16
+--- !u!114 &18
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -683,16 +996,24 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 0
-    y: 751
-    width: 1482
-    height: 267
+    x: 8
+    y: 770
+    width: 1851
+    height: 280
   m_PersistentViewDataDictionary: {fileID: 0}
   m_AnimEditor: {fileID: 0}
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: -97620
---- !u!114 &17
+<<<<<<< HEAD
+<<<<<<< HEAD
+  m_LastSelectedObjectID: 8454
+=======
+  m_LastSelectedObjectID: 26618
+>>>>>>> Destructablecrate
+=======
+  m_LastSelectedObjectID: 7984
+>>>>>>> Collectables_Revised_2
+--- !u!114 &19
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -712,12 +1033,19 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 0
-    y: 629
-    width: 1161
+    y: 575
+    width: 857
     height: 250
+=======
+    x: 8
+    y: 770
+    width: 1851
+    height: 280
+>>>>>>> Collectables_Revised_2
   m_PersistentViewDataDictionary: {fileID: 0}
---- !u!114 &18
+--- !u!114 &20
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -738,14 +1066,14 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 629
-    width: 1161
-    height: 250
+    y: 774
+    width: 1979
+    height: 284
   m_PersistentViewDataDictionary: {fileID: 0}
   m_MixersTreeState:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
-    m_LastClickedID: 14996
+    m_LastClickedID: -606412
     m_ExpandedIDs: 12eb343c
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -816,16 +1144,16 @@ MonoBehaviour:
       splitSize: 6
       xOffset: 0
     m_HorizontalSplitter:
-      ID: 3955
+      ID: 2838
       splitterInitialOffset: 0
       currentActiveSplitter: -1
-      realSizes: 5d0100002d030000
+      realSizes: 520200006a050000
       relativeSizes:
       - 0.3
       - 0.7
       minSizes: a0000000a0000000
       maxSizes: 0000000000000000
-      lastTotalSize: 1162
+      lastTotalSize: 1980
       splitSize: 6
       xOffset: -1
   m_SectionOrder: 00000000030000000100000002000000
@@ -834,7 +1162,7 @@ MonoBehaviour:
   m_ShowReferencedBuses: 1
   m_ShowBusConnections: 0
   m_ShowBusConnectionsOfSelection: 0
---- !u!114 &19
+--- !u!114 &21
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -854,21 +1182,34 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1165
+<<<<<<< HEAD
+<<<<<<< HEAD
+    x: 861
     y: 94
-    width: 275
-    height: 785
+    width: 579
+=======
+    x: 1116
+    y: 94
+    width: 324
+>>>>>>> Destructablecrate
+    height: 731
+=======
+    x: 1863
+    y: 100
+    width: 689
+    height: 950
+>>>>>>> Collectables_Revised_2
   m_PersistentViewDataDictionary: {fileID: 0}
   m_ObjectsLockedBeforeSerialization: []
   m_InstanceIDsLockedBeforeSerialization: 
   m_LockTracker:
     m_IsLocked: 0
   m_PreviewResizer:
-    m_CachedPref: 212
+    m_CachedPref: 166
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_PreviewWindow: {fileID: 0}
---- !u!114 &20
+--- !u!114 &22
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -888,12 +1229,12 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1350
-    y: 92
-    width: 570
-    height: 926
+    x: 1863
+    y: 100
+    width: 689
+    height: 950
   m_PersistentViewDataDictionary: {fileID: 0}
---- !u!114 &21
+--- !u!114 &23
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -913,8 +1254,8 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1350
+    x: 1983
     y: 92
-    width: 570
-    height: 926
+    width: 577
+    height: 966
   m_PersistentViewDataDictionary: {fileID: 0}
