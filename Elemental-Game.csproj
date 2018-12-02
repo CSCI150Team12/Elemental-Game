@@ -338,8 +338,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\ElementCombination.cs" />
-    <Compile Include="Assets\LightningSpell.cs" />
+    <Compile Include="Assets\GameInfo.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Attributes\GetSetAttribute.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Attributes\MinAttribute.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Attributes\TrackballAttribute.cs" />
@@ -393,24 +392,29 @@
     <Compile Include="Assets\Scripts\Collectables\SpeedBoost.cs" />
     <Compile Include="Assets\Scripts\CollectableSpawner.cs" />
     <Compile Include="Assets\Scripts\CountdownTimer.cs" />
-    <Compile Include="Assets\Scripts\DDOL.cs" />
     <Compile Include="Assets\Scripts\DestroyByBoundary.cs" />
+    <Compile Include="Assets\Scripts\ElementCombination.cs" />
     <Compile Include="Assets\Scripts\FireballSpell.cs" />
-    <Compile Include="Assets\Scripts\GameOverMenu.cs" />
+    <Compile Include="Assets\Scripts\GameManager.cs" />
+    <Compile Include="Assets\Scripts\GameplayMenu.cs" />
     <Compile Include="Assets\Scripts\GameTimer.cs" />
     <Compile Include="Assets\Scripts\GrassTile.cs" />
     <Compile Include="Assets\Scripts\HingeJointTarget.cs" />
-    <Compile Include="Assets\Scripts\MainMenu.cs" />
-    <Compile Include="Assets\Scripts\PauseMenu.cs" />
+    <Compile Include="Assets\Scripts\Menus\GameOverMenu.cs" />
+    <Compile Include="Assets\Scripts\Menus\MainMenu.cs" />
+    <Compile Include="Assets\Scripts\Menus\OptionsMenu.cs" />
+    <Compile Include="Assets\Scripts\Menus\PauseMenu.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\PlayerDeath.cs" />
     <Compile Include="Assets\Scripts\PlayerSpawner.cs" />
     <Compile Include="Assets\Scripts\QuicksandSpell.cs" />
     <Compile Include="Assets\Scripts\SpellBit.cs" />
+    <Compile Include="Assets\Scripts\SpellQueue.cs" />
     <Compile Include="Assets\Scripts\Spells\AirSpell.cs" />
     <Compile Include="Assets\Scripts\Spells\EarthSpell.cs" />
     <Compile Include="Assets\Scripts\Spells\FireSpell.cs" />
     <Compile Include="Assets\Scripts\Spells\IceSpell.cs" />
+    <Compile Include="Assets\Scripts\Spells\LightningSpell.cs" />
     <Compile Include="Assets\Scripts\Spells\MagmaSpell.cs" />
     <Compile Include="Assets\Scripts\Spells\Spell.cs" />
     <Compile Include="Assets\Scripts\Spells\SpellEffect.cs" />
@@ -419,7 +423,6 @@
     <Compile Include="Assets\Scripts\Spells\TornadoSpell.cs" />
     <Compile Include="Assets\Scripts\Spells\TwoFireballsSpell.cs" />
     <Compile Include="Assets\Scripts\Spells\WaterSpell.cs" />
-    <Compile Include="Assets\SpellQueue.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Materials\Spells\Blackhole_GradientSmoothing.shader" />
