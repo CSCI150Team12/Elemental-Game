@@ -71,7 +71,7 @@ public class SpellBit : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
-        OnTouch(other.gameObject);
+        //OnTouch(other.gameObject);
     }
 
     private void OnTouch(GameObject obj)

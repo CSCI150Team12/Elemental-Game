@@ -11,6 +11,7 @@ public class Spell : MonoBehaviour {
     public float lifespan = 0f;
     public Vector3 offset = new Vector3(0, 1.25f, 1.5f);
     public float triggerForce = 0f;
+    public float triggerDelay = 0f;
     public string triggerEffectName = "";
     public float damageAmount = 0;
     public float damagePerSecond = 0f;
@@ -20,6 +21,7 @@ public class Spell : MonoBehaviour {
     public bool started = false;
     public float startSpeed = 0f;
     private float lifeTime;
+    private bool canTrigger = false;
     private PlayerController player;
     protected Vector3 velocity = Vector3.zero;
     public bool stopAnimation = false;
@@ -28,6 +30,7 @@ public class Spell : MonoBehaviour {
     public virtual void Start()
     {
         Stop(true);
+        StartCoroutine(StartTrigger());
         if (oneShot)
         {
             StartCoroutine(OneShot());
@@ -65,9 +68,9 @@ public class Spell : MonoBehaviour {
 
     protected virtual void OnTriggerEnter(Collider other)
     {
-        if (other.GetComponentInParent<Rigidbody>() && !GetComponent<SpellField>())
+        if (other.GetComponentInParent<Rigidbody>() && !GetComponent<SpellField>() && canTrigger)
         {
-            
+
             ApplyEffect(other.gameObject);
             PlayerController player = other.gameObject.GetComponent<PlayerController>();
             if (player)
@@ -84,7 +87,10 @@ public class Spell : MonoBehaviour {
 
     protected void OnTriggerStay(Collider other)
     {
-        DealDamage(other.gameObject);
+        if (canTrigger)
+        {
+            DealDamage(other.gameObject);
+        }
     }
 
     protected virtual void OnParticleCollision(GameObject other)
@@ -96,7 +102,7 @@ public class Spell : MonoBehaviour {
             {
                 return;
             }
-            
+
             ApplyEffect(other);
             PlayerController player = other.gameObject.GetComponent<PlayerController>();
             if (player)
@@ -135,9 +141,9 @@ public class Spell : MonoBehaviour {
         {
             meshRenderer.enabled = true;
         }
-        if (GetComponent<BitEmitter>())
+        if (GetComponentInChildren<BitEmitter>())
         {
-            GetComponent<BitEmitter>().Initialize();
+            GetComponentInChildren<BitEmitter>().Initialize();
         }
         if (GetComponent<Rigidbody>())
         {
@@ -153,7 +159,7 @@ public class Spell : MonoBehaviour {
 
     public virtual void Stop(bool isHidden = false)
     {
-        foreach(ParticleSystem particleSystem in GetComponentsInChildren<ParticleSystem>())
+        foreach (ParticleSystem particleSystem in GetComponentsInChildren<ParticleSystem>())
         {
             particleSystem.Stop();
         }
@@ -187,6 +193,12 @@ public class Spell : MonoBehaviour {
         {
             Instantiate(Resources.Load("Prefabs/Spell Effects/" + triggerEffectName + " Effect"), obj.transform);
         }
+    }
+
+    private IEnumerator StartTrigger()
+    {
+        yield return new WaitForSeconds(triggerDelay);
+        canTrigger = true;
     }
 
     public virtual void Die()
