@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     public int playerNumber = 1;
     public Slider damageUI;
     public TMP_Text spellQueueUI;
+    public TMP_SpriteAsset spellIcon;
     public float moveSpeed = 4f;
     public float rotateSpeed = 10f;
     public float damage = 0f;
@@ -172,6 +173,7 @@ public class PlayerController : MonoBehaviour
         spellPrefab.transform.rotation = transform.rotation;
         spellComponent.SetVelocity(transform.forward);
         spellComponent.Initialize();
+      
     }
 
     public void AddElement(string element)
@@ -222,7 +224,6 @@ public class PlayerController : MonoBehaviour
             root.parent = transform;
         }
     }
-
 }
 
 

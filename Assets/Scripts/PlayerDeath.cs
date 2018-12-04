@@ -6,33 +6,28 @@ using UnityEngine;
 public class PlayerDeath : MonoBehaviour {
 
     public Rigidbody p;
-    public bool playerOnMap = true;
-    private int playerLife1 = 3;
-    //private int playerLife2 = 4;
+    public PlayerSpawner s;
+    int playerLife = 3;
 
     void FixedUpdate() {
         if (p.position.y < -1f) {
-            playerOnMap = false;
-            Player1Life();
+            Debug.Log(playerLife);
+            PlayerLife();
         }
     }
-
-
-    void Player1Life()
+    
+    void PlayerLife()
     {
-        if (playerOnMap == false)
+        if (playerLife < 1)
         {
-            if (playerLife1 < 1)
-            {
-                FindObjectOfType<GameOverMenu>().GameOver();
-            }
-            else
-            {
-                FindObjectOfType<PlayerSpawner>().SpawnPlayer();
-                playerOnMap = true;
-                playerLife1--;
-            }
+            FindObjectOfType<GameOverMenu>().GameOver();
+            Debug.Log(playerLife);
+        }
+        else
+        {
+            p.velocity = Vector3.zero;
+            s.SpawnPlayerCenter();
+            playerLife--;
         }
     }
-
 }
