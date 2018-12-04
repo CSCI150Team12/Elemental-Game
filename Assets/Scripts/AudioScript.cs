@@ -4,27 +4,19 @@ using UnityEngine;
 
 public class AudioScript : MonoBehaviour
 {
-
-    public AudioSource Button;
-    public AudioClip hoverButtonSFX;
-    public AudioClip clickButtonSFX;
-
-    // Play button sound
-    public void PlayButton()
-    {
-        Button.Play();
-    }
+    public AudioSource hoverSFX;
+    public AudioSource clickSFX;
 
     // Play hover over button sound
     public void HoverSound()
     {
-        Button.PlayOneShot(hoverButtonSFX);
+        hoverSFX.Play();
     }
 
     // Play click on button sound
     public void ClickSound()
     {
-        Button.PlayOneShot(clickButtonSFX);
+        clickSFX.Play();
     }
 
     // Use this for initialization
