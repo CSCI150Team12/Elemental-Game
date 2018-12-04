@@ -195,6 +195,18 @@ public class Spell : MonoBehaviour {
         }
     }
 
+    public virtual void SecondaryCast()
+    {
+        if (GetComponent<BitEmitter>())
+        {
+            GetComponent<BitEmitter>().Expel();
+        }
+    }
+
+    public virtual void TertiaryCast()
+    {
+    }
+
     private IEnumerator StartTrigger()
     {
         yield return new WaitForSeconds(triggerDelay);

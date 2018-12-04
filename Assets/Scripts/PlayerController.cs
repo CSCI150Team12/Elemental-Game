@@ -100,9 +100,9 @@ public class PlayerController : MonoBehaviour
                 }
                 
             }
-            else if (currentSpell && currentSpell.GetComponent<BitEmitter>())
+            else if (currentSpell)
             {
-                currentSpell.GetComponent<BitEmitter>().Expel();
+                currentSpell.SecondaryCast();
             }
             
         }

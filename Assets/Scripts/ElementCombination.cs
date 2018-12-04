@@ -29,7 +29,7 @@ public class ElementCombination : MonoBehaviour
         elements.Add("Fire + Steam", "Air");
         elements.Add("Fire + Magma", "Plasma");
         
-        //elements.Add("Fire + Mud", "Brick");
+        elements.Add("Fire + Mud", "Dirt");
         elements.Add("Water + Fireball", "Steam Ball");
         //elements.Add("Water + Ice", "Glacier");
         elements.Add("Water + Sand", "Quicksand");

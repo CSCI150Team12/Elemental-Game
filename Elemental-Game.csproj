@@ -13,11 +13,13 @@
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
-    <CompilerResponseFile></CompilerResponseFile>
+    <CompilerResponseFile>
+    </CompilerResponseFile>
     <UnityProjectType>Game:1</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows:5</UnityBuildTarget>
     <UnityVersion>2018.2.15f1</UnityVersion>
-    <RootNamespace></RootNamespace>
+    <RootNamespace>
+    </RootNamespace>
     <LangVersion>4</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -338,6 +340,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\DirtSpell.cs" />
     <Compile Include="Assets\GameInfo.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Attributes\GetSetAttribute.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Attributes\MinAttribute.cs" />
@@ -404,6 +407,7 @@
     <Compile Include="Assets\Scripts\Menus\MainMenu.cs" />
     <Compile Include="Assets\Scripts\Menus\OptionsMenu.cs" />
     <Compile Include="Assets\Scripts\Menus\PauseMenu.cs" />
+    <Compile Include="Assets\Scripts\Modifiers\PositionModifier.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\PlayerDeath.cs" />
     <Compile Include="Assets\Scripts\PlayerSpawner.cs" />
@@ -424,6 +428,7 @@
     <Compile Include="Assets\Scripts\Spells\TornadoSpell.cs" />
     <Compile Include="Assets\Scripts\Spells\TwoFireballsSpell.cs" />
     <Compile Include="Assets\Scripts\Spells\WaterSpell.cs" />
+    <Compile Include="Assets\Stage.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Materials\Spells\Blackhole_GradientSmoothing.shader" />

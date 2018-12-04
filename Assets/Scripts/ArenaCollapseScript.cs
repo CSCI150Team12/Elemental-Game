@@ -23,8 +23,9 @@ public class ArenaCollapseScript : MonoBehaviour {
         cobject = GameObject.FindGameObjectsWithTag("CObject");
     }
 
-	// Update is called once per frame
-	void Update () {
+
+    // Update is called once per frame
+    void Update () {
         float t = Time.time - startTime;
         int seconds = (int)t;
         if (seconds == 120) {
