@@ -1,14 +1,15 @@
 ﻿<Properties StartupConfiguration="{31A3256A-6F20-14C7-D50D-174046A142A0}|">
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/PlayerSpawner.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/ElementCombination.cs">
     <Files>
       <File FileName="Assets/Scripts/GameOverMenu.cs" Line="4" Column="1" />
       <File FileName="Assets/WinPlayer.cs" Line="19" Column="41" />
       <File FileName="Assets/Scripts/CountdownTimer.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/PlayerDeath.cs" Line="15" Column="6" />
+      <File FileName="Assets/Scripts/PlayerDeath.cs" Line="27" Column="31" />
       <File FileName="Assets/Scripts/GameTimer.cs" Line="1" Column="1" />
-      <File FileName="Assets/SpellQueue.cs" Line="63" Column="42" />
-      <File FileName="Assets/Scripts/PlayerSpawner.cs" Line="1" Column="1" />
+      <File FileName="Assets/SpellQueue.cs" Line="44" Column="1" />
+      <File FileName="Assets/Scripts/PlayerSpawner.cs" Line="5" Column="45" />
+      <File FileName="Assets/ElementCombination.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
