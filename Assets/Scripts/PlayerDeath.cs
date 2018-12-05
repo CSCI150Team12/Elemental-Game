@@ -1,27 +1,38 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 
 public class PlayerDeath : MonoBehaviour {
 
-    public Rigidbody p;
+    public Rigidbody p; 
     public PlayerSpawner s;
     int playerLife = 3;
+    public string name;
+    public TMP_Text lives;
+
+    void Awake() {
+    }
 
     void FixedUpdate() {
-        if (p.position.y < -1f) {
-            Debug.Log(playerLife);
+        if (p.position.y < -3f) {
             PlayerLife();
         }
+        lives.GetComponent<TMP_Text>().text = playerLife.ToString();
     }
-    
+
     void PlayerLife()
     {
-        if (playerLife < 1)
-        {
-            FindObjectOfType<GameOverMenu>().GameOver();
-            Debug.Log(playerLife);
+        if (playerLife == 1) {
+            playerLife--;
+            int winner = 0;
+            if (p.name == "Player1") {
+                winner = 2;
+            } else if (p.name == "Player2") { 
+                winner = 1;
+            }
+            FindObjectOfType<WinPlayer>().PlayerWon(winner);
         }
         else
         {

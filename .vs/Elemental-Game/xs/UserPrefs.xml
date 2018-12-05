@@ -1,27 +1,14 @@
 ﻿<Properties StartupConfiguration="{31A3256A-6F20-14C7-D50D-174046A142A0}|">
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
-<<<<<<< HEAD
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/PlayerDeath.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/PlayerSpawner.cs">
     <Files>
-      <File FileName="Assets/Scripts/Spells/Spell.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/GameTimer.cs" Line="19" Column="58" />
-      <File FileName="Assets/Scripts/PlayerSpawner.cs" Line="17" Column="53" />
-      <File FileName="Assets/Scripts/PlayerDeath.cs" Line="27" Column="10" />
-      <File FileName="Assets/Scripts/Spells/EarthSpell.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/DestroyByBoundary.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/GameOverMenu.cs" Line="10" Column="37" />
-      <File FileName="Assets/Scripts/ArenaCollapseScript.cs" Line="36" Column="23" />
-      <File FileName="Assets/SpellQueue.cs" Line="18" Column="70" />
-      <File FileName="Assets/ElementCombination.cs" Line="26" Column="49" />
-      <File FileName="Assets/Scripts/MainMenu.cs" Line="6" Column="50" />
-      <File FileName="Assets/Scripts/PlayerController.cs" Line="12" Column="38" />
-=======
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/destroyedobj.cs">
-    <Files>
-      <File FileName="Assets/Scripts/AudioScript.cs" Line="41" Column="2" />
-      <File FileName="Assets/Scripts/PlayerController.cs" Line="1" Column="1" />
-      <File FileName="Assets/destroyedobj.cs" Line="8" Column="1" />
->>>>>>> Destructablecrate
+      <File FileName="Assets/Scripts/GameOverMenu.cs" Line="4" Column="1" />
+      <File FileName="Assets/WinPlayer.cs" Line="19" Column="41" />
+      <File FileName="Assets/Scripts/CountdownTimer.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/PlayerDeath.cs" Line="15" Column="6" />
+      <File FileName="Assets/Scripts/GameTimer.cs" Line="1" Column="1" />
+      <File FileName="Assets/SpellQueue.cs" Line="63" Column="42" />
+      <File FileName="Assets/Scripts/PlayerSpawner.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
