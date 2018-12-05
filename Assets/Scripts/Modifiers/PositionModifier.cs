@@ -46,8 +46,6 @@ public class PositionModifier : MonoBehaviour {
             }
             transform.position += amplitude * Mathf.Sin(Time.time * Mathf.PI *  timeRate);
         }
-        transform.position = velocity + startPosition;
-        transform.position = new Vector3(transform.position.x, Mathf.Clamp(transform.position.y, minPosition.y, maxPosition.y), transform.position.z);
         velocity += acceleration;
 	}
 }

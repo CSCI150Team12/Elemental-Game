@@ -342,7 +342,6 @@
     <Compile Include="Assets\destroyedobj.cs" />
     <Compile Include="Assets\DirtSpell.cs" />
     <Compile Include="Assets\DLScript.cs" />
-    <Compile Include="Assets\ElementCombination.cs" />
     <Compile Include="Assets\GameInfo.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Attributes\GetSetAttribute.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Attributes\MinAttribute.cs" />
@@ -398,19 +397,18 @@
     <Compile Include="Assets\Scripts\Collectables\SpeedBoost.cs" />
     <Compile Include="Assets\Scripts\CollectableSpawner.cs" />
     <Compile Include="Assets\Scripts\CountdownTimer.cs" />
-    <Compile Include="Assets\Scripts\DDOL.cs" />
     <Compile Include="Assets\Scripts\DeathSpell.cs" />
     <Compile Include="Assets\Scripts\DestroyByBoundary.cs" />
     <Compile Include="Assets\Scripts\ElementCombination.cs" />
     <Compile Include="Assets\Scripts\FireballSpell.cs" />
-    <Compile Include="Assets\Scripts\GameOverMenu.cs" />
-    <Compile Include="Assets\Scripts\GameplayMenu.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
+    <Compile Include="Assets\Scripts\GameplayMenu.cs" />
     <Compile Include="Assets\Scripts\GameTimer.cs" />
     <Compile Include="Assets\Scripts\GlobalVariables.cs" />
     <Compile Include="Assets\Scripts\GrassTile.cs" />
     <Compile Include="Assets\Scripts\HingeJointTarget.cs" />
     <Compile Include="Assets\Scripts\LifeSpell.cs" />
+    <Compile Include="Assets\Scripts\Menus\GameOverMenu.cs" />
     <Compile Include="Assets\Scripts\Menus\MainMenu.cs" />
     <Compile Include="Assets\Scripts\Menus\OptionsMenu.cs" />
     <Compile Include="Assets\Scripts\Menus\PauseMenu.cs" />
@@ -441,7 +439,6 @@
     <Compile Include="Assets\Scripts\Spells\TornadoSpell.cs" />
     <Compile Include="Assets\Scripts\Spells\TwoFireballsSpell.cs" />
     <Compile Include="Assets\Scripts\Spells\WaterSpell.cs" />
-    <Compile Include="Assets\SpellQueue.cs" />
     <Compile Include="Assets\Stage.cs" />
   </ItemGroup>
   <ItemGroup>
