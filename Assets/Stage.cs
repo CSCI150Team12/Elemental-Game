@@ -17,13 +17,19 @@ public class Stage : MonoBehaviour {
         followMarker.position = transform.position;
         followMarker.parent = transform.parent;
         PositionModifier pos = followMarker.gameObject.AddComponent<PositionModifier>();
-        pos.velocity = new Vector3(0,0,0.1f);
+        /*
         pos.focusPoint = followMarker.parent;
         pos.dynamic = false;
         pos.focusTimeOscillation = false;
         pos.focusOscillation = true;
         pos.oscillationAmplitude = Vector3.up * 0.01f;
-        pos.oscillationRate = 1f;
+        pos.oscillationRate = 1f;*/
+        pos.velocity = new Vector3(0, -1, 0);
+        pos.focusPoint = GameObject.Find("Player2").transform;
+        pos.minPosition = Vector3.zero;
+        pos.maxPosition = Vector3.one;
+        pos.oscillationAmplitude = Vector3.up;
+        pos.dynamic = true;
 
         transform.parent = null;
 

@@ -1,12 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-<<<<<<< HEAD
 # Visual Studio 2017
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.Postprocessing.Runtime", "Unity.Postprocessing.Runtime.csproj", "{49FCAFB7-7D0A-B3F6-2171-B4248A94EC21}"
-=======
-# Visual Studio 15
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{31A3256A-6F20-14C7-D50D-174046A142A0}"
->>>>>>> master
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elemental-Game", "Elemental-Game.csproj", "{0811C728-799A-81BC-2896-2356E646F56C}"
 EndProject
