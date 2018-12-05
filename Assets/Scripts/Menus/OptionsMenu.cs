@@ -135,7 +135,7 @@ public class OptionsMenu : MonoBehaviour
         resolutionDropdown.RefreshShownValue();
 
         // Load fullscreen settings
-        fullscreenVar = (PlayerPrefs.GetInt("FullscreenSetting") == 1) 
+        fullscreenVar = (PlayerPrefs.GetInt("FullscreenSetting") == 1)
             ? true : false;
         fullscreenToggle.isOn = fullscreenVar;
     }
