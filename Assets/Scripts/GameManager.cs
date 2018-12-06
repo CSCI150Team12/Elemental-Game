@@ -20,7 +20,7 @@ public class GameManager : MonoBehaviour
         // Load or create music volume setting
         if (PlayerPrefs.HasKey("MusicVolume"))
         {
-            audioMixer.SetFloat("MusicFaderVolume", 
+            audioMixer.SetFloat("MusicFaderVolume",
                                 PlayerPrefs.GetFloat("MusicVolume"));
         }
         else
@@ -31,7 +31,7 @@ public class GameManager : MonoBehaviour
         // Load or create SFX volume setting
         if (PlayerPrefs.HasKey("SFXVolume"))
         {
-            audioMixer.SetFloat("SFXFaderVolume", 
+            audioMixer.SetFloat("SFXFaderVolume",
                                 PlayerPrefs.GetFloat("SFXVolume"));
         }
         else
@@ -42,7 +42,7 @@ public class GameManager : MonoBehaviour
         // Load or create UI volume setting
         if (PlayerPrefs.HasKey("UIVolume"))
         {
-            audioMixer.SetFloat("UIFaderVolume", 
+            audioMixer.SetFloat("UIFaderVolume",
                                 PlayerPrefs.GetFloat("UIVolume"));
         }
         else
@@ -74,7 +74,7 @@ public class GameManager : MonoBehaviour
         else
         {
             int i = 0;
-            while (resolutions[i].width != Screen.currentResolution.width || 
+            while (resolutions[i].width != Screen.currentResolution.width ||
                    resolutions[i].height != Screen.currentResolution.height)
             {
                 i++;
