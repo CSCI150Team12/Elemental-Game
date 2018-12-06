@@ -20,7 +20,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 2}
-  m_MinSize: {x: 950, y: 521}
+  m_MinSize: {x: 950, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -43,7 +43,7 @@ MonoBehaviour:
     y: 0
     width: 1920
     height: 997
-  m_MinSize: {x: 950, y: 521}
+  m_MinSize: {x: 950, y: 542}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &3
 MonoBehaviour:
@@ -106,10 +106,10 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 947
-  m_MinSize: {x: 681, y: 471}
-  m_MaxSize: {x: 14002, y: 14021}
+  m_MinSize: {x: 683, y: 492}
+  m_MaxSize: {x: 14004, y: 14042}
   vertical: 0
-  controlID: 4581
+  controlID: 3361
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -130,10 +130,10 @@ MonoBehaviour:
     y: 0
     width: 1531
     height: 947
-  m_MinSize: {x: 404, y: 471}
-  m_MaxSize: {x: 10000, y: 14021}
+  m_MinSize: {x: 406, y: 492}
+  m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
-  controlID: 4582
+  controlID: 3362
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -154,10 +154,10 @@ MonoBehaviour:
     y: 0
     width: 1531
     height: 573
-  m_MinSize: {x: 404, y: 221}
-  m_MaxSize: {x: 8004, y: 4021}
+  m_MinSize: {x: 406, y: 221}
+  m_MaxSize: {x: 8006, y: 4021}
   vertical: 0
-  controlID: 4583
+  controlID: 3363
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -368,10 +368,10 @@ MonoBehaviour:
     height: 552
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
-    scrollPos: {x: 0, y: 80}
+    scrollPos: {x: 0, y: 3257}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 546dffffeaceffff0000000018a700006ea8000004a90000
+    m_ExpandedIDs: 94d9ffff12fbffff00000000d825000026530000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -425,9 +425,9 @@ MonoBehaviour:
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 1.7528558, y: 6.6890564, z: 18.843275}
+    m_Target: {x: -7.703286, y: -9.548912, z: -5.849991}
     speed: 2
-    m_Value: {x: 1.7528558, y: 6.6890564, z: 18.843275}
+    m_Value: {x: -7.703286, y: -9.548912, z: -5.849991}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -455,13 +455,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: -0.13812548, y: 0.810036, z: -0.21142319, w: -0.5292101}
+    m_Target: {x: -0.14960119, y: 0.83691525, z: -0.28135324, w: -0.44500872}
     speed: 2
-    m_Value: {x: -0.13812548, y: 0.810036, z: -0.21142319, w: -0.5292101}
+    m_Value: {x: -0.14960119, y: 0.83691525, z: -0.28135324, w: -0.44500872}
   m_Size:
-    m_Target: 41.20246
+    m_Target: 43.056572
     speed: 2
-    m_Value: 41.20246
+    m_Value: 43.056572
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -598,20 +598,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets/Materials/GameObjectMaterial
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/Materials/GameObjectMaterial
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Daniel\Documents\GitHub\Elemental-Game
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 228}
-    m_SelectedIDs: 86570000
-    m_LastClickedID: 22406
-    m_ExpandedIDs: 000000005e55000072550000e4550000f056000060580000ba580000d45b00006c5c00000c6400000e64000010640000126400001464000016640000186400001a6400001c64000000ca9a3b
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: f6180000
+    m_LastClickedID: 6390
+    m_ExpandedIDs: 00000000161100003a11000012120000a413000020160000b4160000be1b0000b41c0000224a0000244a0000264a0000284a00002a4a00002c4a00002e4a0000304a0000324a000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -639,7 +639,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000005e55000072550000e4550000f056000060580000ba580000d45b00006c5c00000c6400000e64000010640000126400001464000016640000186400001a6400001c64000000ca9a3b
+    m_ExpandedIDs: 00000000161100003a11000012120000a413000020160000b4160000be1b0000b41c0000224a0000244a0000264a0000284a00002a4a00002c4a00002e4a0000304a0000324a000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -722,7 +722,7 @@ MonoBehaviour:
   m_AnimEditor: {fileID: 0}
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 41874
+  m_LastSelectedObjectID: 21642
 --- !u!114 &19
 MonoBehaviour:
   m_ObjectHideFlags: 52
