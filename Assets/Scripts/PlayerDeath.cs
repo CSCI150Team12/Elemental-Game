@@ -11,6 +11,7 @@ public class PlayerDeath : MonoBehaviour {
     int playerLife = 3;
     public string name;
     public TMP_Text lives;
+    public GameObject other;
 
     void Awake() {
     }
@@ -36,9 +37,13 @@ public class PlayerDeath : MonoBehaviour {
         }
         else
         {
-            p.velocity = Vector3.zero;
-            s.SpawnPlayerCenter();
-            playerLife--;
+            p.velocity = Vector3.zero;                                  // stop player momentum from continuing after death 
+            //FindObjectOfType<SpellEffect>().Die();                   // kill any damage overtime spell affect
+            FindObjectOfType<PlayerController>().damage = 0f;           // set player damage to 0
+            FindObjectOfType<PlayerController>().damageUI.value = 0f;   // set the player UI damage to 0
+            s.SpawnPlayerCenter();                                      // respawn player at center of the arena
+            playerLife--;                                               // decrement the player life
+
         }
     }
 }
