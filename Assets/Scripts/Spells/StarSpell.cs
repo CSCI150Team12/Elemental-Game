@@ -5,6 +5,7 @@ using UnityEngine;
 public class StarSpell : MonoBehaviour {
 
     public float scaleRate;
+    public bool destructive = false;
     private Spell spell;
     private SpellField field;
     private Vector3 scale;
@@ -18,6 +19,21 @@ public class StarSpell : MonoBehaviour {
         field = GetComponentInChildren<SpellField>();
         gravityModifier = field.gravityModifier;
         field.gravityModifier = 0f;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (destructive && other.transform.parent != transform)
+        {
+            if (other.GetComponent<PlayerController>())
+            {
+                other.transform.position = Vector3.up * -1000;
+            }
+            else
+            {
+                Destroy(other.gameObject);
+            }
+        }
     }
 
     private void FixedUpdate()

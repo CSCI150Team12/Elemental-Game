@@ -20,13 +20,22 @@ public class DirtSpell : Spell {
             tile = hit.transform.gameObject;
             tile.GetComponent<Collider>().enabled = false;
             tile.GetComponent<MeshRenderer>().enabled = false;
-            transform.parent = tile.transform;
+            GetComponentInChildren<MeshRenderer>().materials = tile.GetComponent<MeshRenderer>().materials;
+            transform.parent = null;
             base.Initialize();
         }
         else
         {
             Die();
         }
+        StartCoroutine(ToggleKinematic());
+    }
+
+    public IEnumerator ToggleKinematic()
+    {
+        gameObject.layer = LayerMask.NameToLayer("NoStageCollision");
+        yield return new WaitForSeconds(0.5f);
+        gameObject.layer = LayerMask.NameToLayer("Ground");
     }
 
     public override void SecondaryCast()

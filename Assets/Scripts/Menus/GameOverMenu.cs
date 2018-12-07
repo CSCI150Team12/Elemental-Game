@@ -28,7 +28,7 @@ public class GameOverMenu : MonoBehaviour
     {
         gameOverMenuUI.SetActive(false);
         Time.timeScale = 1f;
-        SceneManager.LoadScene("Game");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     // Load 'Menu' scene

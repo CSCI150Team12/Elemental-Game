@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PositionModifier : MonoBehaviour {
 
+    public float delay = 0f;
     public Transform focusPoint;
     public bool dynamic;
     public Vector3 velocity;
@@ -15,37 +16,52 @@ public class PositionModifier : MonoBehaviour {
     public float oscillationRate;
     public Vector3 oscillationAmplitude;
     private Vector3 startPosition;
+    private bool started = false;
 
     private void Start()
     {
         startPosition = transform.position;
+        StartCoroutine(Initialize());
+    }
+
+    private IEnumerator Initialize()
+    {
+        yield return new WaitForSeconds(delay);
+        started = true;
     }
 
     void FixedUpdate () {
-        if (focusPoint)
+        if (started)
         {
-            Vector3 amplitude = oscillationAmplitude;
-            Vector3 position;
-            if (dynamic)
+            if (focusPoint)
             {
-                position = transform.position;
+                Vector3 amplitude = oscillationAmplitude;
+                Vector3 position;
+                if (dynamic)
+                {
+                    position = transform.position;
+                }
+                else
+                {
+                    position = startPosition;
+                }
+
+                float timeRate = oscillationRate;
+                if (focusOscillation)
+                {
+                    amplitude = (position - focusPoint.position).normalized * amplitude.magnitude;
+                }
+                if (focusTimeOscillation)
+                {
+                    timeRate *= (position - focusPoint.position).magnitude;
+                }
+                transform.position += amplitude * Mathf.Sin(Time.time * Mathf.PI * timeRate);
             }
             else
             {
-                position = startPosition;
+                transform.position += velocity;
             }
-            
-            float timeRate = oscillationRate;
-            if (focusOscillation)
-            {
-                amplitude = (position - focusPoint.position).normalized * amplitude.magnitude;
-            }
-            if (focusTimeOscillation)
-            {
-                timeRate *= (position - focusPoint.position).magnitude;
-            }
-            transform.position += amplitude * Mathf.Sin(Time.time * Mathf.PI *  timeRate);
+            velocity += acceleration;
         }
-        velocity += acceleration;
-	}
+    }
 }

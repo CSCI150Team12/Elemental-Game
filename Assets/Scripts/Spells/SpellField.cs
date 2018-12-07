@@ -6,13 +6,22 @@ public class SpellField : MonoBehaviour {
 
     public float gravityModifier = 0f;
     public string spellEffect;
+    public bool affectStage = false;
 
     private void OnTriggerStay(Collider other)
     {
         Rigidbody body = other.GetComponent<Rigidbody>();
-        if (body && !body.GetComponent<Rigidbody>().isKinematic && (transform.position - body.transform.position).magnitude > 0)
+        if (body && (transform.position - body.transform.position).magnitude > 0)
         {
-            body.AddForce((transform.position - body.transform.position).normalized * gravityModifier / (transform.position - body.transform.position).magnitude);
+            if (!body.GetComponent<Rigidbody>().isKinematic)
+            {
+                body.AddForce((transform.position - body.transform.position).normalized * gravityModifier / (transform.position - body.transform.position).magnitude);
+            }
+            else if (body.GetComponent<Stage>() && affectStage)
+            {
+                body.mass = 1;
+                body.isKinematic = false;
+            }
         }
         ApplyEffect(other.gameObject);
     }

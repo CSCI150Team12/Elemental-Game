@@ -16,6 +16,7 @@ public class EarthSpell : Spell
             transform.rotation = hit.transform.rotation;
             tile = hit.transform.gameObject;
             transform.parent = hit.transform;
+            GetComponentInChildren<MeshRenderer>().material = tile.GetComponent<MeshRenderer>().material;
             base.Initialize();
         }
         else
@@ -44,9 +45,12 @@ public class EarthSpell : Spell
     {
         if ((transform.position.y < max && speed > 0) || (transform.position.y > min && speed < 0 ))
         {
-            tile.transform.position += new Vector3(0, speed * Time.deltaTime, 0);
+            tile.GetComponent<Stage>().followMarker.transform.position += new Vector3(0, speed * Time.deltaTime, 0);
             transform.Find("Body").localScale += new Vector3(0, 0, 2.5f * speed * Time.deltaTime);
             transform.Find("Body").position -= new Vector3(0, speed * Time.deltaTime, 0);
+        }
+        else if (transform.position.y <= min && speed < 0)
+        {
         }
     }
 

@@ -59,7 +59,7 @@ MeshRenderer:
   m_ReflectionProbeUsage: 1
   m_RenderingLayerMask: 4294967295
   m_Materials:
-  - {fileID: 2100000, guid: 71c58b8a7efb8ba43a23534bf25fd08a, type: 2}
+  - {fileID: 2100000, guid: ea3b45764c304674db232a9f7277848f, type: 2}
   - {fileID: 2100000, guid: a815642882f3877428079c8525be6b3c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
@@ -135,9 +135,13 @@ MonoBehaviour:
   lifespan: 0
   offset: {x: 0, y: -1.5, z: 2}
   triggerForce: 0
+  triggerDelay: 0
+  startDelay: 0
   triggerEffectName: 
   damageAmount: 0
+  damagePerSecond: 0
   deathDelay: 0
+  turnSpeedModifier: 1
   animationVar: GroundHit
   started: 0
   startSpeed: 0

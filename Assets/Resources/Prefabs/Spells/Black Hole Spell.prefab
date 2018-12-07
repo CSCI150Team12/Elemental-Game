@@ -161,6 +161,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scaleRate: 0.01
+  destructive: 1
 --- !u!114 &114470299817496656
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -176,17 +177,20 @@ MonoBehaviour:
   dying: 0
   hasLifespan: 1
   oneShot: 1
+  noCast: 0
   lifespan: 10
   offset: {x: 0, y: 1.25, z: 1.5}
   triggerForce: 0
+  triggerDelay: 0
+  startDelay: 0
   triggerEffectName: 
   damageAmount: 25
+  damagePerSecond: 0
   deathDelay: 5
+  turnSpeedModifier: 1
   animationVar: IsChanneling
   started: 0
   startSpeed: 10
-  bit: {fileID: 0}
-  bitVelocity: {x: 0, y: 0, z: 0}
   stopAnimation: 0
 --- !u!114 &114897001201786600
 MonoBehaviour:
@@ -201,6 +205,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gravityModifier: 50
   spellEffect: 
+  affectStage: 0
 --- !u!135 &135269784210948238
 SphereCollider:
   m_ObjectHideFlags: 1

@@ -12,6 +12,7 @@ public class Spell : MonoBehaviour {
     public Vector3 offset = new Vector3(0, 1.25f, 1.5f);
     public float triggerForce = 0f;
     public float triggerDelay = 0f;
+    public float startDelay = 0f;
     public string triggerEffectName = "";
     public float damageAmount = 0;
     public float damagePerSecond = 0f;
@@ -37,8 +38,9 @@ public class Spell : MonoBehaviour {
         }
         if (noCast)
         {
-            Initialize();
+            StartCoroutine(DelayedInitialize());
         }
+        
     }
 
     void DealDamage(GameObject other)
@@ -155,6 +157,12 @@ public class Spell : MonoBehaviour {
             player.rotateSpeed /= turnSpeedModifier;
         }
         started = true;
+    }
+
+    private IEnumerator DelayedInitialize()
+    {
+        yield return new WaitForSeconds(startDelay);
+        Initialize();
     }
 
     public virtual void Stop(bool isHidden = false)

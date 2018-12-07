@@ -138,6 +138,7 @@ public class PlayerController : MonoBehaviour
             animator.SetFloat("RunFront", 0);
         }
         transform.GetComponent<Rigidbody>().MovePosition(transform.position + rightMovement + upMovement);
+        
     }
 
     IEnumerator Jump()
