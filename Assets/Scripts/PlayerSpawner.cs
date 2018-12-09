@@ -10,10 +10,11 @@ public class PlayerSpawner : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        SpawnPlayer(); //Spawn player at the start of the game
+        Invoke("SpawnPlayer", 1f); //Spawn player at the start of the game
 	}
 
     public void SpawnPlayer() {
+        P.SetActive(true);
         P.transform.position = spawnPointP.transform.position; // Spawn player at position of spawnpoint
     }
 

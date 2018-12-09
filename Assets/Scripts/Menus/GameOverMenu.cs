@@ -16,9 +16,7 @@ public class GameOverMenu : MonoBehaviour
         gameTimer = GetComponent<GameTimer>();
     }
 
-    //Show 'game over' screen
-    public void GameOver()
-    {
+    public void GameOver() {
         gameOverMenuUI.SetActive(true);
         Time.timeScale = 0f;
     }
