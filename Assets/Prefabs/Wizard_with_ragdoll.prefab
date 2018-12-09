@@ -1849,11 +1849,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerNumber: 2
   damageUI: {fileID: 0}
+  spellQueueUI: {fileID: 0}
+  spellIcon: {fileID: 0}
   moveSpeed: 4
   rotateSpeed: 10
   damage: 0
   jumpForce: 300
-  spellStr: Water
   pelvis: {fileID: 1801454307402824}
 --- !u!114 &114761650014326560
 MonoBehaviour:
@@ -1866,6 +1867,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9fa4b46bb9a7d6a449316dfeb5b96243, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spellQueueUI: {fileID: 0}
 --- !u!135 &135905844301194830
 SphereCollider:
   m_ObjectHideFlags: 1

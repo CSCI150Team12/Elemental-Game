@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/Desert Stage.unity
+    guid: 8681d8a6d4865f646bacc3361ad792f7
   m_configObjects: {}

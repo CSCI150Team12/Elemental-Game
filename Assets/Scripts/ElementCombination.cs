@@ -48,7 +48,7 @@ public class ElementCombination : MonoBehaviour
         elements.Add("Air + Lightning", "Lightning Storm");
         //Collectible items/Extra
         elements.Add("Black Hole + Fire", "Star");
-        elements.Add("Life + Mud", "Frog");
+        elements.Add("Life + Water", "Frog");
     }
 
     public string GetElement(string element1, string element2)

@@ -13,7 +13,7 @@ public class MainMenu : MonoBehaviour
     {
         StartCoroutine("DelayTime");
         Time.timeScale = 1;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene("Game");
         Time.timeScale = 1f;
     }
 
