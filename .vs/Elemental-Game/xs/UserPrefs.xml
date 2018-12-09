@@ -5,7 +5,7 @@
       <File FileName="Assets/Scripts/GameOverMenu.cs" Line="4" Column="1" />
       <File FileName="Assets/WinPlayer.cs" Line="19" Column="41" />
       <File FileName="Assets/Scripts/CountdownTimer.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/PlayerDeath.cs" Line="41" Column="115" />
+      <File FileName="Assets/Scripts/PlayerDeath.cs" Line="41" Column="73" />
       <File FileName="Assets/Scripts/GameTimer.cs" Line="1" Column="1" />
       <File FileName="Assets/SpellQueue.cs" Line="44" Column="1" />
       <File FileName="Assets/Scripts/PlayerSpawner.cs" Line="5" Column="45" />
@@ -15,7 +15,7 @@
       <File FileName="Assets/Scripts/Spells/Spell.cs" Line="132" Column="52" />
       <File FileName="Assets/Scripts/Spells/MagmaSpell.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Spells/StarSpell.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Spells/SpellEffect.cs" Line="63" Column="23" />
+      <File FileName="Assets/Scripts/Spells/SpellEffect.cs" Line="55" Column="5" />
       <File FileName="Assets/Scripts/FireballSpell.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/PossessSpell.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/PolymorphSpell.cs" Line="1" Column="1" />
@@ -24,6 +24,8 @@
       <File FileName="Assets/Scripts/PlayerController.cs" Line="10" Column="27" />
       <File FileName="Assets/Scripts/DeathSpell.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Spells/IceSpell.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/PauseMenu.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/Spells/SpellField.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
