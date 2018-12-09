@@ -154,6 +154,7 @@
     <Compile Include="Assets\Scripts\Spells\TwoFireballsSpell.cs" />
     <Compile Include="Assets\Scripts\Spells\WaterSpell.cs" />
     <Compile Include="Assets\SpellQueue.cs" />
+    <Compile Include="Assets\TurtleScript.cs" />
     <None Include="Assets\PostProcessing\Resources\Shaders\DepthOfField.shader" />
     <None Include="Assets\Materials\Spells\Blackhole_GradientSmoothing.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />

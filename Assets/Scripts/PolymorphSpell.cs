@@ -4,6 +4,23 @@ using UnityEngine;
 
 public class PolymorphSpell : Spell {
 
+
+    // NOTICE: Can only have 1 Polymorph Spell per game!!!! 
+    // BUG: Second Polymorph isnt displayed because gameobject is destroyed.
+    // NOTICE: duration=death delay +1 = lifespan +1
+
+    public float duration;  // The duration the player will remain morphed
+    private PlayerController PC;
+    private PlayerController TurtlePC;
+    private bool HIT;
+    private SkinnedMeshRenderer Target;
+    private CapsuleCollider Target1;
+    private Rigidbody Target2;
+    private SkinnedMeshRenderer TurtleTarget;
+    public GameObject TransformationObject;
+    private Transform TargetLocation;
+    private float HealthHolder;
+
     public override void Initialize()
     {
         base.Initialize();
@@ -13,15 +30,48 @@ public class PolymorphSpell : Spell {
 
     protected override void OnTriggerEnter(Collider other)
     {
+
+        
         if (started)
         {
-            
+            if (other.CompareTag("Player"))    // If the player touches the item, then activate!
+            {
+                
 
 
+                PC = other.GetComponent<PlayerController>();  // Obtain "PlayerController", properties
+                PC.moveSpeed = 1;
+                HealthHolder = PC.damage;
+
+                string holder = other.name; // Stores the name of the object it hit into holder
+                HIT = true; // Becomes true, when spell hits a player.
+
+                PC = other.GetComponent<PlayerController>();  // Obtain "PlayerController", properties
+
+                Target = other.GetComponentInChildren<SkinnedMeshRenderer>();
+                Target.enabled = false; // Makes player invisible
+
+                Target2 = other.GetComponent<Rigidbody>();
+                Target2.useGravity = false;
+
+                Target1 = other.GetComponent<CapsuleCollider>();
+                Target1.enabled = false;
+                
 
 
+                TurtlePC = TransformationObject.GetComponent<PlayerController>();
+                
 
+                // Do this before turtle is spawned, otherwise wont give proper control
+                if (holder == "Player2") // If target was Player2, then Player 2 becomes possessed
+                    TurtlePC.playerNumber = 2;
+                else if (holder == "Player1") // If target was Player1, then Player 1 becomes possessed
+                    TurtlePC.playerNumber = 1;
 
+                Instantiate(TransformationObject, transform.position, transform.rotation); // Get user location, spawns turtle
+                TurtlePC.moveSpeed = 1;
+
+            }
             base.OnTriggerEnter(other);
             transform.Find("Body").GetComponent<ParticleSystem>().Play();
             SetVelocity(Vector3.zero);
@@ -35,4 +85,19 @@ public class PolymorphSpell : Spell {
         transform.Find("Body").GetComponent<ParticleSystem>().Pause();
         started = true;
     }
+
+    private void Update()
+    {
+        duration -= Time.deltaTime;                 // Decrement duration down to 0
+        if (duration <= 0)
+        {
+
+            Target.enabled = true;  // Makes player visible
+            Target2.useGravity = true;
+            Target1.enabled = true;
+            PC.moveSpeed = 5;       // Put movespeed back to normal
+            GlobalVariables.TurtleActive = false;       // Destroys Turtle
+ 
+        }   
+    } 
 }
