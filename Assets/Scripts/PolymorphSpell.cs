@@ -51,16 +51,17 @@ public class PolymorphSpell : Spell {
                 Target = other.GetComponentInChildren<SkinnedMeshRenderer>();
                 Target.enabled = false; // Makes player invisible
 
-                Target2 = other.GetComponent<Rigidbody>();
+                Target2 = other.GetComponent<Rigidbody>();  // Removes gravity from invisible wizard
                 Target2.useGravity = false;
 
-                Target1 = other.GetComponent<CapsuleCollider>();
+                Target1 = other.GetComponent<CapsuleCollider>();    // Removes collider from wizard
                 Target1.enabled = false;
                 
 
 
-                TurtlePC = TransformationObject.GetComponent<PlayerController>();
-                
+                TurtlePC = TransformationObject.GetComponent<PlayerController>();   //Gets Turtles "PlayerController" properties
+                TurtlePC.damage = HealthHolder;
+
 
                 // Do this before turtle is spawned, otherwise wont give proper control
                 if (holder == "Player2") // If target was Player2, then Player 2 becomes possessed
@@ -70,9 +71,10 @@ public class PolymorphSpell : Spell {
 
                 Instantiate(TransformationObject, transform.position, transform.rotation); // Get user location, spawns turtle
                 TurtlePC.moveSpeed = 1;
+                TurtlePC.damage = HealthHolder;// Moves wizards health to turtle
 
             }
-            base.OnTriggerEnter(other);
+            base.OnTriggerEnter(other); // Use for particle effect
             transform.Find("Body").GetComponent<ParticleSystem>().Play();
             SetVelocity(Vector3.zero);
             Die();
@@ -88,16 +90,23 @@ public class PolymorphSpell : Spell {
 
     private void Update()
     {
-        duration -= Time.deltaTime;                 // Decrement duration down to 0
+        duration -= Time.deltaTime;     // Decrement duration down to 0
         if (duration <= 0)
         {
-
-            Target.enabled = true;  // Makes player visible
-            Target2.useGravity = true;
-            Target1.enabled = true;
-            PC.moveSpeed = 5;       // Put movespeed back to normal
+           // PC.damage = HealthHolder;   // Moves turtles health back to wizard
+            Target.enabled = true;      // Makes player visible
+            Target2.useGravity = true;  // Gives gravity back to wizard
+            Target1.enabled = true;     //Enables collision for wizard
+            PC.moveSpeed = 5;           // Put movespeed back to normal
             GlobalVariables.TurtleActive = false;       // Destroys Turtle
  
         }   
+        else
+        {
+           HealthHolder = TurtlePC.damage;
+            //PC.damage = HealthHolder;
+            PC.damage = HealthHolder;
+            Debug.Log(HealthHolder);
+        }
     } 
 }
