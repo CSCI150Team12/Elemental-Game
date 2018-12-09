@@ -1503,11 +1503,11 @@ MonoBehaviour:
     lineCount: 0
     pageCount: 0
     materialCount: 1
-  m_havePropertiesChanged: 1
+  m_havePropertiesChanged: 0
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 1
+  m_isInputParsingRequired: 0
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -10329,6 +10329,7 @@ MonoBehaviour:
   s: {fileID: 2108962584}
   name: Player1
   lives: {fileID: 1656143591}
+  other: {fileID: 0}
 --- !u!1001 &643275865
 Prefab:
   m_ObjectHideFlags: 0
@@ -30532,11 +30533,11 @@ MonoBehaviour:
     lineCount: 0
     pageCount: 0
     materialCount: 1
-  m_havePropertiesChanged: 1
+  m_havePropertiesChanged: 0
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
-  m_isInputParsingRequired: 1
+  m_isInputParsingRequired: 0
   m_inputSource: 0
   m_hasFontAssetChanged: 0
   m_subTextObjects:
@@ -32465,6 +32466,7 @@ MonoBehaviour:
   s: {fileID: 625250105}
   name: Player2
   lives: {fileID: 581254001}
+  other: {fileID: 0}
 --- !u!1001 &2059250258
 Prefab:
   m_ObjectHideFlags: 0

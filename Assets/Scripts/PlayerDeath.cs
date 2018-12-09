@@ -39,6 +39,7 @@ public class PlayerDeath : MonoBehaviour {
         {
             p.velocity = Vector3.zero;                                  // stop player momentum from continuing after death 
             if(p.GetComponentInChildren<SpellEffect>()) {               // kill any damage overtime spell affect
+
                 p.GetComponentInChildren<SpellEffect>().Die();
             }
             p.GetComponent<PlayerController>().damage = 0f;             // set player damage to 0

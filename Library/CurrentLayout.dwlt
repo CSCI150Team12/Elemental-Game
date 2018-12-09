@@ -106,10 +106,10 @@ MonoBehaviour:
     y: 30
     width: 1440
     height: 752
-  m_MinSize: {x: 683, y: 342}
-  m_MaxSize: {x: 12008, y: 8042}
+  m_MinSize: {x: 681, y: 342}
+  m_MaxSize: {x: 12006, y: 8042}
   vertical: 0
-  controlID: 190
+  controlID: 1398
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -130,10 +130,10 @@ MonoBehaviour:
     y: 0
     width: 1004
     height: 752
-  m_MinSize: {x: 406, y: 342}
-  m_MaxSize: {x: 8006, y: 8042}
+  m_MinSize: {x: 404, y: 342}
+  m_MaxSize: {x: 8004, y: 8042}
   vertical: 1
-  controlID: 191
+  controlID: 1399
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -154,10 +154,10 @@ MonoBehaviour:
     y: 0
     width: 1004
     height: 455
-  m_MinSize: {x: 406, y: 221}
-  m_MaxSize: {x: 8006, y: 4021}
+  m_MinSize: {x: 404, y: 221}
+  m_MaxSize: {x: 8004, y: 4021}
   vertical: 0
-  controlID: 192
+  controlID: 1446
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -367,8 +367,8 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 
-    m_LastClickedID: 0
+    m_SelectedIDs: a6250000
+    m_LastClickedID: 9638
     m_ExpandedIDs: e4fbffff00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -420,13 +420,13 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SceneLighting: 1
   lastFramingTime: 20438.305009007454
-  m_2DMode: 1
+  m_2DMode: 0
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 484.30927, y: 89.16136, z: -3.640253}
+    m_Target: {x: 6.170518, y: 4.469954, z: 5.0988197}
     speed: 2
-    m_Value: {x: 484.30927, y: 89.16136, z: -3.640253}
+    m_Value: {x: 6.170518, y: 4.469954, z: 5.0988197}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -446,25 +446,25 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
     yGrid:
-      m_Target: 0
-      speed: 2
-      m_Value: 0
-    zGrid:
       m_Target: 1
       speed: 2
       m_Value: 1
+    zGrid:
+      m_Target: 0
+      speed: 2
+      m_Value: 0
   m_Rotation:
-    m_Target: {x: 0, y: 0, z: 0, w: 1}
+    m_Target: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
     speed: 2
-    m_Value: {x: 0, y: 0, z: 0, w: 1}
+    m_Value: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
   m_Size:
-    m_Target: 898.3473
+    m_Target: 17.768646
     speed: 2
-    m_Value: 898.3473
+    m_Value: 17.768646
   m_Ortho:
-    m_Target: 1
+    m_Target: 0
     speed: 2
-    m_Value: 1
+    m_Value: 0
   m_ShowGlobalGrid: 1
   m_LastSceneViewRotation: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
   m_LastSceneViewOrtho: 0
@@ -534,20 +534,20 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Resources/Prefabs
+    - Assets/Scripts
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Resources/Prefabs
+  - Assets/Scripts
   m_LastFoldersGridSize: -1
   m_LastProjectPath: /Users/shauntderharoutunian/Documents/GitHub/Elemental-Game
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 145}
-    m_SelectedIDs: 1e1b0000
-    m_LastClickedID: 6942
-    m_ExpandedIDs: 00000000d20f0000dc1000002a1100006e120000ee140000921a00000c4900000e4900001049000012490000144900001649000018490000
+    scrollPos: {x: 0, y: 177}
+    m_SelectedIDs: fe0f0000
+    m_LastClickedID: 4094
+    m_ExpandedIDs: 00000000d20f0000fe0f0000dc1000002a1100006e120000ee140000921a00000c4900000e490000104900001249000014490000164900001849000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -575,7 +575,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000d20f0000dc1000002a1100006e120000ee140000921a00000c4900000e4900001049000012490000144900001649000018490000
+    m_ExpandedIDs: 00000000d20f0000fe0f0000dc1000002a1100006e120000ee140000921a00000c4900000e490000104900001249000014490000164900001849000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -600,8 +600,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 702df7ff
-    m_LastClickedInstanceID: -578192
+    m_SelectedInstanceIDs: a6250000
+    m_LastClickedInstanceID: 9638
     m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000
     m_RenameOverlay:
@@ -627,7 +627,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 0}
+    m_ScrollPosition: {x: 0, y: 61}
     m_GridSize: 64
   m_DirectoriesAreaWidth: 234
 --- !u!114 &17
