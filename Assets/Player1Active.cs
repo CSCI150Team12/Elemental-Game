@@ -13,7 +13,9 @@ public class Player1Active : MonoBehaviour {
 	void Update () {
         if (GlobalVariables.Player1Active == false)
         {
-            GlobalVariables.Player1Active = true;
+           // GetComponent<SkinnedMeshRenderer>.enabled = false;
+
+
 
             Destroy(gameObject);
 

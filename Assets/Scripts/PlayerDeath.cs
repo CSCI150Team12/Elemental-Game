@@ -7,7 +7,8 @@ public class PlayerDeath : MonoBehaviour {
 
     public Rigidbody p;
     public PlayerSpawner s;
-    int playerLife = 3;
+    // int playerLife = 3;
+    public int playerLife;  // Made it public for Collectables
 
     void FixedUpdate() {
         if (p.position.y < -1f) {
