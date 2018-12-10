@@ -57,7 +57,6 @@ public class PlayerController : MonoBehaviour
     {
         if (!frozen)
         {
-            print(Time.timeScale);
             Move();
         }
     }

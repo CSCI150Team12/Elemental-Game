@@ -19,6 +19,7 @@ public class DeathSpell : Spell {
             transform.rotation = hit.transform.rotation;
             tile = hit.transform.gameObject;
             transform.parent = tile.transform;
+            tile.GetComponent<MeshRenderer>().enabled = false;
             base.Initialize();
         }
         else
@@ -54,6 +55,7 @@ public class DeathSpell : Spell {
         
         if (duration <= 0)
         {
+            tile.GetComponent<MeshRenderer>().enabled = true;
             Destroy(gameObject);    // Gets rid of the object  
             GetComponent<MeshRenderer>().enabled = false;   //Makes the item disappear
 

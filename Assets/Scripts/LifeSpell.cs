@@ -19,6 +19,7 @@ public class LifeSpell : Spell
             transform.position = hit.transform.position;
             transform.rotation = hit.transform.rotation;
             tile = hit.transform.gameObject;
+            tile.GetComponent<MeshRenderer>().enabled = false;
             transform.parent = tile.transform;
             base.Initialize();
         }
@@ -60,6 +61,7 @@ public class LifeSpell : Spell
 
         if (duration <= 0)
         {
+            tile.GetComponent<MeshRenderer>().enabled = true;
             Destroy(gameObject);    // Gets rid of the object  
             GetComponent<MeshRenderer>().enabled = false;   //Makes the item disappear
 

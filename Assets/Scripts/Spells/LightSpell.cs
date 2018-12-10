@@ -6,8 +6,11 @@ public class LightSpell : MonoBehaviour
 {
 
     public float duration;
+    private Light myLight;
+
     private void Start()
     {
+        myLight = GameObject.Find("Directional Light").GetComponent<Light>();
         StartCoroutine(Blind());
     }
 
@@ -15,7 +18,7 @@ public class LightSpell : MonoBehaviour
     {
         for (int i = 1; i <= 4; i++)
         {
-            GlobalVariables.LightIntensity = i;
+            myLight.intensity = i;
             yield return new WaitForSeconds(.05f);
         }
 
@@ -23,11 +26,10 @@ public class LightSpell : MonoBehaviour
 
         for (int i = 4; i >= 1; i--)
         {
-            GlobalVariables.LightIntensity = i;
+            myLight.intensity = i;
             yield return new WaitForSeconds(.05f);
 
         }
-        yield return new WaitForSeconds(0);
         
     }
 }

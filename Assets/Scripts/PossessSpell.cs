@@ -62,7 +62,6 @@ public class PossessSpell : Spell
                     PC.playerNumber = 1;
                     HIT = false;                        // Changed to false, so that it doesnt change more than once.
                 }
-                    Debug.Log(PC.playerNumber);
             }
             else
             {

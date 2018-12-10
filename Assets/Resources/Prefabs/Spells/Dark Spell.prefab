@@ -150,15 +150,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isChild: 0
   dying: 0
-  hasLifespan: 0
+  hasLifespan: 1
   oneShot: 1
   noCast: 0
   lifespan: 5
   offset: {x: 0, y: 1.25, z: 2}
   triggerForce: 0
+  triggerDelay: 0
+  startDelay: 0
   triggerEffectName: Fire
   damageAmount: 0.1
+  damagePerSecond: 0
   deathDelay: 0.5
+  turnSpeedModifier: 1
   animationVar: GroundHit
   started: 0
   startSpeed: 0

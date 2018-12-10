@@ -24,7 +24,7 @@ public class SpeedBoost : MonoBehaviour {
         PC.moveSpeed = 9f;      // Changed speed to 8
 
         GetComponent<MeshRenderer>().enabled = false;   //Makes the item disappear
-        GetComponentInChildren<MeshRenderer>().enabled = false;
+        GetComponentsInChildren<MeshRenderer>()[1].enabled = false;
         GetComponent<Collider>().enabled = false;      //Makes the item disapper
         
         yield return new WaitForSeconds(5);     // Timer

@@ -26,11 +26,11 @@ public class WaterController : MonoBehaviour {
 
     void OnTriggerEnter(Collider other)
     {
-        if (other.GetComponentInParent<Rigidbody>() && other.GetComponent<Stage>())
+        if (other.GetComponentInParent<Rigidbody>() && other.GetComponentInChildren<MeshRenderer>() && other.GetComponentInChildren<MeshRenderer>().materials[0].name.Contains("Dark Ice"))
         {
             objs.Add(other.gameObject);
-            other.gameObject.GetComponentInParent<Rigidbody>().drag = 1;
-            other.gameObject.GetComponentInParent<Rigidbody>().angularDrag = 1;
+            other.gameObject.GetComponentInParent<Rigidbody>().drag = 5;
+            other.gameObject.GetComponentInParent<Rigidbody>().angularDrag = 5;
         }
     }
 
@@ -39,8 +39,8 @@ public class WaterController : MonoBehaviour {
         if (objs.IndexOf(other.gameObject) != -1)
         {
             objs.Remove(other.gameObject);
-            other.gameObject.GetComponentInParent<Rigidbody>().drag = 0;
-            other.gameObject.GetComponentInParent<Rigidbody>().angularDrag = 0;
+            other.gameObject.GetComponentInParent<Rigidbody>().drag = 5;
+            other.gameObject.GetComponentInParent<Rigidbody>().angularDrag = 5;
         }
     }
 }

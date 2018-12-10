@@ -1,0 +1,70 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1502460353408626}
+  m_IsPrefabAsset: 1
+--- !u!1 &1502460353408626
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4771535997393076}
+  - component: {fileID: 114531899340580518}
+  m_Layer: 0
+  m_Name: SpawnCollectable
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4771535997393076
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1502460353408626}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0.7071068, w: 0}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 180}
+--- !u!114 &114531899340580518
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1502460353408626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c43640cbfe1ae83429799d35c4996971, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item1: {fileID: 1957492907822426, guid: 81b9df3bffeae204f88e548b6e25d7a2, type: 2}
+  item2: {fileID: 1241267204692074, guid: 52bc6a1812fe0c94997b8f94e361b020, type: 2}
+  item3: {fileID: 1982478488121110, guid: 0fc4c74a9957d0948a720603167c9ed4, type: 2}
+  item4: {fileID: 1348349532139524, guid: c9e94e494e5fb534abb8bce26589dc7c, type: 2}
+  item5: {fileID: 1348349532139524, guid: 1a50ffa10dbcb2c47bae2a8f09f2aaf9, type: 2}
+  item6: {fileID: 1348349532139524, guid: 68dee76ca152a7645a8d879013216741, type: 2}
+  item7: {fileID: 1348349532139524, guid: aa78835340f023e4e9901346f949f9f0, type: 2}
+  item8: {fileID: 1348349532139524, guid: 7a3670b496c57ac4f82eb255f9a1d85b, type: 2}
+  item9: {fileID: 1348349532139524, guid: 459609a18baa45548b73741679a60e6c, type: 2}
+  item10: {fileID: 1348349532139524, guid: 861b89a55b2b35b468f08848b425bfe2, type: 2}
+  item11: {fileID: 1348349532139524, guid: a3fcf0db65ec7bb4590a4d86c91ec825, type: 2}
+  item12: {fileID: 1348349532139524, guid: 9e748f89b9e37c74eaec8fc8686fb0f8, type: 2}
+  duration: 120
+  spawnTime: 0
+  spawnDelay: 30
+  RangeX: 10
+  RangeZ: 9

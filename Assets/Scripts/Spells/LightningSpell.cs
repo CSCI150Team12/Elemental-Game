@@ -32,7 +32,6 @@ public class LightningSpell : Spell {
     {
         yield return new WaitForSeconds(0.15f);
         ParticleSystem.Particle[] particles = new ParticleSystem.Particle[particleSystem.particleCount];
-        print(particleSystem.particleCount);
 
         int count = particleSystem.GetParticles(particles);
         for(float t = 0f; t < 1f; t+= 0.1f)
