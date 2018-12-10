@@ -25,7 +25,6 @@ public class StarSpell : MonoBehaviour {
     {
         if (destructive && other.transform.parent != transform && other.tag != "Indestructable")
         {
-            print(other.tag);
             if (other.GetComponent<PlayerController>())
             {
                 other.transform.position = Vector3.up * -1000;
