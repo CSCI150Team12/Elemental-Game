@@ -119,7 +119,7 @@ public class Spell : MonoBehaviour {
         }
     }
 
-    private float DamageForceScale(PlayerController player, float factor = 1.25f)
+    private float DamageForceScale(PlayerController player, float factor = 1.20f)
     {
         if (triggerForce == 0)
         {
