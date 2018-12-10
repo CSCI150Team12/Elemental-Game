@@ -119,12 +119,12 @@ MonoBehaviour:
   hasLifespan: 1
   oneShot: 1
   noCast: 0
-  lifespan: 10
+  lifespan: 6
   offset: {x: 0, y: 1.25, z: 1.5}
   triggerForce: 1
   triggerEffectName: Polymorph
   damageAmount: 0
-  deathDelay: 10
+  deathDelay: 6
   animationVar: IsChanneling
   started: 0
   startSpeed: 0.5
@@ -132,6 +132,12 @@ MonoBehaviour:
   duration: 5
   TransformationObject: {fileID: 1341645459349402, guid: efd946ac1b14ee447b9bf472c32a453e,
     type: 2}
+  TransformationObject2: {fileID: 1923125012486958, guid: 8d3c20bf0fb162449bf1f01ceee934bc,
+    type: 2}
+  TransformationObject3: {fileID: 1776473124579902, guid: 8eaf8f770c4cede43b9feba8d17d5ff5,
+    type: 2}
+  s1: {fileID: 0}
+  s2: {fileID: 0}
 --- !u!135 &135834966761195270
 SphereCollider:
   m_ObjectHideFlags: 1

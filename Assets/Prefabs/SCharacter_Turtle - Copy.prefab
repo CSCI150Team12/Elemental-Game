@@ -1074,8 +1074,8 @@ MonoBehaviour:
   damageUI: {fileID: 0}
   spellQueueUI: {fileID: 0}
   spellIcon: {fileID: 0}
-  moveSpeed: 1
-  rotateSpeed: 4
+  moveSpeed: 5
+  rotateSpeed: 10
   damage: 0
   jumpForce: 50
   pelvis: {fileID: 0}

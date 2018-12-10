@@ -7,8 +7,8 @@ public class TurtleScript : MonoBehaviour {
     //Vector3 CurrentPos;
     // Use this for initialization
 
-    private Rigidbody Target;
-    private BoxCollider Target2;
+   // private Rigidbody Target;
+  //  private BoxCollider Target2;
     void Start () {
 		
 	}
@@ -23,11 +23,12 @@ public class TurtleScript : MonoBehaviour {
         if(GlobalVariables.TurtleActive == false)
         {
             //GlobalVariables.TurtleActive = true;
-            Target = GetComponent<Rigidbody>();
-            Target2 = GetComponent<BoxCollider>();
-            Target.useGravity = false;
-            Target2.enabled = false;
-           // Destroy(gameObject);
+            //Target = GetComponent<Rigidbody>();
+            //Target2 = GetComponent<BoxCollider>();
+            //Target.useGravity = false;
+            //Target2.enabled = false;
+           Destroy(gameObject);
+
             
         }
 	}

@@ -19,5 +19,7 @@ public class PlayerSpawner : MonoBehaviour {
 
     public void SpawnPlayerCenter() {
         P.transform.position = spawnPointCenter.transform.position; // Spawn player  at the center of the map upon death
+        
     }
+
 }

@@ -10,5 +10,8 @@ public static class GlobalVariables
     public static SkinnedMeshRenderer InvisibilityHolder;   // Sees who has the invisibility spell
     public static PlayerController PolymorphedTarget;    // The person hit by the polymorph spell
     public static bool TurtleActive = true;
+    public static bool Player1Active = true;
+    public static bool Player2Active = true;
+    public static float TurtleHealth;
 
 }

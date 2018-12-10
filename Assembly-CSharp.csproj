@@ -65,6 +65,8 @@
     <Compile Include="Assets\destroyedobj.cs" />
     <Compile Include="Assets\DLScript.cs" />
     <Compile Include="Assets\ElementCombination.cs" />
+    <Compile Include="Assets\Player1Active.cs" />
+    <Compile Include="Assets\Player2Active.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Attributes\GetSetAttribute.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Attributes\MinAttribute.cs" />
     <Compile Include="Assets\PostProcessing\Runtime\Attributes\TrackballAttribute.cs" />
