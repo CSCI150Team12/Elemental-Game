@@ -20392,6 +20392,11 @@ Prefab:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114721748930660648, guid: 78f53cc8785374a6d894f7ed3dbd348e,
+        type: 2}
+      propertyPath: gameMusic
+      value: 
+      objectReference: {fileID: 2104027552}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 78f53cc8785374a6d894f7ed3dbd348e, type: 2}
   m_IsPrefabAsset: 0
@@ -37777,6 +37782,11 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b1a64b81b34e9cb4ebd351b7a35cdca1, type: 2}
   m_IsPrefabAsset: 0
+--- !u!82 &2104027552 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 82003841097973352, guid: b1a64b81b34e9cb4ebd351b7a35cdca1,
+    type: 2}
+  m_PrefabInternal: {fileID: 2104027551}
 --- !u!4 &2106376822 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4200649020935196, guid: b99fbfd81fc0f484fb2376aa85693b5f,

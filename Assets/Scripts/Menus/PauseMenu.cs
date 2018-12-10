@@ -9,6 +9,7 @@ public class PauseMenu : MonoBehaviour
 
     public static bool GameIsPaused = false;
     public GameObject pauseMenuUI;
+    public AudioSource gameMusic;
 
     // Update is called once per frame
     void Update()
@@ -34,6 +35,7 @@ public class PauseMenu : MonoBehaviour
         GameIsPaused = false;
         Time.timeScale = 1f;
         StartCoroutine(UnfreezePlayers());
+        gameMusic.UnPause();
     }
 
     private IEnumerator UnfreezePlayers()
@@ -53,6 +55,7 @@ public class PauseMenu : MonoBehaviour
         GetComponentInChildren<Button>().Select();
         GameObject.Find("Player1").GetComponent<PlayerController>().SetFrozen(true);
         GameObject.Find("Player2").GetComponent<PlayerController>().SetFrozen(true);
+        gameMusic.Pause();
     }
 
     // Restart game
