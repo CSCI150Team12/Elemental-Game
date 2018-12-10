@@ -20,10 +20,10 @@ MonoBehaviour:
     y: 30
     width: 1440
     height: 806
-  m_MinSize: {x: 681, y: 471}
-  m_MaxSize: {x: 14002, y: 14021}
+  m_MinSize: {x: 683, y: 492}
+  m_MaxSize: {x: 14004, y: 14042}
   vertical: 0
-  controlID: 2115
+  controlID: 2409
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -123,10 +123,10 @@ MonoBehaviour:
     y: 0
     width: 1163
     height: 806
-  m_MinSize: {x: 404, y: 471}
-  m_MaxSize: {x: 10000, y: 14021}
+  m_MinSize: {x: 406, y: 492}
+  m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
-  controlID: 2116
+  controlID: 2410
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -147,10 +147,10 @@ MonoBehaviour:
     y: 0
     width: 1163
     height: 487
-  m_MinSize: {x: 404, y: 221}
-  m_MaxSize: {x: 8004, y: 4021}
+  m_MinSize: {x: 406, y: 221}
+  m_MaxSize: {x: 8006, y: 4021}
   vertical: 0
-  controlID: 2088
+  controlID: 2260
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -169,8 +169,8 @@ MonoBehaviour:
     y: 0
     width: 208
     height: 487
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 6}
   m_Panes:
   - {fileID: 6}
@@ -203,9 +203,9 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 90650000
-    m_LastClickedID: 26000
-    m_ExpandedIDs: 887dffff1a95ffffbc99ffff98b9ffff000000007664000082650000
+    m_SelectedIDs: a6540000
+    m_LastClickedID: 0
+    m_ExpandedIDs: 04b5feff60bffeff34cafeff9cd5feffe0e1feff26f1feffc0f8feffb603ffff1611ffff0e24ffffac28ffff887dffff1a95ffffbc99ffff98b9ffff000000007664000082650000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -504,19 +504,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Materials
+    - Assets/Scenes
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Materials
+  - Assets/Scenes
   m_LastFoldersGridSize: -1
   m_LastProjectPath: /Users/jovani/Documents/GitHub/Elemental-Game
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 66.00189}
-    m_SelectedIDs: b2530000
-    m_LastClickedID: 21426
+    scrollPos: {x: 0, y: 232.00256}
+    m_SelectedIDs: 7c520000
+    m_LastClickedID: 21116
     m_ExpandedIDs: 00000000565000006a500000dc500000e65100007c52000056530000b2530000de56000076570000486000004a6000004c6000004e600000506000005260000054600000566000005860000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -570,9 +570,9 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 90650000
-    m_LastClickedInstanceID: 26000
-    m_HadKeyboardFocusLastEvent: 0
+    m_SelectedInstanceIDs: a6540000
+    m_LastClickedInstanceID: 21670
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000fe1a000018370000e83e0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
