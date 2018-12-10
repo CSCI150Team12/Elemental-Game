@@ -21,7 +21,7 @@ public class PlayerController : MonoBehaviour
     private Spell currentSpell;
     private Animator animator;
     private bool canJump = true;
-    private bool canCast = true;
+    public bool canCast = true;
     private float castReset = 0f;
     private bool frozen = false;
 

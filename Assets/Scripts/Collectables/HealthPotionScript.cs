@@ -7,6 +7,7 @@ using UnityEngine;
 public class HealthPotionScript : MonoBehaviour
 {
 
+    public float AmountHealed;          // Amount to heal user
     //public GameObject pickupEffect;     // Creates the game object, (Needed for sound?)
     private float holder;
 
@@ -26,14 +27,14 @@ public class HealthPotionScript : MonoBehaviour
 
         holder = PC.damage;      // Moves damage into placeholder
 
-        if (holder <= 50)       // If the user has less than 50 damage
+        if (holder <= AmountHealed)       // If the user has less than 50 damage
         {
             PC.damage = 0;      // Then damge = 0
             PC.TakeDamage(0);
         }
         else                    // Else remove 50 damage from current damage
         {
-            PC.TakeDamage(-50f);   
+            PC.TakeDamage(-(AmountHealed));   
         }
 
         GetComponent<MeshRenderer>().enabled = false;   //Makes the item disappear

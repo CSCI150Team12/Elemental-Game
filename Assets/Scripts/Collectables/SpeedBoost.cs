@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class SpeedBoost : MonoBehaviour {
 
-    public GameObject pickupEffect;     // Creates the game object
+   public GameObject pickupEffect;     // Creates the game object, Need this for Speed Boost potion
 
     private void OnTriggerEnter(Collider other) 
     {
@@ -24,9 +24,9 @@ public class SpeedBoost : MonoBehaviour {
         PC.moveSpeed = 9f;      // Changed speed to 8
 
         GetComponent<MeshRenderer>().enabled = false;   //Makes the item disappear
-       
-        GetComponent<Collider>().enabled = false;                       //Makes the item disapper
-
+        GetComponentInChildren<MeshRenderer>().enabled = false;
+        GetComponent<Collider>().enabled = false;      //Makes the item disapper
+        
         yield return new WaitForSeconds(5);     // Timer
 
         PC.moveSpeed = 5f;      // After Timer expires, then go back to original speed 4

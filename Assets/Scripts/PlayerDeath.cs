@@ -9,7 +9,7 @@ public class PlayerDeath : MonoBehaviour {
 
     public Rigidbody p;
     public PlayerSpawner s;
-    int playerLife = 3;
+    public int playerLife = 3;
     public string name;
     public TMP_Text lives;
     public GameObject other;
@@ -31,7 +31,7 @@ public class PlayerDeath : MonoBehaviour {
             int winner = 0;
             if (p.name == "Player1") {
                 winner = 2;
-            } else if (p.name == "Player2") { 
+            } else if (p.name == "Player2") {
                 winner = 1;
             }
             FindObjectOfType<WinPlayer>().PlayerWon(winner);

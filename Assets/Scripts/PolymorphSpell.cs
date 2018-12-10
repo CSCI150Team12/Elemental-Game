@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PolymorphSpell : Spell {
+public class PolymorphSpell : Spell
+{
 
     public override void Initialize()
     {
@@ -15,13 +16,6 @@ public class PolymorphSpell : Spell {
     {
         if (started)
         {
-            
-
-
-
-
-
-
             base.OnTriggerEnter(other);
             transform.Find("Body").GetComponent<ParticleSystem>().Play();
             SetVelocity(Vector3.zero);
@@ -35,4 +29,5 @@ public class PolymorphSpell : Spell {
         transform.Find("Body").GetComponent<ParticleSystem>().Pause();
         started = true;
     }
+
 }
