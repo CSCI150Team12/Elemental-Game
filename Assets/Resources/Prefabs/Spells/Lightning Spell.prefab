@@ -40,7 +40,7 @@ GameObject:
   - component: {fileID: 114604438133041636}
   m_Layer: 0
   m_Name: Lightning Spell
-  m_TagString: Untagged
+  m_TagString: Indestructable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -103,6 +103,8 @@ MonoBehaviour:
   lifespan: 2
   offset: {x: 0, y: 0, z: 5}
   triggerForce: 0
+  triggerDelay: 0
+  startDelay: 0
   triggerEffectName: Fire
   damageAmount: 30
   damagePerSecond: 0

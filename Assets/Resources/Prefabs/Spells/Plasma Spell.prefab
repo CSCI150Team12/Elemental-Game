@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 136401145161489272}
   m_Layer: 0
   m_Name: Body
-  m_TagString: Untagged
+  m_TagString: Indestructable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -60,7 +60,7 @@ GameObject:
   - component: {fileID: 54755813146515520}
   m_Layer: 0
   m_Name: Plasma Spell
-  m_TagString: Untagged
+  m_TagString: Indestructable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

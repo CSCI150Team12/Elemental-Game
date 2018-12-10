@@ -24,9 +24,11 @@ public class PolymorphSpellEffect : SpellEffect
         turtle.transform.localScale *= transform.parent.GetComponent<Collider>().bounds.size.magnitude / 2;
         turtle.transform.localPosition = new Vector3(0, 0.1f, 0);
         turtle.transform.position = transform.position;
+        turtle.transform.rotation = transform.rotation;
         var emptyObject = new GameObject();
         emptyObject.transform.parent = transform;
         transform.parent.rotation = rotation;
+        turtle.transform.rotation = rotation;
         turtle.transform.parent = emptyObject.transform;
 
 

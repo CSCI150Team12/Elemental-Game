@@ -23,8 +23,9 @@ public class StarSpell : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
-        if (destructive && other.transform.parent != transform)
+        if (destructive && other.transform.parent != transform && other.tag != "Indestructable")
         {
+            print(other.tag);
             if (other.GetComponent<PlayerController>())
             {
                 other.transform.position = Vector3.up * -1000;
