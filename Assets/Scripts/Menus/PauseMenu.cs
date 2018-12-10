@@ -8,6 +8,7 @@ public class PauseMenu : MonoBehaviour
 {
 
     public static bool GameIsPaused = false;
+    public static bool optionsNotActive = true;
     public GameObject pauseMenuUI;
     public AudioSource gameMusic;
 
@@ -15,7 +16,9 @@ public class PauseMenu : MonoBehaviour
     void Update()
     {
         // Show or hide pause menu if 'esc' key is pressed
-        if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.Joystick1Button7))
+        if ((Input.GetKeyDown(KeyCode.Escape) 
+        || Input.GetKeyDown(KeyCode.Joystick1Button7)) 
+            && optionsNotActive)
         {
             if (GameIsPaused)
             {
@@ -82,6 +85,7 @@ public class PauseMenu : MonoBehaviour
     {
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
+        optionsNotActive = false;
     }
 
     // Show pause menu
@@ -89,6 +93,7 @@ public class PauseMenu : MonoBehaviour
     {
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
+        optionsNotActive = true;
         GetComponentInChildren<Button>().Select();
     }
 
