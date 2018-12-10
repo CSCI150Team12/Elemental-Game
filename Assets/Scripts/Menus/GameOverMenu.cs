@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GameOverMenu : MonoBehaviour
 {
@@ -19,6 +20,7 @@ public class GameOverMenu : MonoBehaviour
     public void GameOver() {
         gameOverMenuUI.SetActive(true);
         Time.timeScale = 0f;
+        GetComponentInChildren<Button>().Select();
     }
 
     // Start new game

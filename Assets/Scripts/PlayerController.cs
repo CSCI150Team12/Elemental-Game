@@ -41,7 +41,7 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        if (!frozen)
+        if (!frozen && Time.timeScale > 0)
         {
             GetInput();
         }
@@ -57,6 +57,7 @@ public class PlayerController : MonoBehaviour
     {
         if (!frozen)
         {
+            print(Time.timeScale);
             Move();
         }
     }
@@ -153,28 +154,31 @@ public class PlayerController : MonoBehaviour
 
     IEnumerator CastSpell(string spellStr)
     {
-        GameObject spellPrefab = (GameObject)Instantiate(Resources.Load("Prefabs/Spells/" + spellStr + " Spell"));
-        Spell spellComponent = spellPrefab.GetComponent<Spell>();
-        currentSpell = spellComponent;
-        if (spellComponent.isChild)
+        GameObject resource = (GameObject)Resources.Load("Prefabs/Spells/" + spellStr + " Spell");
+        if (resource)
         {
-            spellPrefab.transform.parent = transform;
+            GameObject spellPrefab = Instantiate(resource);
+            Spell spellComponent = spellPrefab.GetComponent<Spell>();
+            currentSpell = spellComponent;
+            if (spellComponent.isChild)
+            {
+                spellPrefab.transform.parent = transform;
+            }
+            if (spellComponent.animationVar == "IsChanneling")
+            {
+                animator.SetBool("IsChanneling", true);
+            }
+            else if (spellComponent.animationVar == "GroundHit")
+            {
+                animator.SetTrigger("GroundHit");
+            }
+            canCast = false;
+            yield return new WaitForSeconds(0.3f);
+            spellPrefab.transform.position = transform.TransformPoint(spellComponent.offset); ;
+            spellPrefab.transform.rotation = transform.rotation;
+            spellComponent.SetVelocity(transform.forward);
+            spellComponent.Initialize();
         }
-        if (spellComponent.animationVar == "IsChanneling")
-        {
-            animator.SetBool("IsChanneling", true);
-        }
-        else if (spellComponent.animationVar == "GroundHit")
-        {
-            animator.SetTrigger("GroundHit");
-        }
-        canCast = false;
-        yield return new WaitForSeconds(0.3f);
-        spellPrefab.transform.position = transform.TransformPoint(spellComponent.offset); ;
-        spellPrefab.transform.rotation = transform.rotation;
-        spellComponent.SetVelocity(transform.forward);
-        spellComponent.Initialize();
-      
     }
 
     public void AddElement(string element)

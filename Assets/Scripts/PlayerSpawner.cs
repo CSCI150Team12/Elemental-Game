@@ -10,7 +10,7 @@ public class PlayerSpawner : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        Invoke("SpawnPlayer", 1f); //Spawn player at the start of the game
+        Invoke("SpawnPlayer", 0f); //Spawn player at the start of the game
 	}
 
     public void SpawnPlayer() {

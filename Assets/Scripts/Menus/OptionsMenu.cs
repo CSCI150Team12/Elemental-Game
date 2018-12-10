@@ -94,6 +94,7 @@ public class OptionsMenu : MonoBehaviour
     {
         optionsMenuUI.SetActive(true);
         Time.timeScale = 0f;
+        GetComponentInChildren<Button>().Select();
     }
 
     // Use this for initialization

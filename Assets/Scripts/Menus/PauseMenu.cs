@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -13,7 +14,7 @@ public class PauseMenu : MonoBehaviour
     void Update()
     {
         // Show or hide pause menu if 'esc' key is pressed
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.Joystick1Button7))
         {
             if (GameIsPaused)
             {
@@ -30,8 +31,16 @@ public class PauseMenu : MonoBehaviour
     public void Resume()
     {
         pauseMenuUI.SetActive(false);
-        Time.timeScale = 1f;
         GameIsPaused = false;
+        Time.timeScale = 1f;
+        StartCoroutine(UnfreezePlayers());
+    }
+
+    private IEnumerator UnfreezePlayers()
+    {
+        yield return new WaitForSeconds(0.01f);
+        GameObject.Find("Player1").GetComponent<PlayerController>().SetFrozen(false);
+        GameObject.Find("Player2").GetComponent<PlayerController>().SetFrozen(false);
     }
 
     // Pause game
@@ -40,6 +49,10 @@ public class PauseMenu : MonoBehaviour
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
         GameIsPaused = true;
+        GetComponentsInChildren<Button>()[1].Select();
+        GetComponentInChildren<Button>().Select();
+        GameObject.Find("Player1").GetComponent<PlayerController>().SetFrozen(true);
+        GameObject.Find("Player2").GetComponent<PlayerController>().SetFrozen(true);
     }
 
     // Restart game
@@ -73,6 +86,7 @@ public class PauseMenu : MonoBehaviour
     {
         pauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
+        GetComponentInChildren<Button>().Select();
     }
 
     // Quit game

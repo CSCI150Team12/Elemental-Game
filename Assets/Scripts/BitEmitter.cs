@@ -52,7 +52,6 @@ public class BitEmitter : MonoBehaviour {
                 obj.GetComponent<Rigidbody>().velocity = transform.TransformPoint(bitVelocity) * Random.Range(0.9f, 1.1f);
                 SpellBit spellBit = obj.GetComponent<SpellBit>();
                 spellBit.spell = GetComponent<Spell>();
-                print(transform);
                 if (transform.Find("Target"))
                 {
                     spellBit.attractor = transform.Find("Target").gameObject;

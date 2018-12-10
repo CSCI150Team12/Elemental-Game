@@ -41,17 +41,25 @@ public class SpellQueue : MonoBehaviour
     }
    public string  Dequeue() // remove first/head 
     {
-        string result = spellQueue.First.Value;
-        spellQueue.RemoveFirst();
-        UpdateUI();
-        return result;
+        if (spellQueue.Count > 0)
+        {
+            string result = spellQueue.First.Value;
+            spellQueue.RemoveFirst();
+            UpdateUI();
+            return result;
+        }
+        return null;
     }
     public string Pop() // remove last/tail  
     {
-        string result = spellQueue.Last.Value;
-        spellQueue.RemoveLast();
-        UpdateUI();
-        return result;
+        if (spellQueue.Count > 0)
+        {
+            string result = spellQueue.Last.Value;
+            spellQueue.RemoveLast();
+            UpdateUI();
+            return result;
+        }
+        return null;
     }
     private void UpdateUI()
     {

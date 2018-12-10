@@ -9,7 +9,6 @@ public class PlayerDeath : MonoBehaviour {
 
     public Rigidbody p;
     public PlayerSpawner s;
-    public TMP_Text livesUI;
     int playerLife = 3;
     public string name;
     public TMP_Text lives;

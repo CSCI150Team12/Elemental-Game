@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour
 {
@@ -38,6 +39,7 @@ public class MainMenu : MonoBehaviour
     {
         mainMenuUI.SetActive(true);
         Time.timeScale = 0f;
+        GetComponentInChildren<Button>().Select();
     }
 
     // Quit game
