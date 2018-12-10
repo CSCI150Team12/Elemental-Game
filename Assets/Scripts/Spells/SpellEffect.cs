@@ -13,7 +13,7 @@ public class SpellEffect : MonoBehaviour {
     public Vector3 shrinkDirection = new Vector3(1,1,1);
     private float startTime;
 
-	void Start () {
+	protected virtual void Start () {
         startTime = Time.time;
         InvokeRepeating("DealDamage", 1f, 0.1f);
         ToggleFreeze(true);
@@ -52,7 +52,7 @@ public class SpellEffect : MonoBehaviour {
         }
     }
 
-    public void Die()
+    public virtual void Die()
     {
         ParticleSystem particleSystem = GetComponent<ParticleSystem>();
         if (particleSystem)

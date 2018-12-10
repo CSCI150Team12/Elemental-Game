@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4910258801774304}
   - component: {fileID: 198586537832111028}
   - component: {fileID: 199343109791323270}
-  - component: {fileID: 114869247362159048}
+  - component: {fileID: 114713479666554316}
   m_Layer: 0
   m_Name: Polymorph Effect
   m_TagString: Untagged
@@ -42,7 +42,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
---- !u!114 &114869247362159048
+--- !u!114 &114713479666554316
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -50,16 +50,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 1238978058506384}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e7defab1b877304da4f3774a56a3d98, type: 3}
+  m_Script: {fileID: 11500000, guid: 2515cb75cc4f6a44b8cee214a2c15f59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   damagePerSecond: 0
-  lifespan: 1
+  lifespan: 10
   deathspan: 1
   offset: {x: 0, y: 0, z: 0}
   freezeObj: 0
   shrinkDeath: 0
   shrinkDirection: {x: 1, y: 1, z: 1}
+  turtle: {fileID: 1341645459349402, guid: ce3f75e898c741d42a2720562d220854, type: 2}
 --- !u!198 &198586537832111028
 ParticleSystem:
   m_ObjectHideFlags: 1
