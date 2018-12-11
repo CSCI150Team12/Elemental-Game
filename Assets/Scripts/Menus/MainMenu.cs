@@ -8,25 +8,6 @@ public class MainMenu : MonoBehaviour
 {
 
     public GameObject mainMenuUI;
-    public Dropdown stageSelect;
-
-    // Load 'Game' scene
-    public void PlayGame()
-    {
-        StartCoroutine("DelayTime");
-        Time.timeScale = 1;
-        SceneManager.LoadScene(stageSelect.options[stageSelect.value].text + " Stage");
-        Time.timeScale = 1f;
-    }
-
-    // 
-    IEnumerator DelayTime()
-    {
-        while (true)
-        {
-            yield return new WaitForSeconds(1);
-        }
-    }
 
     // Hide main menu
     public void HideMainMenu()
