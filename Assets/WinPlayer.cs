@@ -16,7 +16,7 @@ public class WinPlayer : MonoBehaviour {
 
     public void PlayerWon(int w)
     {
-        winner.GetComponent<TMP_Text>().text = "PLAYER " + w + " WINS";
+        winner.GetComponent<TMP_Text>().text = "PLAYER " + w + " WINS!";
         playerWinMenuUI.SetActive(true);
         Time.timeScale = 0f;
         GetComponentInChildren<Button>().Select();

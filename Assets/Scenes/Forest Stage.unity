@@ -8995,6 +8995,15 @@ Prefab:
       propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: ClickSound
       objectReference: {fileID: 0}
+    - target: {fileID: 1912182961610954, guid: 52a67f4cbaa464462baffcd8956bb6ba, type: 2}
+      propertyPath: m_Name
+      value: RestartButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 114973414367143688, guid: 52a67f4cbaa464462baffcd8956bb6ba,
+        type: 2}
+      propertyPath: m_text
+      value: RESTART
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 52a67f4cbaa464462baffcd8956bb6ba, type: 2}
   m_IsPrefabAsset: 0
@@ -10530,6 +10539,21 @@ Prefab:
       propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 980227666}
+    - target: {fileID: 114252136676380998, guid: b021c3edf5619ff44ac4c04303edfb8f,
+        type: 2}
+      propertyPath: m_fontColorGradientPreset
+      value: 
+      objectReference: {fileID: 11400000, guid: 0deecba77f0e942859fc6727223a6d39,
+        type: 2}
+    - target: {fileID: 1160541197441562, guid: b021c3edf5619ff44ac4c04303edfb8f, type: 2}
+      propertyPath: m_Name
+      value: RestartButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 114329297171757654, guid: b021c3edf5619ff44ac4c04303edfb8f,
+        type: 2}
+      propertyPath: m_text
+      value: RESTART
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b021c3edf5619ff44ac4c04303edfb8f, type: 2}
   m_IsPrefabAsset: 0
