@@ -25,6 +25,7 @@ GameObject:
   - component: {fileID: 54523941400572660}
   - component: {fileID: 64032229956973316}
   - component: {fileID: 114836234219869752}
+  - component: {fileID: 82461229157510202}
   m_Layer: 0
   m_Name: Stone Spell
   m_TagString: Untagged
@@ -116,6 +117,102 @@ MeshCollider:
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: 5ac210d5194b0459fa88cb356d09faac, type: 3}
+--- !u!82 &82461229157510202
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1521521643379324}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 243227065015335618, guid: beef0b7fa275c47d1857a32015dd4205,
+    type: 2}
+  m_audioClip: {fileID: 8300000, guid: daf2695eb88c6467fb29cb52feab6549, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!95 &95403565153096420
 Animator:
   serializedVersion: 3
@@ -149,14 +246,18 @@ MonoBehaviour:
   dying: 0
   hasLifespan: 0
   oneShot: 1
+  noCast: 0
   lifespan: 0
   offset: {x: 0, y: 1.25, z: 1.5}
   triggerForce: 0
+  triggerDelay: 0
+  startDelay: 0
   triggerEffectName: 
   damageAmount: 0
+  damagePerSecond: 0
   deathDelay: 0
+  turnSpeedModifier: 1
   animationVar: IsChanneling
   started: 0
   startSpeed: 20
-  bit: {fileID: 0}
-  bitVelocity: {x: 0, y: 0, z: 0}
+  stopAnimation: 0
