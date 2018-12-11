@@ -25,8 +25,8 @@ MonoBehaviour:
     yOffset: 34.2
     xAdvance: -74.9
     scale: 2
-    name: MagmaBall
-    hashCode: -1204932700
+    name: Magmaball
+    hashCode: -1206015036
     unicode: 0
     pivot: {x: -32, y: 32}
     sprite: {fileID: 21300000, guid: f23ff5f503989435eb861dcaa891be6d, type: 3}
