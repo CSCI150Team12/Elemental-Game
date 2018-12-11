@@ -6,7 +6,6 @@ using UnityEngine.UI;
 
 public class StageSelector : MonoBehaviour
 {
-
     public GameObject stageSelectorUI;
     public Dropdown stageSelect;
 

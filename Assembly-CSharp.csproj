@@ -131,6 +131,7 @@
     <Compile Include="Assets\Scripts\GrassTile.cs" />
     <Compile Include="Assets\Scripts\HingeJointTarget.cs" />
     <Compile Include="Assets\Scripts\LifeSpell.cs" />
+    <Compile Include="Assets\Scripts\Menus\Credits.cs" />
     <Compile Include="Assets\Scripts\Menus\GameOverMenu.cs" />
     <Compile Include="Assets\Scripts\Menus\MainMenu.cs" />
     <Compile Include="Assets\Scripts\Menus\OptionsMenu.cs" />
