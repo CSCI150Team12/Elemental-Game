@@ -77,5 +77,10 @@ public class SpellQueue : MonoBehaviour
             }
             spellQueueUI.text = spellQueueUI.text.TrimEnd(' ', '|');
         }
+		if (spellQueue.Count == 0){
+			spellQueueUI.enabled = false;
+		}else{
+			spellQueueUI.enabled = true;
+		}
     }
 }
