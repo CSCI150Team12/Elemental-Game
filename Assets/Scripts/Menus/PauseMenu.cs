@@ -18,7 +18,8 @@ public class PauseMenu : MonoBehaviour
         // Show or hide pause menu if 'esc' key is pressed
         if ((Input.GetKeyDown(KeyCode.Escape) 
         || Input.GetKeyDown(KeyCode.Joystick1Button7)) 
-            && optionsNotActive)
+            && (optionsNotActive 
+        && (GameOverMenu.notGameOver && WinPlayer.noPlayerWon)))
         {
             if (GameIsPaused)
             {

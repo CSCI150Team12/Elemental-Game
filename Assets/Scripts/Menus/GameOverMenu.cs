@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class GameOverMenu : MonoBehaviour
 {
-
+    public static bool notGameOver = true;
     public GameTimer gameTimer;
     public GameObject gameOverMenuUI;
 
@@ -17,17 +17,20 @@ public class GameOverMenu : MonoBehaviour
         gameTimer = GetComponent<GameTimer>();
     }
 
+    // Display game over screen
     public void GameOver() {
         gameOverMenuUI.SetActive(true);
         Time.timeScale = 0f;
         GetComponentInChildren<Button>().Select();
+        notGameOver = false;
     }
 
-    // Start new game
+    // Restart match
     public void Restart()
     {
         gameOverMenuUI.SetActive(false);
         Time.timeScale = 1f;
+        notGameOver = true;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 

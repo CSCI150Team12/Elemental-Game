@@ -10494,7 +10494,7 @@ Prefab:
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 519054745}
+      objectReference: {fileID: 577691518}
     - target: {fileID: 114329297171757654, guid: b021c3edf5619ff44ac4c04303edfb8f,
         type: 2}
       propertyPath: m_havePropertiesChanged
@@ -10554,9 +10554,20 @@ Prefab:
       propertyPath: m_text
       value: RESTART
       objectReference: {fileID: 0}
+    - target: {fileID: 114083892457965124, guid: b021c3edf5619ff44ac4c04303edfb8f,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Restart
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b021c3edf5619ff44ac4c04303edfb8f, type: 2}
   m_IsPrefabAsset: 0
+--- !u!114 &577691518 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114810574087583260, guid: b021c3edf5619ff44ac4c04303edfb8f,
+    type: 2}
+  m_PrefabInternal: {fileID: 577691517}
+  m_Script: {fileID: 11500000, guid: 40fa24e2a7afd49e6b1be0c2d4fc49ae, type: 3}
 --- !u!4 &580937473 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4200649020935196, guid: b99fbfd81fc0f484fb2376aa85693b5f,

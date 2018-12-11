@@ -20853,7 +20853,7 @@ Prefab:
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 193737482}
+      objectReference: {fileID: 1245459008}
     - target: {fileID: 114083892457965124, guid: b021c3edf5619ff44ac4c04303edfb8f,
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -20907,6 +20907,12 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b021c3edf5619ff44ac4c04303edfb8f, type: 2}
   m_IsPrefabAsset: 0
+--- !u!114 &1245459008 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114810574087583260, guid: b021c3edf5619ff44ac4c04303edfb8f,
+    type: 2}
+  m_PrefabInternal: {fileID: 1245459007}
+  m_Script: {fileID: 11500000, guid: 40fa24e2a7afd49e6b1be0c2d4fc49ae, type: 3}
 --- !u!4 &1249996966 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4200649020935196, guid: b99fbfd81fc0f484fb2376aa85693b5f,

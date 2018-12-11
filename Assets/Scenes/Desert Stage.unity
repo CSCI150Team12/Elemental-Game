@@ -25991,7 +25991,7 @@ Prefab:
         type: 2}
       propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1727767831}
+      objectReference: {fileID: 1663117423}
     - target: {fileID: 114550942395961530, guid: b021c3edf5619ff44ac4c04303edfb8f,
         type: 2}
       propertyPath: m_Delegates.Array.data[1].callback.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -26017,9 +26017,20 @@ Prefab:
       value: 
       objectReference: {fileID: 11400000, guid: 0deecba77f0e942859fc6727223a6d39,
         type: 2}
+    - target: {fileID: 114550942395961530, guid: b021c3edf5619ff44ac4c04303edfb8f,
+        type: 2}
+      propertyPath: m_Delegates.Array.data[0].callback.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Restart
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b021c3edf5619ff44ac4c04303edfb8f, type: 2}
   m_IsPrefabAsset: 0
+--- !u!114 &1663117423 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114810574087583260, guid: b021c3edf5619ff44ac4c04303edfb8f,
+    type: 2}
+  m_PrefabInternal: {fileID: 1663117422}
+  m_Script: {fileID: 11500000, guid: 40fa24e2a7afd49e6b1be0c2d4fc49ae, type: 3}
 --- !u!1 &1667574156 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1507649953330256, guid: b99fbfd81fc0f484fb2376aa85693b5f,
