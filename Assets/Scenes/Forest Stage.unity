@@ -7011,6 +7011,11 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4f674156400b5b946b746621f9580a93, type: 2}
   m_IsPrefabAsset: 0
+--- !u!1 &420839731 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1128043944501020, guid: 4f674156400b5b946b746621f9580a93,
+    type: 2}
+  m_PrefabInternal: {fileID: 420839730}
 --- !u!1001 &423682865
 Prefab:
   m_ObjectHideFlags: 0
@@ -20432,6 +20437,11 @@ Prefab:
       propertyPath: gameMusic
       value: 
       objectReference: {fileID: 2104027552}
+    - target: {fileID: 114721748930660648, guid: 78f53cc8785374a6d894f7ed3dbd348e,
+        type: 2}
+      propertyPath: healthDisplay
+      value: 
+      objectReference: {fileID: 420839731}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 78f53cc8785374a6d894f7ed3dbd348e, type: 2}
   m_IsPrefabAsset: 0

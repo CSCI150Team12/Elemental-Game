@@ -6,10 +6,10 @@ using UnityEngine.UI;
 
 public class PauseMenu : MonoBehaviour
 {
-
     public static bool GameIsPaused = false;
     public static bool optionsNotActive = true;
     public GameObject pauseMenuUI;
+    public GameObject healthDisplay;
     public AudioSource gameMusic;
 
     // Update is called once per frame
@@ -40,8 +40,10 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1f;
         StartCoroutine(UnfreezePlayers());
         gameMusic.UnPause();
+        healthDisplay.SetActive(true);
     }
 
+    //
     private IEnumerator UnfreezePlayers()
     {
         yield return new WaitForSeconds(0.01f);
@@ -60,6 +62,7 @@ public class PauseMenu : MonoBehaviour
         GameObject.Find("Player1").GetComponent<PlayerController>().SetFrozen(true);
         GameObject.Find("Player2").GetComponent<PlayerController>().SetFrozen(true);
         gameMusic.Pause();
+        healthDisplay.SetActive(false);
     }
 
     // Restart game
@@ -69,6 +72,7 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1f;
         GameIsPaused = false;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        healthDisplay.SetActive(true);
     }
 
     // Load 'Menu' scene
